@@ -21,13 +21,51 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Person" id="82a-7W-tre">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Person" rowHeight="85" id="82a-7W-tre" customClass="PersonCell" customModule="CoreDataDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="82a-7W-tre" id="UPW-EL-eyX">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="82a-7W-tre" id="UPW-EL-eyX">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDV-kh-yVA" userLabel="NameLabel">
+                                                    <rect key="frame" x="37" y="11" width="340" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ga5-QQ-j21" userLabel="AgeLabel">
+                                                    <rect key="frame" x="37" y="48" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFM-aB-d4A" userLabel="GenderLabel">
+                                                    <rect key="frame" x="119" y="47" width="265" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="zFM-aB-d4A" firstAttribute="leading" secondItem="Ga5-QQ-j21" secondAttribute="trailing" constant="40" id="3Ft-Zq-vcT"/>
+                                                <constraint firstItem="zFM-aB-d4A" firstAttribute="leading" secondItem="Ga5-QQ-j21" secondAttribute="trailing" constant="40" id="4IR-Z6-seM"/>
+                                                <constraint firstItem="Ga5-QQ-j21" firstAttribute="leading" secondItem="UPW-EL-eyX" secondAttribute="leadingMargin" constant="17" id="7v2-Mc-8oo"/>
+                                                <constraint firstItem="Ga5-QQ-j21" firstAttribute="top" secondItem="xDV-kh-yVA" secondAttribute="bottom" constant="16" id="A2k-xz-1NE"/>
+                                                <constraint firstItem="zFM-aB-d4A" firstAttribute="top" secondItem="xDV-kh-yVA" secondAttribute="bottom" constant="15" id="FIu-DF-CKu"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="zFM-aB-d4A" secondAttribute="bottom" constant="6" id="LR5-FZ-Dk1"/>
+                                                <constraint firstItem="xDV-kh-yVA" firstAttribute="leading" secondItem="UPW-EL-eyX" secondAttribute="leadingMargin" constant="17" id="Nkv-pF-U7H"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Ga5-QQ-j21" secondAttribute="bottom" constant="5" id="PwI-i8-bB5"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="xDV-kh-yVA" secondAttribute="trailing" constant="17" id="of2-GG-lpT"/>
+                                                <constraint firstItem="xDV-kh-yVA" firstAttribute="top" secondItem="UPW-EL-eyX" secondAttribute="topMargin" id="uF9-e3-EYV"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="zFM-aB-d4A" secondAttribute="trailing" constant="10" id="wd3-Jl-aem"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="AgeLabel" destination="Ga5-QQ-j21" id="MC9-Ma-XA5"/>
+                                            <outlet property="GenderLabel" destination="zFM-aB-d4A" id="e46-ob-0fK"/>
+                                            <outlet property="nameLabel" destination="xDV-kh-yVA" id="NFO-aX-50D"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

@@ -22,6 +22,9 @@ class ViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        self.tableView.estimatedRowHeight = 44.0
+        self.tableView.rowHeight = UITableView.automaticDimension
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapAdd))
         
     }
@@ -35,7 +38,7 @@ class ViewController: UIViewController {
                 return
             }
             
-            self.createPerson(name: text, gender: "none", age: 64)
+            self.createPerson(name: text, gender: "men", age: 64)
         }))
     
         present(alert, animated: true)
@@ -48,7 +51,7 @@ class ViewController: UIViewController {
             persons = try context.fetch(Person.fetchRequest())
         }
         catch{
-            print("Error getting context")
+            print("Error getting context getAllPersons")
         }
         
         DispatchQueue.main.async {
@@ -68,7 +71,7 @@ class ViewController: UIViewController {
             getAllPersons()
         }
         catch{
-            print("Error saving context")
+            print("Error saving context on creating person")
         }
     }
     
@@ -80,11 +83,11 @@ class ViewController: UIViewController {
             try context.save()
         }
         catch{
-            print("Error saving context")
+            print("Error saving context on deleting person")
         }
     }
     
-    func upadePerson(person: Person, newName: String, newGender: String, newAge: Int64 ){
+    func updatePerson(person: Person, newName: String, newGender: String, newAge: Int64 ){
         person.name = newName
         person.gender = newGender
         person.age = newAge
@@ -93,7 +96,7 @@ class ViewController: UIViewController {
             try context.save()
         }
         catch{
-            print("Error saving context")
+            print("Error saving context update person")
         }
     }
 }
@@ -110,8 +113,8 @@ extension ViewController: UITableViewDelegate{
         let alert = UIAlertController(title: "Edit person", message: "Edit name", preferredStyle: .alert)
         alert.addTextField()
         
-        let textfiled = alert.textFields![0]
-        textfiled.text = person.name
+        let textfield = alert.textFields![0]
+        textfield.text = person.name
         
         //Configure button handler
         
@@ -119,37 +122,43 @@ extension ViewController: UITableViewDelegate{
             
             let textfield = alert.textFields![0]
             
-            person.name = textfiled.text
+            person.name = textfield.text
             
             //Save changes
+            self.updatePerson(person: person, newName: textfield.text!, newGender: "men", newAge:22)
             
-            do {
-                try self.context.save()
-            }
-            catch{
-                
-            }
+            //Refreshing tableView
             self.getAllPersons()
     }
+        // Adding button
+        
         alert.addAction(saveButton)
         
-        
+        //Presenting alert
         self.present(alert, animated: true, completion: nil)
 }
 }
 
 extension ViewController: UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 85
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return persons.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let person = persons[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Person", for: indexPath)
+        let personCell = tableView.dequeueReusableCell(withIdentifier: "Person", for: indexPath) as? PersonCell
         
-        cell.textLabel?.text = person.name
+        personCell?.nameLabel.text = person.name
+        personCell?.AgeLabel.text = "Age: \(person.age)"
+        personCell?.GenderLabel.text = "Gender: \(person.gender ?? "0")"
         
-        return cell
+        
+        return personCell ?? UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
