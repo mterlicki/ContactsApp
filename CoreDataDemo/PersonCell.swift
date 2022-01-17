@@ -15,7 +15,13 @@ class PersonCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
+        
+    func setCell(with person:Person){
+            nameLabel.text = person.name
+            AgeLabel.text = "Age: \(person.age)"
+            GenderLabel.text = "Gender: \(person.gender ?? "unknown")"
+    }
+    
 
 }

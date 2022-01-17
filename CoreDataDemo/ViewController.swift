@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - View Controler
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
@@ -26,7 +27,6 @@ class ViewController: UIViewController {
         self.tableView.rowHeight = UITableView.automaticDimension
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapAdd))
-        
     }
     
     @objc private func didTapAdd(){
@@ -44,6 +44,8 @@ class ViewController: UIViewController {
         present(alert, animated: true)
         
     }
+    
+    // MARK: Core data functions
     
     func getAllPersons(){
         
@@ -101,6 +103,8 @@ class ViewController: UIViewController {
     }
 }
 
+// MARK: Table View functions
+
 extension ViewController: UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -152,11 +156,7 @@ extension ViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let person = persons[indexPath.row]
         let personCell = tableView.dequeueReusableCell(withIdentifier: "Person", for: indexPath) as? PersonCell
-        
-        personCell?.nameLabel.text = person.name
-        personCell?.AgeLabel.text = "Age: \(person.age)"
-        personCell?.GenderLabel.text = "Gender: \(person.gender ?? "0")"
-        
+        personCell?.setCell(with: person)
         
         return personCell ?? UITableViewCell()
     }
