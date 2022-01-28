@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F77264E527A41F0F0012E783 /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77264E427A41F0F0012E783 /* PersonViewController.swift */; };
 		F784173026EB2899001553D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F784172F26EB2899001553D7 /* AppDelegate.swift */; };
 		F784173226EB2899001553D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F784173126EB2899001553D7 /* SceneDelegate.swift */; };
 		F784173426EB2899001553D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F784173326EB2899001553D7 /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F77264E427A41F0F0012E783 /* PersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
 		F784172C26EB2899001553D7 /* CoreDataDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F784172F26EB2899001553D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F784173126EB2899001553D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				F7BA230B2791B552000E8ADC /* PersonCell.swift */,
 				F784173126EB2899001553D7 /* SceneDelegate.swift */,
 				F784173326EB2899001553D7 /* ViewController.swift */,
+				F77264E427A41F0F0012E783 /* PersonViewController.swift */,
 				F784173526EB2899001553D7 /* Main.storyboard */,
 				F784173B26EB289C001553D7 /* Assets.xcassets */,
 				F784173D26EB289C001553D7 /* LaunchScreen.storyboard */,
@@ -281,6 +284,7 @@
 				F784176726EB2A69001553D7 /* Person+CoreDataClass.swift in Sources */,
 				F784173026EB2899001553D7 /* AppDelegate.swift in Sources */,
 				F784173226EB2899001553D7 /* SceneDelegate.swift in Sources */,
+				F77264E527A41F0F0012E783 /* PersonViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

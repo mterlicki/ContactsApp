@@ -32,15 +32,23 @@ class ViewController: UIViewController {
     @objc private func didTapAdd(){
         let alert = UIAlertController(title: "New person", message: "Add new person", preferredStyle: .alert)
         alert.addTextField(configurationHandler: nil)
-        //alert.addTextField(configurationHandler: nil)
-        alert.addAction(UIAlertAction(title: "Submit", style: .cancel, handler: { _ in
-            guard let filed = alert.textFields?.first, let text = filed.text, !text.isEmpty else {
+
+        let submitButton = UIAlertAction(title: "Submit", style: .default, handler: { _ in
+            
+            guard let filed = alert.textFields?.first, let text = filed.text, !text.isEmpty
+            
+            else {
                 return
             }
             
             self.createPerson(name: text, gender: "men", age: 64)
-        }))
-    
+        })
+        let cancelButton = UIAlertAction(title: "Cancel", style: .destructive, handler: { _ in
+            return
+        })
+        
+        alert.addAction(submitButton)
+        alert.addAction(cancelButton)
         present(alert, animated: true)
         
     }
@@ -109,38 +117,50 @@ extension ViewController: UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        //Selected person
-        let person = self.persons[indexPath.row]
+        //  Selected person
+        let selectedPerson = self.persons[indexPath.row]
         
-        //Alert to edit name
+        // Alert to edit name
         
-        let alert = UIAlertController(title: "Edit person", message: "Edit name", preferredStyle: .alert)
-        alert.addTextField()
-        
-        let textfield = alert.textFields![0]
-        textfield.text = person.name
-        
-        //Configure button handler
-        
-        let  saveButton = UIAlertAction(title: "Save", style:. default) {(action) in
-            
-            let textfield = alert.textFields![0]
-            
-            person.name = textfield.text
-            
-            //Save changes
-            self.updatePerson(person: person, newName: textfield.text!, newGender: "men", newAge:22)
-            
-            //Refreshing tableView
-            self.getAllPersons()
-    }
-        // Adding button
-        
-        alert.addAction(saveButton)
-        
+//        let alert = UIAlertController(title: "Edit person", message: "Edit name", preferredStyle: .alert)
+//        alert.addTextField()
+//
+//        let textfield = alert.textFields![0]
+//        textfield.text = person.name
+//
+//        //Configure button handler
+//
+//        let  saveButton = UIAlertAction(title: "Save", style:. default) {(action) in
+//
+//            let textfield = alert.textFields![0]
+//
+//            person.name = textfield.text
+//
+//            //Save changes
+//            self.updatePerson(person: person, newName: textfield.text!, newGender: "men", newAge:22)
+//
+//            //Refreshing tableView
+//            self.getAllPersons()
+//        }
+//        let cancelButton = UIAlertAction(title: "Cancel", style: .destructive, handler: { _ in
+//            return
+//        })
+//
+//        // Adding buttons
+//
+//        alert.addAction(saveButton)
+//        alert.addAction(cancelButton)
         //Presenting alert
-        self.present(alert, animated: true, completion: nil)
-}
+        //self.present(alert, animated: true, completion: nil)
+        
+        guard let vc = self.storyboard!.instantiateViewController(withIdentifier: "personVC") as? PersonViewController else{
+            return
+        }
+        vc.person = selectedPerson
+        navigationController?.pushViewController(vc, animated: true)
+        //self.present(vc,animated: true)
+
+    }
 }
 
 extension ViewController: UITableViewDataSource{

@@ -29,20 +29,21 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDV-kh-yVA" userLabel="NameLabel">
-                                                    <rect key="frame" x="37" y="11" width="340" height="21"/>
+                                                    <rect key="frame" x="37" y="11" width="340" height="25"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ga5-QQ-j21" userLabel="AgeLabel">
-                                                    <rect key="frame" x="37" y="48" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="37" y="52" width="30" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFM-aB-d4A" userLabel="GenderLabel">
-                                                    <rect key="frame" x="119" y="47" width="265" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="107" y="51" width="277" height="17"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="genderLabel"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -61,6 +62,7 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="zFM-aB-d4A" secondAttribute="trailing" constant="10" id="wd3-Jl-aem"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="personCell"/>
                                         <connections>
                                             <outlet property="AgeLabel" destination="Ga5-QQ-j21" id="MC9-Ma-XA5"/>
                                             <outlet property="GenderLabel" destination="zFM-aB-d4A" id="e46-ob-0fK"/>
@@ -87,6 +89,88 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="122.54464285714285"/>
+        </scene>
+        <!--Person View Controller-->
+        <scene sceneID="4WL-tp-xk8">
+            <objects>
+                <viewController storyboardIdentifier="personVC" id="8sF-FK-YSI" customClass="PersonViewController" customModule="CoreDataDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Siy-15-t5r">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4fD-nB-kwp" userLabel="NameStackView">
+                                <rect key="frame" x="20" y="64" width="57" height="26.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WvF-HZ-eP0">
+                                        <rect key="frame" x="0.0" y="0.0" width="45" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" text=" " borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QPa-G2-A25">
+                                        <rect key="frame" x="45" y="0.0" width="12" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e9D-NH-lY4" userLabel="AgeStackView">
+                                <rect key="frame" x="20" y="110.5" width="57" height="26.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZtL-mq-hbQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text=" " borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1al-oA-VcD">
+                                        <rect key="frame" x="30" y="0.0" width="27" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ceQ-dL-yFq" userLabel="GenderStackView">
+                                <rect key="frame" x="20" y="157" width="88.5" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ik-O7-ugR">
+                                        <rect key="frame" x="0.0" y="0.0" width="56.5" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text=" " borderStyle="line" textAlignment="natural" minimumFontSize="17" id="vB2-pJ-vVY">
+                                        <rect key="frame" x="56.5" y="0.0" width="32" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mma-8X-FCR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="e9D-NH-lY4" firstAttribute="top" secondItem="4fD-nB-kwp" secondAttribute="bottom" constant="20" id="1z0-4a-6Zo"/>
+                            <constraint firstItem="mma-8X-FCR" firstAttribute="trailing" secondItem="e9D-NH-lY4" secondAttribute="trailing" constant="20" id="3xp-Fg-giw"/>
+                            <constraint firstItem="4fD-nB-kwp" firstAttribute="top" secondItem="mma-8X-FCR" secondAttribute="top" constant="20" id="4Bc-aM-cs6"/>
+                            <constraint firstItem="4fD-nB-kwp" firstAttribute="leading" secondItem="mma-8X-FCR" secondAttribute="leading" constant="20" id="5EV-21-HcX"/>
+                            <constraint firstItem="ceQ-dL-yFq" firstAttribute="leading" secondItem="mma-8X-FCR" secondAttribute="leading" constant="20" id="BWC-RJ-rZo"/>
+                            <constraint firstItem="mma-8X-FCR" firstAttribute="trailing" secondItem="4fD-nB-kwp" secondAttribute="trailing" constant="20" id="Q6o-zR-UIN"/>
+                            <constraint firstItem="e9D-NH-lY4" firstAttribute="leading" secondItem="mma-8X-FCR" secondAttribute="leading" constant="20" id="SLZ-RR-eYW"/>
+                            <constraint firstItem="ceQ-dL-yFq" firstAttribute="top" secondItem="e9D-NH-lY4" secondAttribute="bottom" constant="20" id="WVT-es-mB2"/>
+                            <constraint firstItem="mma-8X-FCR" firstAttribute="trailing" secondItem="ceQ-dL-yFq" secondAttribute="trailing" constant="20" id="wpx-cy-ad2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ageTextField" destination="1al-oA-VcD" id="0Uy-im-DLv"/>
+                        <outlet property="genderTextField" destination="vB2-pJ-vVY" id="3kH-Du-ZqC"/>
+                        <outlet property="nameTextField" destination="QPa-G2-A25" id="fDR-pe-fu3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l5Z-wa-1ft" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2088.4057971014495" y="122.54464285714285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Tpw-Cz-XJG">
