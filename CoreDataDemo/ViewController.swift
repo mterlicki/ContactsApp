@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - View Controler
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
@@ -15,6 +16,8 @@ class ViewController: UIViewController {
     
     private var persons = [Person]()
     
+    public var completion: ((Person?) -> Void)?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.title = "People"
@@ -22,25 +25,37 @@ class ViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapAdd))
+        self.tableView.estimatedRowHeight = 44.0
+        self.tableView.rowHeight = UITableView.automaticDimension
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapAdd))
     }
     
     @objc private func didTapAdd(){
-        let alert = UIAlertController(title: "New person", message: "Add new person", preferredStyle: .alert)
+        let alert = UIAlertController(title: "New person", message: "Enter person name", preferredStyle: .alert)
         alert.addTextField(configurationHandler: nil)
-        //alert.addTextField(configurationHandler: nil)
-        alert.addAction(UIAlertAction(title: "Submit", style: .cancel, handler: { _ in
-            guard let filed = alert.textFields?.first, let text = filed.text, !text.isEmpty else {
+
+        let submitButton = UIAlertAction(title: "Submit", style: .default, handler: { _ in
+            
+            guard let filed = alert.textFields?.first, let text = filed.text, !text.isEmpty
+            
+            else {
                 return
             }
             
-            self.createPerson(name: text, gender: "none", age: 64)
-        }))
-    
+            self.createPerson(name: text, gender: "men", age: 64)
+        })
+        let cancelButton = UIAlertAction(title: "Cancel", style: .destructive, handler: { _ in
+            return
+        })
+        
+        alert.addAction(submitButton)
+        alert.addAction(cancelButton)
         present(alert, animated: true)
         
     }
+    
+    // MARK: Core data functions
     
     func getAllPersons(){
         
@@ -48,7 +63,7 @@ class ViewController: UIViewController {
             persons = try context.fetch(Person.fetchRequest())
         }
         catch{
-            print("Error getting context")
+            print("Error getting context getAllPersons")
         }
         
         DispatchQueue.main.async {
@@ -68,7 +83,7 @@ class ViewController: UIViewController {
             getAllPersons()
         }
         catch{
-            print("Error saving context")
+            print("Error saving context on creating person")
         }
     }
     
@@ -80,11 +95,11 @@ class ViewController: UIViewController {
             try context.save()
         }
         catch{
-            print("Error saving context")
+            print("Error saving context on deleting person")
         }
     }
     
-    func upadePerson(person: Person, newName: String, newGender: String, newAge: Int64 ){
+    func updatePerson(person: Person, newName: String, newGender: String, newAge: Int64 ){
         person.name = newName
         person.gender = newGender
         person.age = newAge
@@ -93,63 +108,45 @@ class ViewController: UIViewController {
             try context.save()
         }
         catch{
-            print("Error saving context")
+            print("Error saving context update person")
         }
     }
 }
+
+// MARK: Table View functions
 
 extension ViewController: UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        //Selected person
-        let person = self.persons[indexPath.row]
+        //  Selected person
+        let selectedPerson = self.persons[indexPath.row]
         
-        //Alert to edit name
+        guard let personViewController = storyboard?.instantiateViewController(withIdentifier: "personVC") as? PersonViewController else { return  }
         
-        let alert = UIAlertController(title: "Edit person", message: "Edit name", preferredStyle: .alert)
-        alert.addTextField()
+        personViewController.person = selectedPerson
         
-        let textfiled = alert.textFields![0]
-        textfiled.text = person.name
-        
-        //Configure button handler
-        
-        let  saveButton = UIAlertAction(title: "Save", style:. default) {(action) in
-            
-            let textfield = alert.textFields![0]
-            
-            person.name = textfiled.text
-            
-            //Save changes
-            
-            do {
-                try self.context.save()
-            }
-            catch{
-                
-            }
-            self.getAllPersons()
+        self.navigationController?.pushViewController(personViewController, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
-        alert.addAction(saveButton)
-        
-        
-        self.present(alert, animated: true, completion: nil)
-}
 }
 
 extension ViewController: UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 85
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return persons.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let person = persons[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Person", for: indexPath)
+        let personCell = tableView.dequeueReusableCell(withIdentifier: "Person", for: indexPath) as? PersonCell
+        personCell?.setCell(with: person)
         
-        cell.textLabel?.text = person.name
-        
-        return cell
+        return personCell ?? UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
