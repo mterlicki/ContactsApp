@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     
     private var persons = [Person]()
     
+    public var completion: ((Person?) -> Void)?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.title = "People"
@@ -30,7 +32,7 @@ class ViewController: UIViewController {
     }
     
     @objc private func didTapAdd(){
-        let alert = UIAlertController(title: "New person", message: "Add new person", preferredStyle: .alert)
+        let alert = UIAlertController(title: "New person", message: "Enter person name", preferredStyle: .alert)
         alert.addTextField(configurationHandler: nil)
 
         let submitButton = UIAlertAction(title: "Submit", style: .default, handler: { _ in
@@ -120,46 +122,12 @@ extension ViewController: UITableViewDelegate{
         //  Selected person
         let selectedPerson = self.persons[indexPath.row]
         
-        // Alert to edit name
+        guard let personViewController = storyboard?.instantiateViewController(withIdentifier: "personVC") as? PersonViewController else { return  }
         
-//        let alert = UIAlertController(title: "Edit person", message: "Edit name", preferredStyle: .alert)
-//        alert.addTextField()
-//
-//        let textfield = alert.textFields![0]
-//        textfield.text = person.name
-//
-//        //Configure button handler
-//
-//        let  saveButton = UIAlertAction(title: "Save", style:. default) {(action) in
-//
-//            let textfield = alert.textFields![0]
-//
-//            person.name = textfield.text
-//
-//            //Save changes
-//            self.updatePerson(person: person, newName: textfield.text!, newGender: "men", newAge:22)
-//
-//            //Refreshing tableView
-//            self.getAllPersons()
-//        }
-//        let cancelButton = UIAlertAction(title: "Cancel", style: .destructive, handler: { _ in
-//            return
-//        })
-//
-//        // Adding buttons
-//
-//        alert.addAction(saveButton)
-//        alert.addAction(cancelButton)
-        //Presenting alert
-        //self.present(alert, animated: true, completion: nil)
+        personViewController.person = selectedPerson
         
-        guard let vc = self.storyboard!.instantiateViewController(withIdentifier: "personVC") as? PersonViewController else{
-            return
-        }
-        vc.person = selectedPerson
-        navigationController?.pushViewController(vc, animated: true)
-        //self.present(vc,animated: true)
-
+        self.navigationController?.pushViewController(personViewController, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
