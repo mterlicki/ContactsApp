@@ -16,7 +16,6 @@ class ViewController: UIViewController {
     
     private var persons = [Person]()
     
-    public var completion: ((Person?) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
