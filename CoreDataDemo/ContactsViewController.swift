@@ -8,7 +8,7 @@
 import UIKit
 
 // MARK: - View Controler
-class ViewController: UIViewController {
+class ContactsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -29,6 +29,7 @@ class ViewController: UIViewController {
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapAdd))
     }
+    
     
     @objc private func didTapAdd(){
         let alert = UIAlertController(title: "New person", message: "Enter person name", preferredStyle: .alert)
@@ -114,23 +115,22 @@ class ViewController: UIViewController {
 
 // MARK: Table View functions
 
-extension ViewController: UITableViewDelegate{
+extension ContactsViewController: UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         //  Selected person
         let selectedPerson = self.persons[indexPath.row]
-        
-        guard let personViewController = storyboard?.instantiateViewController(withIdentifier: "personVC") as? PersonViewController else { return  }
-        
+
+        guard let personViewController = storyboard?.instantiateViewController(withIdentifier: "personVC") as? EditPersonViewController else { return  }
+        personViewController.delegate = self
         personViewController.person = selectedPerson
-        
         self.navigationController?.pushViewController(personViewController, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
-extension ViewController: UITableViewDataSource{
+extension ContactsViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 85
@@ -170,3 +170,12 @@ extension ViewController: UITableViewDataSource{
         return UISwipeActionsConfiguration(actions: [action])
     }
 }
+
+extension ContactsViewController: EditPersonDelegate{
+    
+    func editPerson() {
+        self.tableView.reloadData()
+    }
+}
+
+

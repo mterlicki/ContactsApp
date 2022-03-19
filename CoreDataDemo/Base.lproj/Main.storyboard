@@ -12,7 +12,7 @@
         <!--People-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoreDataDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ContactsViewController" customModule="CoreDataDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,10 +90,10 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="122.54464285714285"/>
         </scene>
-        <!--Person View Controller-->
+        <!--Edit Person View Controller-->
         <scene sceneID="4WL-tp-xk8">
             <objects>
-                <viewController storyboardIdentifier="personVC" id="8sF-FK-YSI" customClass="PersonViewController" customModule="CoreDataDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="personVC" id="8sF-FK-YSI" customClass="EditPersonViewController" customModule="CoreDataDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Siy-15-t5r">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -204,6 +204,9 @@
                     <navigationItem key="navigationItem" id="dih-Zw-A42"/>
                     <connections>
                         <outlet property="ageLabel" destination="Kls-7o-32D" id="JN6-zf-hmH"/>
+                        <outlet property="editAgeButton" destination="Lbd-wl-xyd" id="3MD-jg-sfL"/>
+                        <outlet property="editGenderButton" destination="ACO-HH-Y0A" id="Sdc-P6-4Hd"/>
+                        <outlet property="editNameButton" destination="dyh-V1-iht" id="hSH-l2-wlB"/>
                         <outlet property="genderLabel" destination="ONK-Uw-hrS" id="sQe-tf-3nd"/>
                         <outlet property="nameLabel" destination="awS-fH-BMT" id="b24-vq-55U"/>
                     </connections>
@@ -211,6 +214,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l5Z-wa-1ft" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2088.4057971014495" y="122.54464285714285"/>
+        </scene>
+        <!--Add Person View Controller-->
+        <scene sceneID="s2U-DK-Lad">
+            <objects>
+                <viewController id="hcq-ge-F7y" customClass="AddPersonViewController" customModule="CoreDataDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2iG-7e-Z9i">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="UzN-nQ-tK5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="589-E7-Ff0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2077" y="850"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Tpw-Cz-XJG">

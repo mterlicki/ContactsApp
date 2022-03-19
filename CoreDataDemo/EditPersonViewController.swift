@@ -7,13 +7,21 @@
 
 import UIKit
 
-class PersonViewController: UIViewController {
+protocol EditPersonDelegate{
+    func editPerson()
+}
+
+class EditPersonViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var genderLabel: UILabel!
-    public var person: Person?
+    @IBOutlet weak var editNameButton: UIButton!
+    @IBOutlet weak var editAgeButton: UIButton!
+    @IBOutlet weak var editGenderButton: UIButton!
     
+    public var person: Person?
+    var delegate: EditPersonDelegate?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -22,12 +30,16 @@ class PersonViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
-        super.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(didTapDone))
+        super.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style:.plain , target: self, action: #selector(didTapEdit))
         super.navigationItem.title = person?.name?.uppercased()
         
         nameLabel.text = person?.name
         ageLabel.text = "\(person?.age ?? 0)"
         genderLabel.text = person?.gender
+        
+        editNameButton.isHidden = true
+        editAgeButton.isHidden = true
+        editGenderButton.isHidden = true
     }
     
     @IBAction func editName(_ sender: Any) {
@@ -51,7 +63,21 @@ class PersonViewController: UIViewController {
         person?.age = Int64(age ?? 0)
         person?.gender = genderLabel.text
         
-        navigationController?.popToRootViewController(animated: true)
+        editNameButton.isHidden = true
+        editAgeButton.isHidden = true
+        editGenderButton.isHidden = true
+        
+        super.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style:.plain , target: self, action: #selector(didTapEdit))
+        delegate?.editPerson()
+    }
+    
+    @objc private func didTapEdit(){
+        super.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(didTapDone))
+        
+        editNameButton.isHidden = false
+        editAgeButton.isHidden = false
+        editGenderButton.isHidden = false
+        
     }
     
     
@@ -79,4 +105,6 @@ class PersonViewController: UIViewController {
         present(alert, animated: true)
         
     }
+        
+
 }
