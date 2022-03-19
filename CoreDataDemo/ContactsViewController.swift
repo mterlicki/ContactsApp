@@ -35,10 +35,8 @@ class ContactsViewController: UIViewController {
         
         guard let addPersonViewController = storyboard?.instantiateViewController(withIdentifier: "addPersonViewController") as? AddPersonViewController else { return }
         
-        
+        addPersonViewController.delegate = self
         self.present(UINavigationController(rootViewController: addPersonViewController), animated: true, completion: nil)
-
-        
     }
     
     // MARK: Core data functions
@@ -58,19 +56,20 @@ class ContactsViewController: UIViewController {
     }
         
     
-    func addPerson(person: Person){
+    func addNewPerson(name: String, age: Int64, gender: String){
         let newPerson = Person(context: context)
-        newPerson.name = person.name
-        newPerson.gender = person.gender
-        newPerson.age = person.age
+        newPerson.name = name
+        newPerson.gender = gender
+        newPerson.age = age
+        newPerson.id = UUID()
         
         do{
             try context.save()
-            getAllPersons()
         }
         catch{
             print("Error saving context on creating person")
         }
+        
     }
     
     func deletePerson(person: Person){
@@ -157,16 +156,27 @@ extension ContactsViewController: UITableViewDataSource{
     }
 }
 
+// MARK: Extensions
+
 extension ContactsViewController: EditPersonDelegate{
     
     func editPerson() {
-        self.tableView.reloadData()
+        do{
+            try self.context.save()
+        }
+        catch{
+            
+        }
+        getAllPersons()
     }
 }
 
 extension ContactsViewController: AddPersonDelegate{
-    func addPerson(){
-        self.tableView.reloadData()
+    func addPerson(name: String, age: Int64, gender: String){
+    
+        addNewPerson(name: name, age: age, gender: gender)
+        
+        getAllPersons()
         
     }
 }

@@ -2,7 +2,7 @@
 //  Person+CoreDataClass.swift
 //  CoreDataDemo
 //
-//  Created by Michal Terlicki on 10/09/2021.
+//  Created by Michal Terlicki on 19/03/2022.
 //
 //
 

@@ -8,7 +8,7 @@
 import UIKit
 
 protocol AddPersonDelegate{
-    func addPerson(person: Person)
+    func addPerson(name: String, age: Int64, gender: String)
 }
 
 class AddPersonViewController: UIViewController {
@@ -18,7 +18,6 @@ class AddPersonViewController: UIViewController {
     @IBOutlet weak var genderTextField: UITextField!
     
     var delegate: AddPersonDelegate?
-    var person: Person = Person()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +32,11 @@ class AddPersonViewController: UIViewController {
     }
     
     @objc func didTapSave(){
-        
-        
+        let name = nameTextField.text ?? ""
+        let gender = genderTextField.text ?? ""
+        let age = Int(ageTextField.text ?? "")
+    
+        delegate?.addPerson(name: name, age: Int64(age ?? 0), gender: gender)
+        self.dismiss(animated: true, completion: nil)
     }
 }
