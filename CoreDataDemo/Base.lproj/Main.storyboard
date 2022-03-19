@@ -99,54 +99,53 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="fDs-gF-Zlu">
-                                <rect key="frame" x="20" y="64" width="374" height="165"/>
+                                <rect key="frame" x="20" y="64" width="374" height="145.5"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="62" translatesAutoresizingMaskIntoConstraints="NO" id="pT0-c0-6D3">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="31"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pT0-c0-6D3">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fz9-AT-GoA">
-                                                <rect key="frame" x="0.0" y="0.0" width="65.5" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="65.5" height="24"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awS-fH-BMT">
-                                                <rect key="frame" x="127.5" y="0.0" width="96.5" height="31"/>
+                                                <rect key="frame" x="85.5" y="0.0" width="96.5" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyh-V1-iht">
-                                                <rect key="frame" x="286" y="0.0" width="88" height="31"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system" title=" " titleAlignment="trailing"/>
+                                                <rect key="frame" x="202" y="0.0" width="172" height="24"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title=" " image="pencil" catalog="system"/>
                                                 <connections>
                                                     <action selector="editName:" destination="8sF-FK-YSI" eventType="touchUpInside" id="2gy-i3-2OX"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="62" translatesAutoresizingMaskIntoConstraints="NO" id="XTS-5F-cto">
-                                        <rect key="frame" x="0.0" y="67" width="374" height="31"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="XTS-5F-cto">
+                                        <rect key="frame" x="0.0" y="60" width="374" height="24"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ja-1w-8hL">
-                                                <rect key="frame" x="0.0" y="0.0" width="47.5" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="47.5" height="24"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ageLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kls-7o-32D">
-                                                <rect key="frame" x="109.5" y="0.0" width="80.5" height="31"/>
+                                                <rect key="frame" x="67.5" y="0.0" width="80.5" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lbd-wl-xyd">
-                                                <rect key="frame" x="252" y="0.0" width="122" height="31"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system" title=" " titleAlignment="trailing">
-                                                    <fontDescription key="titleFontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="11"/>
-                                                </buttonConfiguration>
+                                                <rect key="frame" x="168" y="0.0" width="206" height="24"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="11"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title=" " image="pencil" catalog="system"/>
                                                 <connections>
                                                     <action selector="editAge:" destination="8sF-FK-YSI" eventType="touchUpInside" id="GXR-Lu-Tob"/>
                                                 </connections>
@@ -156,28 +155,28 @@
                                             <constraint firstAttribute="trailing" secondItem="Lbd-wl-xyd" secondAttribute="trailing" id="0Jl-R8-8Pq"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="62" translatesAutoresizingMaskIntoConstraints="NO" id="eGw-5l-Gc9">
-                                        <rect key="frame" x="0.0" y="134" width="374" height="31"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eGw-5l-Gc9">
+                                        <rect key="frame" x="0.0" y="120" width="374" height="25.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Gender: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6e5-Qt-Cao">
-                                                <rect key="frame" x="0.0" y="0.0" width="83.5" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="83.5" height="25.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="genderLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONK-Uw-hrS">
-                                                <rect key="frame" x="145.5" y="0.0" width="99" height="31"/>
+                                                <rect key="frame" x="103.5" y="0.0" width="110" height="25.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACO-HH-Y0A">
-                                                <rect key="frame" x="306.5" y="0.0" width="67.5" height="31"/>
+                                                <rect key="frame" x="233.5" y="0.0" width="140.5" height="25.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="67.5" id="4sL-FS-06x"/>
                                                 </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system" title=" "/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title=" " image="pencil" catalog="system"/>
                                                 <connections>
                                                     <action selector="editGender:" destination="8sF-FK-YSI" eventType="touchUpInside" id="sOt-eI-O3n"/>
                                                 </connections>
@@ -218,17 +217,86 @@
         <!--Add Person View Controller-->
         <scene sceneID="s2U-DK-Lad">
             <objects>
-                <viewController id="hcq-ge-F7y" customClass="AddPersonViewController" customModule="CoreDataDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addPersonViewController" id="hcq-ge-F7y" customClass="AddPersonViewController" customModule="CoreDataDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2iG-7e-Z9i">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eNd-WQ-5LW">
+                                <rect key="frame" x="20" y="64" width="374" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6E9-Dr-Ehy">
+                                        <rect key="frame" x="0.0" y="0.0" width="45" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RBS-JC-hJd">
+                                        <rect key="frame" x="65" y="0.0" width="309" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="A0u-xq-ifM">
+                                <rect key="frame" x="20" y="146" width="374" height="32"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kjt-Tb-8S8">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="32"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fsM-WP-myF">
+                                        <rect key="frame" x="50" y="0.0" width="210" height="32"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="maO-Oc-xfL">
+                                        <rect key="frame" x="280" y="0.0" width="94" height="32"/>
+                                    </stepper>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uEl-FP-ilO">
+                                <rect key="frame" x="20" y="225" width="374.5" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3EV-Pk-4eF">
+                                        <rect key="frame" x="0.0" y="0.0" width="56.5" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="12K-pY-MBh">
+                                        <rect key="frame" x="76.5" y="0.0" width="298" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="UzN-nQ-tK5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eNd-WQ-5LW" firstAttribute="top" secondItem="UzN-nQ-tK5" secondAttribute="top" constant="20" id="4w4-RC-jB7"/>
+                            <constraint firstItem="A0u-xq-ifM" firstAttribute="leading" secondItem="UzN-nQ-tK5" secondAttribute="leading" constant="20" id="54F-gm-sKe"/>
+                            <constraint firstItem="UzN-nQ-tK5" firstAttribute="trailing" secondItem="uEl-FP-ilO" secondAttribute="trailing" constant="19.5" id="55O-vH-EZE"/>
+                            <constraint firstItem="UzN-nQ-tK5" firstAttribute="trailing" secondItem="A0u-xq-ifM" secondAttribute="trailing" constant="20" id="7aT-KJ-JhL"/>
+                            <constraint firstItem="UzN-nQ-tK5" firstAttribute="trailing" secondItem="eNd-WQ-5LW" secondAttribute="trailing" constant="20" id="MKK-TZ-Xg2"/>
+                            <constraint firstItem="eNd-WQ-5LW" firstAttribute="leading" secondItem="UzN-nQ-tK5" secondAttribute="leading" constant="20" id="cOD-Ga-eaw"/>
+                            <constraint firstItem="uEl-FP-ilO" firstAttribute="top" secondItem="A0u-xq-ifM" secondAttribute="bottom" constant="47" id="f4x-5B-lEA"/>
+                            <constraint firstItem="A0u-xq-ifM" firstAttribute="top" secondItem="eNd-WQ-5LW" secondAttribute="bottom" constant="48" id="ocF-KX-c7r"/>
+                            <constraint firstItem="uEl-FP-ilO" firstAttribute="leading" secondItem="UzN-nQ-tK5" secondAttribute="leading" constant="20" id="vzz-c0-6hQ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ageTextField" destination="fsM-WP-myF" id="XxA-iI-Tpy"/>
+                        <outlet property="genderTextField" destination="12K-pY-MBh" id="jUh-rh-JVf"/>
+                        <outlet property="nameTextField" destination="RBS-JC-hJd" id="zjC-ij-Ezl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="589-E7-Ff0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2077" y="850"/>
+            <point key="canvasLocation" x="2075.36231884058" y="849.77678571428567"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Tpw-Cz-XJG">

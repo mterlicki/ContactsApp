@@ -32,26 +32,12 @@ class ContactsViewController: UIViewController {
     
     
     @objc private func didTapAdd(){
-        let alert = UIAlertController(title: "New person", message: "Enter person name", preferredStyle: .alert)
-        alert.addTextField(configurationHandler: nil)
-
-        let submitButton = UIAlertAction(title: "Submit", style: .default, handler: { _ in
-            
-            guard let filed = alert.textFields?.first, let text = filed.text, !text.isEmpty
-            
-            else {
-                return
-            }
-            
-            self.createPerson(name: text, gender: "men", age: 64)
-        })
-        let cancelButton = UIAlertAction(title: "Cancel", style: .destructive, handler: { _ in
-            return
-        })
         
-        alert.addAction(submitButton)
-        alert.addAction(cancelButton)
-        present(alert, animated: true)
+        guard let addPersonViewController = storyboard?.instantiateViewController(withIdentifier: "addPersonViewController") as? AddPersonViewController else { return }
+        
+        
+        self.present(UINavigationController(rootViewController: addPersonViewController), animated: true, completion: nil)
+
         
     }
     
@@ -72,11 +58,11 @@ class ContactsViewController: UIViewController {
     }
         
     
-    func createPerson(name: String, gender: String, age: Int64){
+    func addPerson(person: Person){
         let newPerson = Person(context: context)
-        newPerson.name = name
-        newPerson.gender = gender
-        newPerson.age = age
+        newPerson.name = person.name
+        newPerson.gender = person.gender
+        newPerson.age = person.age
         
         do{
             try context.save()
@@ -178,4 +164,9 @@ extension ContactsViewController: EditPersonDelegate{
     }
 }
 
-
+extension ContactsViewController: AddPersonDelegate{
+    func addPerson(){
+        self.tableView.reloadData()
+        
+    }
+}

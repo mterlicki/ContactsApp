@@ -7,23 +7,33 @@
 
 import UIKit
 
+protocol AddPersonDelegate{
+    func addPerson(person: Person)
+}
+
 class AddPersonViewController: UIViewController {
 
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var ageTextField: UITextField!
+    @IBOutlet weak var genderTextField: UITextField!
+    
+    var delegate: AddPersonDelegate?
+    var person: Person = Person()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        super.navigationItem.title = "Add person"
+        super.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(didTapCancel))
+        super.navigationItem.rightBarButtonItem =
+        UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(didTapSave))
+    }
 
-        // Do any additional setup after loading the view.
+    @objc func didTapCancel(){
+        self.dismiss(animated: true, completion: nil)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func didTapSave(){
+        
+        
     }
-    */
-
 }
