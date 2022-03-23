@@ -69,6 +69,7 @@ class EditPersonViewController: UIViewController {
         
         super.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style:.plain , target: self, action: #selector(didTapEdit))
         delegate?.editPerson()
+        super.navigationItem.title = person?.name?.uppercased()
     }
     
     @objc private func didTapEdit(){

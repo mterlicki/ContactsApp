@@ -113,11 +113,9 @@
 			children = (
 				F784176C26EB2A79001553D7 /* Model */,
 				F784172F26EB2899001553D7 /* AppDelegate.swift */,
-				F7BA230B2791B552000E8ADC /* PersonCell.swift */,
 				F784173126EB2899001553D7 /* SceneDelegate.swift */,
-				F7B0705D27E63BE500BA37E8 /* AddPersonViewController.swift */,
-				F784173326EB2899001553D7 /* ContactsViewController.swift */,
-				F77264E427A41F0F0012E783 /* EditPersonViewController.swift */,
+				F7DF287827EB797900F0B9B7 /* Cells */,
+				F7DF287727EB78F400F0B9B7 /* View Controllers */,
 				F784173526EB2899001553D7 /* Main.storyboard */,
 				F784173B26EB289C001553D7 /* Assets.xcassets */,
 				F784173D26EB289C001553D7 /* LaunchScreen.storyboard */,
@@ -152,6 +150,24 @@
 				F763FF1D27E678F100E0A2CF /* Person+CoreDataProperties.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F7DF287727EB78F400F0B9B7 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F7B0705D27E63BE500BA37E8 /* AddPersonViewController.swift */,
+				F784173326EB2899001553D7 /* ContactsViewController.swift */,
+				F77264E427A41F0F0012E783 /* EditPersonViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		F7DF287827EB797900F0B9B7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F7BA230B2791B552000E8ADC /* PersonCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

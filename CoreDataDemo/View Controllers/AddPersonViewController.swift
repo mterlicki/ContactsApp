@@ -16,6 +16,13 @@ class AddPersonViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var ageTextField: UITextField!
     @IBOutlet weak var genderTextField: UITextField!
+    @IBOutlet weak var stepper: UIStepper!
+    
+
+    @IBAction func stepperValueChanged(_ sender: UIStepper) {
+        ageTextField.text = Int(sender.value).description
+    }
+    
     
     var delegate: AddPersonDelegate?
     
