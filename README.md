@@ -1,1 +1,1 @@
-# CoreDataDemo
+# Contacts App
