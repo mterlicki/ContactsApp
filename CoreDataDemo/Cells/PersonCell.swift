@@ -20,7 +20,7 @@ class PersonCell: UITableViewCell {
     func setCell(with person:Person){
             nameLabel.text = person.name
             AgeLabel.text = "Age: \(person.age)"
-            GenderLabel.text = "Gender: \(person.gender ?? "unknown")"
+            GenderLabel.text = "Gender: \(person.gender ?? "nn")"
     }
     
 

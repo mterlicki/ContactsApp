@@ -19,15 +19,17 @@ class ContactsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.title = "People"
+        navigationController?.title = "Contacts"
         getAllPersons()
         tableView.delegate = self
         tableView.dataSource = self
         
         self.tableView.estimatedRowHeight = 44.0
         self.tableView.rowHeight = UITableView.automaticDimension
+        tableView.accessibilityIdentifier = "contactTableView"
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapAdd))
+        navigationItem.rightBarButtonItem?.accessibilityIdentifier = "addContactButton"
     }
     
     
@@ -38,6 +40,7 @@ class ContactsViewController: UIViewController {
         addPersonViewController.delegate = self
         self.present(UINavigationController(rootViewController: addPersonViewController), animated: true, completion: nil)
     }
+    
     
     // MARK: Core data functions
     

@@ -25,15 +25,21 @@ class AddPersonViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        super.navigationItem.title = "Add person"
+        super.navigationItem.title = "Add contact"
         super.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(didTapCancel))
+        super.navigationItem.leftBarButtonItem?.accessibilityIdentifier = "cancelButton"
+        
         super.navigationItem.rightBarButtonItem =
         UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(didTapSave))
+        super.navigationItem.rightBarButtonItem?.accessibilityIdentifier = "saveButton"
+        
         nameErrorLabel.text = "Required"
         ageErrorLabel.text = ""
         genderErrorLabel.text = "Required"
             
     }
+    
+    // MARK: Navigation bar functions
 
     @objc func didTapCancel(){
         self.dismiss(animated: true, completion: nil)
@@ -43,11 +49,14 @@ class AddPersonViewController: UIViewController {
         
         if formHasError(){
             let alert = UIAlertController(title: "Validation error", message: "The form has errors. Correct the data to save.", preferredStyle: .alert)
-            let cancelButton = UIAlertAction(title: "Ok", style: .default, handler: { _ in
+            alert.view.accessibilityIdentifier = "formErrorAlert"
+            
+            let okButton = UIAlertAction(title: "Ok", style: .default, handler: { _ in
                 return
             })
+            okButton.accessibilityIdentifier = "alertOkButton"
+            alert.addAction(okButton)
             
-            alert.addAction(cancelButton)
             present(alert, animated: true)
         }
         else
@@ -62,6 +71,8 @@ class AddPersonViewController: UIViewController {
         }
         
     }
+    
+    // MARK: Validators
     
     @IBAction func ageTextFieldChanged(_ sender: Any) {
         if let age = ageTextField.text
@@ -85,6 +96,10 @@ class AddPersonViewController: UIViewController {
     
     private func invalidAge (_ value: String) -> String?
     {
+        if value.count == 0
+        {
+            return "Age is required"
+        }
         let set = CharacterSet(charactersIn: value)
         if !CharacterSet.decimalDigits.isSuperset(of: set)
         {
@@ -137,6 +152,10 @@ class AddPersonViewController: UIViewController {
     
     private func invalidGender (_ value: String) -> String?
     {
+        if value.count == 0
+        {
+            return "Gender is required"
+        }
         if value != "men" && value != "woman" && value != "nn"
         {
             return "Invalid gender, type: men/woman/nn"

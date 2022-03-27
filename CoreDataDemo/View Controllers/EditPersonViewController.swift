@@ -23,10 +23,6 @@ class EditPersonViewController: UIViewController {
     public var person: Person?
     var delegate: EditPersonDelegate?
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
@@ -37,9 +33,9 @@ class EditPersonViewController: UIViewController {
         ageLabel.text = "\(person?.age ?? 0)"
         genderLabel.text = person?.gender
         
-        editNameButton.isHidden = true
-        editAgeButton.isHidden = true
-        editGenderButton.isHidden = true
+        editNameButton.isUserInteractionEnabled = false
+        editAgeButton.isUserInteractionEnabled = false
+        editGenderButton.isUserInteractionEnabled = false
     }
     
     @IBAction func editName(_ sender: Any) {
@@ -63,21 +59,23 @@ class EditPersonViewController: UIViewController {
         person?.age = Int64(age ?? 0)
         person?.gender = genderLabel.text
         
-        editNameButton.isHidden = true
-        editAgeButton.isHidden = true
-        editGenderButton.isHidden = true
+        editNameButton.isUserInteractionEnabled = false
+        editAgeButton.isUserInteractionEnabled = false
+        editGenderButton.isUserInteractionEnabled = false
         
         super.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style:.plain , target: self, action: #selector(didTapEdit))
         delegate?.editPerson()
         super.navigationItem.title = person?.name?.uppercased()
+        super.navigationItem.rightBarButtonItem?.accessibilityIdentifier = "editContactButton"
     }
     
     @objc private func didTapEdit(){
         super.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(didTapDone))
+        super.navigationItem.rightBarButtonItem?.accessibilityIdentifier = "doneButton"
         
-        editNameButton.isHidden = false
-        editAgeButton.isHidden = false
-        editGenderButton.isHidden = false
+        editNameButton.isUserInteractionEnabled = true
+        editAgeButton.isUserInteractionEnabled = true
+        editGenderButton.isUserInteractionEnabled = true
         
     }
     
@@ -85,8 +83,10 @@ class EditPersonViewController: UIViewController {
     func createAlert(title: String, message: String, label: UILabel) -> Void {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
+        
         alert.addTextField(configurationHandler: nil)
         alert.textFields?.first?.text = label.text
+        alert.view.accessibilityIdentifier = "editAlert"
         
         let submitButton = UIAlertAction(title: "Submit", style: .default, handler: { _ in
             
@@ -97,9 +97,12 @@ class EditPersonViewController: UIViewController {
             
             label.text = text
         })
+        submitButton.accessibilityIdentifier = "alertSubmitButton"
+        
         let cancelButton = UIAlertAction(title: "Cancel", style: .destructive, handler: { _ in
             return
         })
+        cancelButton.accessibilityIdentifier = "alertCancelButton"
         
         alert.addAction(submitButton)
         alert.addAction(cancelButton)
