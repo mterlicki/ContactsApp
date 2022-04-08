@@ -30,19 +30,21 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDV-kh-yVA" userLabel="NameLabel">
                                                     <rect key="frame" x="37" y="11" width="340" height="25"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="personNameLabel"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ga5-QQ-j21" userLabel="AgeLabel">
                                                     <rect key="frame" x="37" y="52" width="30" height="17"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="personAgeLabel"/>
                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFM-aB-d4A" userLabel="GenderLabel">
                                                     <rect key="frame" x="107" y="51" width="277" height="17"/>
-                                                    <accessibility key="accessibilityConfiguration" identifier="genderLabel"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="pesonGenderLabel"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -99,10 +101,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="fDs-gF-Zlu">
-                                <rect key="frame" x="20" y="64" width="393.5" height="152.5"/>
+                                <rect key="frame" x="20" y="64" width="384" height="152.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pT0-c0-6D3">
-                                        <rect key="frame" x="0.0" y="0.0" width="393.5" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fz9-AT-GoA">
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="31"/>
@@ -125,7 +127,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyh-V1-iht">
-                                                <rect key="frame" x="347" y="0.0" width="46.5" height="31"/>
+                                                <rect key="frame" x="337.5" y="0.0" width="46.5" height="31"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="nameEditButton"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system" title=" ">
@@ -138,7 +140,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XTS-5F-cto">
-                                        <rect key="frame" x="0.0" y="67" width="393.5" height="24"/>
+                                        <rect key="frame" x="0.0" y="67" width="384" height="24"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ja-1w-8hL">
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="24"/>
@@ -151,8 +153,8 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ageLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kls-7o-32D">
-                                                <rect key="frame" x="116" y="0.0" width="200" height="24"/>
-                                                <accessibility key="accessibilityConfiguration" identifier="constactAgeLabel"/>
+                                                <rect key="frame" x="111.5" y="0.0" width="200" height="24"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="contactAgeLabel"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="200" id="lru-Pw-bNR"/>
                                                 </constraints>
@@ -161,7 +163,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lbd-wl-xyd">
-                                                <rect key="frame" x="371" y="0.0" width="22.5" height="24"/>
+                                                <rect key="frame" x="361.5" y="0.0" width="22.5" height="24"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="ageEditButton"/>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="11"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -176,7 +178,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eGw-5l-Gc9">
-                                        <rect key="frame" x="0.0" y="127" width="393.5" height="25.5"/>
+                                        <rect key="frame" x="0.0" y="127" width="384" height="25.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Gender: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6e5-Qt-Cao">
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="25.5"/>
@@ -189,7 +191,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="genderLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONK-Uw-hrS">
-                                                <rect key="frame" x="116" y="0.0" width="200" height="25.5"/>
+                                                <rect key="frame" x="111.5" y="0.0" width="200" height="25.5"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="contactGenderLabel"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="200" id="ftV-ho-1rJ"/>
@@ -199,11 +201,8 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACO-HH-Y0A">
-                                                <rect key="frame" x="371" y="0.0" width="22.5" height="25.5"/>
+                                                <rect key="frame" x="361.5" y="0.0" width="22.5" height="25.5"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="genderEditButton"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="67.5" id="4sL-FS-06x"/>
-                                                </constraints>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title=" " image="pencil" catalog="system"/>
                                                 <connections>

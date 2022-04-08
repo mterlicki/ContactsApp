@@ -21,6 +21,12 @@
 		F784175526EB289C001553D7 /* CoreDataDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F784175426EB289C001553D7 /* CoreDataDemoUITests.swift */; };
 		F7B0705E27E63BE500BA37E8 /* AddPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B0705D27E63BE500BA37E8 /* AddPersonViewController.swift */; };
 		F7BA230C2791B552000E8ADC /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BA230B2791B552000E8ADC /* PersonCell.swift */; };
+		F7C0BCC227F8824F00EDA802 /* ContactListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C0BCC127F8824F00EDA802 /* ContactListScreen.swift */; };
+		F7C0BCC427F8827C00EDA802 /* AddPersonScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C0BCC327F8827C00EDA802 /* AddPersonScreen.swift */; };
+		F7C0BCC627F8829B00EDA802 /* EditPersonScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C0BCC527F8829B00EDA802 /* EditPersonScreen.swift */; };
+		F7C0BCC827F8833300EDA802 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C0BCC727F8833300EDA802 /* Screen.swift */; };
+		F7C0BCCA27F8862300EDA802 /* BaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C0BCC927F8862300EDA802 /* BaseTest.swift */; };
+		F7C0BCCC27F8939D00EDA802 /* ContactListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C0BCCB27F8939D00EDA802 /* ContactListTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +67,12 @@
 		F784175626EB289C001553D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7B0705D27E63BE500BA37E8 /* AddPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonViewController.swift; sourceTree = "<group>"; };
 		F7BA230B2791B552000E8ADC /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
+		F7C0BCC127F8824F00EDA802 /* ContactListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListScreen.swift; sourceTree = "<group>"; };
+		F7C0BCC327F8827C00EDA802 /* AddPersonScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonScreen.swift; sourceTree = "<group>"; };
+		F7C0BCC527F8829B00EDA802 /* EditPersonScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPersonScreen.swift; sourceTree = "<group>"; };
+		F7C0BCC727F8833300EDA802 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
+		F7C0BCC927F8862300EDA802 /* BaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTest.swift; sourceTree = "<group>"; };
+		F7C0BCCB27F8939D00EDA802 /* ContactListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,7 +149,11 @@
 		F784175326EB289C001553D7 /* CoreDataDemoUITests */ = {
 			isa = PBXGroup;
 			children = (
-				F784175426EB289C001553D7 /* CoreDataDemoUITests.swift */,
+				F7EDEB1127F3722F00B1EB39 /* Tests */,
+				F7EDEB1027F3722100B1EB39 /* Screens */,
+				F7EDEB0F27F3721100B1EB39 /* TestData */,
+				F7EDEB0E27F371F700B1EB39 /* Utility */,
+				F7EDEB0D27F371D300B1EB39 /* Extensions */,
 				F784175626EB289C001553D7 /* Info.plist */,
 			);
 			path = CoreDataDemoUITests;
@@ -168,6 +184,48 @@
 				F7BA230B2791B552000E8ADC /* PersonCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		F7EDEB0D27F371D300B1EB39 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F7EDEB0E27F371F700B1EB39 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		F7EDEB0F27F3721100B1EB39 /* TestData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TestData;
+			sourceTree = "<group>";
+		};
+		F7EDEB1027F3722100B1EB39 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				F7C0BCC127F8824F00EDA802 /* ContactListScreen.swift */,
+				F7C0BCC327F8827C00EDA802 /* AddPersonScreen.swift */,
+				F7C0BCC527F8829B00EDA802 /* EditPersonScreen.swift */,
+				F7C0BCC727F8833300EDA802 /* Screen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		F7EDEB1127F3722F00B1EB39 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F784175426EB289C001553D7 /* CoreDataDemoUITests.swift */,
+				F7C0BCC927F8862300EDA802 /* BaseTest.swift */,
+				F7C0BCCB27F8939D00EDA802 /* ContactListTests.swift */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,6 +382,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7C0BCCC27F8939D00EDA802 /* ContactListTests.swift in Sources */,
+				F7C0BCC827F8833300EDA802 /* Screen.swift in Sources */,
+				F7C0BCC427F8827C00EDA802 /* AddPersonScreen.swift in Sources */,
+				F7C0BCC227F8824F00EDA802 /* ContactListScreen.swift in Sources */,
+				F7C0BCC627F8829B00EDA802 /* EditPersonScreen.swift in Sources */,
+				F7C0BCCA27F8862300EDA802 /* BaseTest.swift in Sources */,
 				F784175526EB289C001553D7 /* CoreDataDemoUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -565,6 +629,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 98H8Q69ZJ4;
 				INFOPLIST_FILE = CoreDataDemoUITests/Info.plist;
@@ -585,6 +650,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 98H8Q69ZJ4;
 				INFOPLIST_FILE = CoreDataDemoUITests/Info.plist;
