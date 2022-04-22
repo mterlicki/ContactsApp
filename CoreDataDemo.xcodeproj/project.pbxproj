@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F7565AFA28133D3200D1D64F /* CoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7565AF928133D3200D1D64F /* CoreDataStore.swift */; };
 		F763FF1E27E678F100E0A2CF /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F763FF1C27E678F100E0A2CF /* Person+CoreDataClass.swift */; };
 		F763FF1F27E678F100E0A2CF /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F763FF1D27E678F100E0A2CF /* Person+CoreDataProperties.swift */; };
 		F77264E527A41F0F0012E783 /* EditPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77264E427A41F0F0012E783 /* EditPersonViewController.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F7565AF928133D3200D1D64F /* CoreDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStore.swift; sourceTree = "<group>"; };
 		F763FF1C27E678F100E0A2CF /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F763FF1D27E678F100E0A2CF /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F77264E427A41F0F0012E783 /* EditPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPersonViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 			children = (
 				F763FF1C27E678F100E0A2CF /* Person+CoreDataClass.swift */,
 				F763FF1D27E678F100E0A2CF /* Person+CoreDataProperties.swift */,
+				F7565AF928133D3200D1D64F /* CoreDataStore.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -376,7 +379,11 @@
 				F7BA230C2791B552000E8ADC /* PersonCell.swift in Sources */,
 				F763FF1F27E678F100E0A2CF /* Person+CoreDataProperties.swift in Sources */,
 				F784173426EB2899001553D7 /* ContactsViewController.swift in Sources */,
+<<<<<<< Updated upstream
 				F7A8397A2803372300562D6F /* LaunchArgumentsHandler.swift in Sources */,
+=======
+				F7565AFA28133D3200D1D64F /* CoreDataStore.swift in Sources */,
+>>>>>>> Stashed changes
 				F784173A26EB2899001553D7 /* CoreDataDemo.xcdatamodeld in Sources */,
 				F784173026EB2899001553D7 /* AppDelegate.swift in Sources */,
 				F784173226EB2899001553D7 /* SceneDelegate.swift in Sources */,

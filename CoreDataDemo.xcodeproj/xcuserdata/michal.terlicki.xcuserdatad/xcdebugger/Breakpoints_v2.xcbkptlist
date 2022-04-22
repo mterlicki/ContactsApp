@@ -3,4 +3,54 @@
    uuid = "2737D710-B7E7-4BE2-8F05-9BB95E2F373B"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6C5487F0-BE43-47D4-B7F6-2D622F1099E4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoreDataDemoUITests/Tests/ContactListTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "testAddContactButtonOpensForm()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6C5487F0-BE43-47D4-B7F6-2D622F1099E4 - f79dca59ec868071"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CoreDataDemoUITests.ContactListTests.testAddContactButtonOpensForm() -&gt; ()"
+                  moduleName = "CoreDataDemoUITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/michal.terlicki/CoreDataDemo/CoreDataDemoUITests/Tests/ContactListTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "320">
+               </Location>
+               <Location
+                  uuid = "6C5487F0-BE43-47D4-B7F6-2D622F1099E4 - 541709037c81c63f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CoreDataDemoUITests.ContactListTests.testAddContactButtonOpensForm() throws -&gt; ()"
+                  moduleName = "CoreDataDemoUITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/michal.terlicki/CoreDataDemo/CoreDataDemoUITests/Tests/ContactListTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "327">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

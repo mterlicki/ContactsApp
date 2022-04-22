@@ -12,7 +12,7 @@ class ContactsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let context = (UIApplication.shared.delegate as! AppDelegate).CoreDataStack.persistentContainer.viewContext
     
     private var persons = [Person]()
     
