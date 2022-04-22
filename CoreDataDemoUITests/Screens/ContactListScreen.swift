@@ -11,6 +11,8 @@ import CoreDataDemo
 struct ContactListScreen: Screen {
     let app: XCUIApplication
     
+    // MARK: Identifiers
+    
     private enum Identifiers {
         static let navigationBar = "naviagtionBar"
         static let addContact = "addContactButton"
@@ -25,13 +27,15 @@ struct ContactListScreen: Screen {
         static let personGender = "pesonGenderLabel"
     }
     
+    // MARK: Handlers
+    
     func addContact() -> AddPersonScreen {
         app.buttons[Identifiers.addContact].tap()
         return AddPersonScreen(app: app)
     }
     
     func selectContact(_ name: String) -> EditPersonScreen {
-        app.tables[Identifiers.contactList].staticTexts[name].tap()
+        app.tables[Identifiers.contactList].cells[name].tap()
         return EditPersonScreen(app: app)
     }
     
@@ -57,16 +61,18 @@ struct ContactListScreen: Screen {
     }
     
     func swipeToDeleteContact(_ name:String) -> Self {
-        app.tables[Identifiers.contactList].staticTexts[name].swipeLeft()
+        app.tables[Identifiers.contactList].cells[name].swipeLeft()
         return self
     }
+    
+    // MARK: Assertions
 
     func verifyContactsName(_ name:String) -> Self {
         
         return self
     }
     
-    func verifyDeleteButtonIsHittable() {
+    func verifyDeleteButtonIsHittable(){
         XCTAssertTrue(app.buttons[Identifiers.deleteButton].isHittable)
     }
     

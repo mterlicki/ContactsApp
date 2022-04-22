@@ -19,6 +19,8 @@
 		F784173F26EB289C001553D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F784173D26EB289C001553D7 /* LaunchScreen.storyboard */; };
 		F784174A26EB289C001553D7 /* CoreDataDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F784174926EB289C001553D7 /* CoreDataDemoTests.swift */; };
 		F784175526EB289C001553D7 /* CoreDataDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F784175426EB289C001553D7 /* CoreDataDemoUITests.swift */; };
+		F7A0158528032BEB00533FE2 /* AddContactTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A0158428032BEB00533FE2 /* AddContactTest.swift */; };
+		F7A8397A2803372300562D6F /* LaunchArgumentsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A839792803372300562D6F /* LaunchArgumentsHandler.swift */; };
 		F7B0705E27E63BE500BA37E8 /* AddPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B0705D27E63BE500BA37E8 /* AddPersonViewController.swift */; };
 		F7BA230C2791B552000E8ADC /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BA230B2791B552000E8ADC /* PersonCell.swift */; };
 		F7C0BCC227F8824F00EDA802 /* ContactListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C0BCC127F8824F00EDA802 /* ContactListScreen.swift */; };
@@ -65,6 +67,8 @@
 		F784175026EB289C001553D7 /* CoreDataDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F784175426EB289C001553D7 /* CoreDataDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDemoUITests.swift; sourceTree = "<group>"; };
 		F784175626EB289C001553D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7A0158428032BEB00533FE2 /* AddContactTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactTest.swift; sourceTree = "<group>"; };
+		F7A839792803372300562D6F /* LaunchArgumentsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchArgumentsHandler.swift; sourceTree = "<group>"; };
 		F7B0705D27E63BE500BA37E8 /* AddPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonViewController.swift; sourceTree = "<group>"; };
 		F7BA230B2791B552000E8ADC /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 		F7C0BCC127F8824F00EDA802 /* ContactListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListScreen.swift; sourceTree = "<group>"; };
@@ -123,6 +127,7 @@
 		F784172E26EB2899001553D7 /* CoreDataDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F7A839782803370200562D6F /* Handlers */,
 				F784176C26EB2A79001553D7 /* Model */,
 				F784172F26EB2899001553D7 /* AppDelegate.swift */,
 				F784173126EB2899001553D7 /* SceneDelegate.swift */,
@@ -166,6 +171,14 @@
 				F763FF1D27E678F100E0A2CF /* Person+CoreDataProperties.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F7A839782803370200562D6F /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				F7A839792803372300562D6F /* LaunchArgumentsHandler.swift */,
+			);
+			path = Handlers;
 			sourceTree = "<group>";
 		};
 		F7DF287727EB78F400F0B9B7 /* View Controllers */ = {
@@ -224,6 +237,7 @@
 				F784175426EB289C001553D7 /* CoreDataDemoUITests.swift */,
 				F7C0BCC927F8862300EDA802 /* BaseTest.swift */,
 				F7C0BCCB27F8939D00EDA802 /* ContactListTests.swift */,
+				F7A0158428032BEB00533FE2 /* AddContactTest.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -362,6 +376,7 @@
 				F7BA230C2791B552000E8ADC /* PersonCell.swift in Sources */,
 				F763FF1F27E678F100E0A2CF /* Person+CoreDataProperties.swift in Sources */,
 				F784173426EB2899001553D7 /* ContactsViewController.swift in Sources */,
+				F7A8397A2803372300562D6F /* LaunchArgumentsHandler.swift in Sources */,
 				F784173A26EB2899001553D7 /* CoreDataDemo.xcdatamodeld in Sources */,
 				F784173026EB2899001553D7 /* AppDelegate.swift in Sources */,
 				F784173226EB2899001553D7 /* SceneDelegate.swift in Sources */,
@@ -386,6 +401,7 @@
 				F7C0BCC827F8833300EDA802 /* Screen.swift in Sources */,
 				F7C0BCC427F8827C00EDA802 /* AddPersonScreen.swift in Sources */,
 				F7C0BCC227F8824F00EDA802 /* ContactListScreen.swift in Sources */,
+				F7A0158528032BEB00533FE2 /* AddContactTest.swift in Sources */,
 				F7C0BCC627F8829B00EDA802 /* EditPersonScreen.swift in Sources */,
 				F7C0BCCA27F8862300EDA802 /* BaseTest.swift in Sources */,
 				F784175526EB289C001553D7 /* CoreDataDemoUITests.swift in Sources */,
