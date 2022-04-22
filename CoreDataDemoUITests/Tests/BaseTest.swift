@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import CoreDataDemo
 
 class BaseTest: XCTestCase {
     var app: XCUIApplication!
@@ -13,7 +14,7 @@ class BaseTest: XCTestCase {
     override func setUp() {
         continueAfterFailure = false
         app = XCUIApplication()
-        app.launchArguments = ["testing"]
+        app.launchArguments = ["UITesting"]
         app.launch()
     }
 

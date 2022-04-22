@@ -12,7 +12,7 @@ enum StorageType {
   case persistent, inMemory
 }
 
-class CoreDataStore {
+class CoreDataController {
   let persistentContainer: NSPersistentContainer
 
   init(_ storageType: StorageType = .persistent) {
