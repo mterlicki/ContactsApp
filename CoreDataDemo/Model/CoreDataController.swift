@@ -8,17 +8,14 @@
 import Foundation
 import CoreData
 
-enum StorageType {
-  case persistent, inMemory
-}
 
 class CoreDataController {
   let persistentContainer: NSPersistentContainer
 
-  init(_ storageType: StorageType = .persistent) {
+  init() {
     self.persistentContainer = NSPersistentContainer(name: "CoreDataDemo")
 
-    if storageType == .inMemory {
+      if CommandLine.arguments.contains("UITesting") {
       let description = NSPersistentStoreDescription()
       description.url = URL(fileURLWithPath: "/dev/null")
       self.persistentContainer.persistentStoreDescriptions = [description]
