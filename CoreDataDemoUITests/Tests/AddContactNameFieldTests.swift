@@ -33,11 +33,23 @@ class AddContactNameFieldTests: BaseTest {
             .nameErrorLabelValueEqualsTo("")
     }
     
+    
+    
     func testErrorLabelShowsMessageAfterDeletingName() throws{
         ContactListScreen(app: app)
             .tapAddContact()
             .typeName("John")
             .clearName()
             .nameErrorLabelValueEqualsTo("Name is required")
+    }
+    
+    func testErrorLabelIsEmptyAfterSavingWithError() throws{
+        ContactListScreen(app: app)
+            .tapAddContact()
+            .typeName("John")
+            .typeAge("33")
+            .typeGender("men")
+            .tapSave()
+            .verifyNumberOfContactsEquals(1)
     }
 }

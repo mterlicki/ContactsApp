@@ -12,7 +12,6 @@ class CoreDataDemoUITests: BaseTest {
     func testExample() throws {
         
         let app = XCUIApplication()
-                      
             
     }
 

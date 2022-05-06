@@ -8,7 +8,7 @@
 import XCTest
 import CoreDataDemo
 
-struct AddPersonScreen: Screen {
+struct AddContactScreen: Screen {
     var app: XCUIApplication
     
     // MARK: Identifiers
@@ -22,7 +22,8 @@ struct AddPersonScreen: Screen {
         
         static let ageLabel = "ageLabel"
         static let ageTextField = "ageTextField"
-        static let ageStepper = "ageStepper"
+        static let ageIncrement = "Increment"
+        static let ageDecrement = "Decrement"
         static let ageErrorLabel = "ageErrorLabel"
         
         static let genderLabel = "genderLabel"
@@ -35,6 +36,16 @@ struct AddPersonScreen: Screen {
     
     
     // MARK: Handlers
+    
+    func tapCancel() -> Self{
+        app.navigationBars[Identifiers.navigationBar].buttons[Identifiers.cancelButton].tap()
+        return self
+    }
+    
+    func tapSave() -> ContactListScreen{
+        app.navigationBars[Identifiers.navigationBar].buttons[Identifiers.saveButton].tap()
+        return ContactListScreen(app: app)
+    }
     
     func tapNameTextField() -> Self{
         app.textFields[Identifiers.nameTextField].tap()
@@ -56,7 +67,6 @@ struct AddPersonScreen: Screen {
             for _ in value{
                 app.keys["delete"].tap()
             }
-            
         }
         return self
     }
@@ -72,13 +82,23 @@ struct AddPersonScreen: Screen {
         return self
     }
     
-    func increaseAge() -> Self{
-        app.steppers[Identifiers.ageStepper].keys["+"].tap()
+    func tapIncreaseAge() -> Self{
+        app.buttons[Identifiers.ageIncrement].tap()
         return self
     }
     
-    func decreaseAge() -> Self{
-        app.steppers[Identifiers.ageStepper].keys["-"].tap()
+    func tapIncreaseAgeWith(_ number: Int) -> Self{
+        app.buttons[Identifiers.ageIncrement].tap(withNumberOfTaps: number, numberOfTouches: 1)
+        return self
+    }
+    
+    func tapDecreaseAge() -> Self{
+        app.buttons[Identifiers.ageDecrement].tap()
+        return self
+    }
+    
+    func tapDecreaseAgeWith(_ number: Int) -> Self{
+        app.buttons[Identifiers.ageDecrement].tap(withNumberOfTaps: number, numberOfTouches: 1)
         return self
     }
     

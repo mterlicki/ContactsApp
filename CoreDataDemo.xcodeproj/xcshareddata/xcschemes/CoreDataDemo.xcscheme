@@ -47,6 +47,14 @@
                BlueprintName = "CoreDataDemoUITests"
                ReferencedContainer = "container:CoreDataDemo.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "BaseTest">
+               </Test>
+               <Test
+                  Identifier = "CoreDataDemoUITests">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
    </TestAction>

@@ -19,4 +19,15 @@ class ContactListTests: BaseTest {
         ContactListScreen(app: app)
             .verifyNumberOfContactsEquals(0)
     }
+    
+    func testAfterSavingContactIsVisibleOnList() throws{
+        ContactListScreen(app: app)
+            .tapAddContact()
+            .typeName("John")
+            .tapIncreaseAgeWith(5)
+            .typeGender("men")
+            .typeName(" Emanuel Snow")
+            .tapSave()
+            .verifyContactsName("John Emanuel Snow")
+    }
 }

@@ -29,9 +29,9 @@ struct ContactListScreen: Screen {
     
     // MARK: Handlers
     
-    func tapAddContact() -> AddPersonScreen {
+    func tapAddContact() -> AddContactScreen {
         app.buttons[Identifiers.addContact].tap()
-        return AddPersonScreen(app: app)
+        return AddContactScreen(app: app)
     }
     
     func selectContact(_ name: String) -> EditPersonScreen {
@@ -67,9 +67,10 @@ struct ContactListScreen: Screen {
     
     // MARK: Assertions
 
-    func verifyContactsName(_ name:String) -> Self {
+    func verifyContactsName(_ name:String) {
         
-        return self
+        let nameLabelValue = app.tables[Identifiers.contactList].cells[name].staticTexts[Identifiers.personName].label
+        XCTAssertTrue(nameLabelValue == name)
     }
     
     func verifyDeleteButtonIsHittable(){
