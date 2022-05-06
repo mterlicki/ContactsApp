@@ -290,7 +290,7 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="18" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fsM-WP-myF">
                                         <rect key="frame" x="120" y="0.0" width="140" height="32"/>
-                                        <accessibility key="accessibilityConfiguration" identifier="ageTextfField"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="ageTextField"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         <connections>
@@ -321,7 +321,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type men/women/nn" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="12K-pY-MBh">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type men/woman/nn" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="12K-pY-MBh">
                                         <rect key="frame" x="120" y="0.0" width="254.5" height="34"/>
                                         <accessibility key="accessibilityConfiguration" identifier="genderTextField"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>

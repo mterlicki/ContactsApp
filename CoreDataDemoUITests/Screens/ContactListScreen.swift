@@ -14,7 +14,7 @@ struct ContactListScreen: Screen {
     // MARK: Identifiers
     
     private enum Identifiers {
-        static let navigationBar = "naviagtionBar"
+        static let navigationBar = "Contacts"
         static let addContact = "addContactButton"
         
         static let contactList = "contactTableView"
@@ -29,7 +29,7 @@ struct ContactListScreen: Screen {
     
     // MARK: Handlers
     
-    func addContact() -> AddPersonScreen {
+    func tapAddContact() -> AddPersonScreen {
         app.buttons[Identifiers.addContact].tap()
         return AddPersonScreen(app: app)
     }

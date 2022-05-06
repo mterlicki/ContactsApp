@@ -10,20 +10,13 @@ import XCTest
 class ContactListTests: BaseTest {
 
     func testAddContactButtonOpensForm() throws{
-        let contactScreen = ContactListScreen(app: app)
-        let addContactScreen = contactScreen.addContact()
-        
-        XCTAssertTrue(addContactScreen.app.exists)
+        ContactListScreen(app: app)
+            .tapAddContact()
+            .addPersonScreenIsLoaded()
     }
     
-    func testNumerOfContactactsGraterThenZero() throws{
+    func testEmptyListHasZeroContacts() throws{
         ContactListScreen(app: app)
-            .verifyNumberOfContactsAreGraterThan(0)
-    }
-    
-    func testSwipeLeftShowsDeleteButton() throws{
-        ContactListScreen(app: app)
-            .swipeToDeleteContact("Adam")
-            .verifyDeleteButtonIsHittable()
+            .verifyNumberOfContactsEquals(0)
     }
 }

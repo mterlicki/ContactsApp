@@ -7,64 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6C5487F0-BE43-47D4-B7F6-2D622F1099E4"
+            uuid = "2A5044A4-3EDB-4990-9D62-81AF6574AADC"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CoreDataDemoUITests/Tests/ContactListTests.swift"
+            filePath = "CoreDataDemoUITests/Tests/AddContactTest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "testAddContactButtonOpensForm()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "6C5487F0-BE43-47D4-B7F6-2D622F1099E4 - f79dca59ec868071"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CoreDataDemoUITests.ContactListTests.testAddContactButtonOpensForm() -&gt; ()"
-                  moduleName = "CoreDataDemoUITests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/michal.terlicki/CoreDataDemo/CoreDataDemoUITests/Tests/ContactListTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "320">
-               </Location>
-               <Location
-                  uuid = "6C5487F0-BE43-47D4-B7F6-2D622F1099E4 - 541709037c81c63f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CoreDataDemoUITests.ContactListTests.testAddContactButtonOpensForm() throws -&gt; ()"
-                  moduleName = "CoreDataDemoUITests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/michal.terlicki/CoreDataDemo/CoreDataDemoUITests/Tests/ContactListTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "327">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9A9FA966-5803-4DA9-836A-3714B8E2B387"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CoreDataDemo/AppDelegate.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "testAgeTextFieldHasInitialValue()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
