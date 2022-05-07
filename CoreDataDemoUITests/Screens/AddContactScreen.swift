@@ -32,6 +32,9 @@ struct AddContactScreen: Screen {
         
         static let cancelButton = "cancelButton"
         static let saveButton = "saveButton"
+        
+        static let saveErrorAlert = "formErrorAlert"
+        static let alertOkButton = "alertOkButton"
     }
     
     
@@ -45,6 +48,11 @@ struct AddContactScreen: Screen {
     func tapSave() -> ContactListScreen{
         app.navigationBars[Identifiers.navigationBar].buttons[Identifiers.saveButton].tap()
         return ContactListScreen(app: app)
+    }
+    
+    func tapSave() -> Self{
+        app.navigationBars[Identifiers.navigationBar].buttons[Identifiers.saveButton].tap()
+        return self
     }
     
     func tapNameTextField() -> Self{
@@ -113,6 +121,11 @@ struct AddContactScreen: Screen {
         return self
     }
     
+    func tapAlertOkButton() -> AddContactScreen{
+        app.alerts[Identifiers.saveErrorAlert].buttons[Identifiers.alertOkButton].tap()
+        return AddContactScreen(app: app)
+    }
+    
     // MARK: Assertions
     
     func addPersonScreenIsLoaded(){
@@ -131,6 +144,12 @@ struct AddContactScreen: Screen {
     
     func nameTextFieldPalaceholderEqualsTo (_ value: String){
         XCTAssertTrue(app.textFields[Identifiers.nameTextField].placeholderValue == value)
+    }
+    
+    func nameTextFiledValueEqualsTo (_ value: String){
+        let nameTextFieldValue = app.textFields[Identifiers.nameTextField].value as! String
+        
+        XCTAssertTrue(nameTextFieldValue == value, "Name text field is not \(value)")
     }
     
     func ageTextFieldValueEqualsTo (_ value: String){
