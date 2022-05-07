@@ -105,7 +105,10 @@ class AddPersonViewController: UIViewController {
         {
             return "Age must contain only digits"
         }
-        
+        let intValue = Int(value)
+        if intValue! < 0 || intValue! > 99 {
+            return "Age must be between 0 and 99"
+        }
         return nil
     }
     

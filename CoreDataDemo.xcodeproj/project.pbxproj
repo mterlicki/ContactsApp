@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F74A770128268D46004D81CB /* AddContactAgeTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74A770028268D46004D81CB /* AddContactAgeTextFieldTests.swift */; };
+		F74A770328269F1C004D81CB /* XCUIElement+ClearText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74A770228269F1C004D81CB /* XCUIElement+ClearText.swift */; };
 		F7565AFA28133D3200D1D64F /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7565AF928133D3200D1D64F /* CoreDataController.swift */; };
 		F763FF1E27E678F100E0A2CF /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F763FF1C27E678F100E0A2CF /* Person+CoreDataClass.swift */; };
 		F763FF1F27E678F100E0A2CF /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F763FF1D27E678F100E0A2CF /* Person+CoreDataProperties.swift */; };
@@ -50,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F74A770028268D46004D81CB /* AddContactAgeTextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactAgeTextFieldTests.swift; sourceTree = "<group>"; };
+		F74A770228269F1C004D81CB /* XCUIElement+ClearText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "XCUIElement+ClearText.swift"; path = "CoreDataDemoUITests/Tests/XCUIElement+ClearText.swift"; sourceTree = SOURCE_ROOT; };
 		F7565AF928133D3200D1D64F /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
 		F763FF1C27E678F100E0A2CF /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F763FF1D27E678F100E0A2CF /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -204,6 +208,7 @@
 		F7EDEB0D27F371D300B1EB39 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F74A770228269F1C004D81CB /* XCUIElement+ClearText.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -241,6 +246,7 @@
 				F7C0BCCB27F8939D00EDA802 /* ContactListTests.swift */,
 				F7A0158428032BEB00533FE2 /* AddContactInitialStateTests.swift */,
 				F77878AF28254716009EEAD2 /* AddContactNameFieldTests.swift */,
+				F74A770028268D46004D81CB /* AddContactAgeTextFieldTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -401,7 +407,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7C0BCCC27F8939D00EDA802 /* ContactListTests.swift in Sources */,
+				F74A770328269F1C004D81CB /* XCUIElement+ClearText.swift in Sources */,
 				F7C0BCC827F8833300EDA802 /* Screen.swift in Sources */,
+				F74A770128268D46004D81CB /* AddContactAgeTextFieldTests.swift in Sources */,
 				F7C0BCC427F8827C00EDA802 /* AddContactScreen.swift in Sources */,
 				F77878B028254716009EEAD2 /* AddContactNameFieldTests.swift in Sources */,
 				F7C0BCC227F8824F00EDA802 /* ContactListScreen.swift in Sources */,

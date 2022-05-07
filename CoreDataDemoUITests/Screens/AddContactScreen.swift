@@ -40,6 +40,7 @@ struct AddContactScreen: Screen {
     
     // MARK: Handlers
     
+    // Naviation bar
     func tapCancel() -> Self{
         app.navigationBars[Identifiers.navigationBar].buttons[Identifiers.cancelButton].tap()
         return self
@@ -55,6 +56,7 @@ struct AddContactScreen: Screen {
         return self
     }
     
+    //Name text field
     func tapNameTextField() -> Self{
         app.textFields[Identifiers.nameTextField].tap()
         return self
@@ -67,18 +69,11 @@ struct AddContactScreen: Screen {
     }
     
     func clearName() -> Self{
-        app.textFields[Identifiers.nameTextField].tap()
-        
-        let value = app.textFields[Identifiers.nameTextField].value as! String
-        
-        if value.count > 0 {
-            for _ in value{
-                app.keys["delete"].tap()
-            }
-        }
+        app.textFields[Identifiers.nameTextField].clearText()
         return self
     }
     
+    // Age text field
     func tapAgeTextField() -> Self{
         app.textFields[Identifiers.ageTextField].tap()
         return self
@@ -97,6 +92,7 @@ struct AddContactScreen: Screen {
     
     func tapIncreaseAgeWith(_ number: Int) -> Self{
         app.buttons[Identifiers.ageIncrement].tap(withNumberOfTaps: number, numberOfTouches: 1)
+
         return self
     }
     
@@ -110,6 +106,12 @@ struct AddContactScreen: Screen {
         return self
     }
     
+    func clearAge() -> Self{
+        app.textFields[Identifiers.ageTextField].clearText()
+        return self
+    }
+    
+    //Gender text field
     func tapGenderTextField() -> Self{
         app.textFields[Identifiers.genderTextField].tap()
         return self
@@ -121,6 +123,7 @@ struct AddContactScreen: Screen {
         return self
     }
     
+    //Alert
     func tapAlertOkButton() -> AddContactScreen{
         app.alerts[Identifiers.saveErrorAlert].buttons[Identifiers.alertOkButton].tap()
         return AddContactScreen(app: app)
@@ -152,32 +155,49 @@ struct AddContactScreen: Screen {
         XCTAssertTrue(nameTextFieldValue == value, "Name text field is not \(value)")
     }
     
-    func ageTextFieldValueEqualsTo (_ value: String){
-        let text = app.textFields[Identifiers.ageTextField].value as! String
-        
-        XCTAssertTrue(text == value)
-    }
-    
-    func genderTextFieldPalaceholderEqualsTo (_ value: String){
-        XCTAssertTrue(app.textFields[Identifiers.genderTextField].placeholderValue == value)
-    }
-    
     func nameErrorLabelValueEqualsTo (_ value: String){
         let nameErrorText = app.staticTexts[Identifiers.nameErrorLabel].label
         
         XCTAssertTrue(nameErrorText == value)
     }
     
-    func genderErrorLabelValueEqualsTo (_ value: String){
-        let genderErrorText = app.staticTexts[Identifiers.genderErrorLabel].label
+    func ageTextFieldValueEqualsTo (_ value: Int){
+        let text = app.textFields[Identifiers.ageTextField].value as! String
+        let age = Int(text)
         
-        XCTAssertTrue(genderErrorText == value)
+        XCTAssertTrue(age == value, "Value of age is \(age ?? 0), not \(value) as expected.")
     }
     
     func ageErrorLabelValueEqualsTo (_ value: String){
         let ageErrorText = app.staticTexts[Identifiers.ageErrorLabel].label
         
         XCTAssertTrue(ageErrorText == value)
+    }
+    
+    func ageIncreaseButtonIsEnabled(){
+        XCTAssertTrue(app.buttons[Identifiers.ageIncrement].isEnabled, "Age increase button is not enabled")
+    }
+    
+    func ageIncreaseButtonIsNotEnabled(){
+        XCTAssertFalse(app.buttons[Identifiers.ageIncrement].isEnabled, "Age increase button is enabled")
+    }
+    
+    func ageDecreaseButtonIsEnabled(){
+        XCTAssertTrue(app.buttons[Identifiers.ageDecrement].isEnabled, "Age increase button is not enabled")
+    }
+    
+    func ageDecreaseButtonIsNotEnabled(){
+        XCTAssertFalse(app.buttons[Identifiers.ageDecrement].isEnabled, "Age increase button is enabled")
+    }
+    
+    func genderTextFieldPalaceholderEqualsTo (_ value: String){
+        XCTAssertTrue(app.textFields[Identifiers.genderTextField].placeholderValue == value)
+    }
+    
+    func genderErrorLabelValueEqualsTo (_ value: String){
+        let genderErrorText = app.staticTexts[Identifiers.genderErrorLabel].label
+        
+        XCTAssertTrue(genderErrorText == value)
     }
     
     func navigationBarHasTitle (_ title: String){
