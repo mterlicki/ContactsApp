@@ -16,7 +16,7 @@ class AddContactNameFieldTests: BaseTest {
             .nameErrorLabelValueEqualsTo("")
     }
     
-    func testErrorLabelShowsMassageWhenTypedNameIsEmpty() throws{
+    func testErrorLabelShowsMessageWhenTypedNameIsEmpty() throws{
         ContactListScreen(app: app)
             .tapAddContact()
             .typeName("")
@@ -32,8 +32,6 @@ class AddContactNameFieldTests: BaseTest {
             .typeName("John")
             .nameErrorLabelValueEqualsTo("")
     }
-    
-    
     
     func testErrorLabelShowsMessageAfterDeletingName() throws{
         ContactListScreen(app: app)

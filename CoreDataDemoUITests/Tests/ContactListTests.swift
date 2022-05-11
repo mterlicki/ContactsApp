@@ -26,8 +26,7 @@ class ContactListTests: BaseTest {
             .typeName("John")
             .tapIncreaseAgeWith(5)
             .typeGender("men")
-            .typeName(" Emanuel Snow")
             .tapSave()
-            .verifyContactsName("John Emanuel Snow")
+            .verifyNumberOfContactsEquals(1)
     }
 }

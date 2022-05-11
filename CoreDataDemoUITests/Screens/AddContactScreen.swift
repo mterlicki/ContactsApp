@@ -123,6 +123,11 @@ struct AddContactScreen: Screen {
         return self
     }
     
+    func clearGender() -> Self{
+        app.textFields[Identifiers.genderTextField].clearText()
+        return self
+    }
+    
     //Alert
     func tapAlertOkButton() -> AddContactScreen{
         app.alerts[Identifiers.saveErrorAlert].buttons[Identifiers.alertOkButton].tap()
@@ -188,6 +193,12 @@ struct AddContactScreen: Screen {
     
     func ageDecreaseButtonIsNotEnabled(){
         XCTAssertFalse(app.buttons[Identifiers.ageDecrement].isEnabled, "Age increase button is enabled")
+    }
+    
+    func genderTextFiledValueEqualsTo (_ value: String){
+        let genderTextFieldValue = app.textFields[Identifiers.genderTextField].value as! String
+        
+        XCTAssertTrue(genderTextFieldValue == value, "Name text field is not \(value)")
     }
     
     func genderTextFieldPalaceholderEqualsTo (_ value: String){
