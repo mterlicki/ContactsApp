@@ -12,7 +12,7 @@ class ContactsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let context = (UIApplication.shared.delegate as! AppDelegate).CoreDataStack.persistentContainer.viewContext
     
     private var persons = [Person]()
     
@@ -70,7 +70,7 @@ class ContactsViewController: UIViewController {
             try context.save()
         }
         catch{
-            print("Error saving context on creating person")
+            fatalError("Error saving context on creating person")
         }
         
     }
@@ -83,7 +83,7 @@ class ContactsViewController: UIViewController {
             try context.save()
         }
         catch{
-            print("Error saving context on deleting person")
+            fatalError("Error saving context on deleting person")
         }
     }
     
@@ -96,7 +96,7 @@ class ContactsViewController: UIViewController {
             try context.save()
         }
         catch{
-            print("Error saving context update person")
+            fatalError("Error saving context update person")
         }
     }
 }
@@ -148,7 +148,7 @@ extension ContactsViewController: UITableViewDataSource{
                 try self.context.save()
             }
             catch{
-                
+                fatalError("Error saving context delete person")
             }
             
             self.getAllPersons()
@@ -168,7 +168,7 @@ extension ContactsViewController: EditPersonDelegate{
             try self.context.save()
         }
         catch{
-            
+            fatalError("Error saving context edit person")
         }
         getAllPersons()
     }

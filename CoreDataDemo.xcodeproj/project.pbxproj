@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F74A770128268D46004D81CB /* AddContactAgeTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74A770028268D46004D81CB /* AddContactAgeTextFieldTests.swift */; };
+		F74A770328269F1C004D81CB /* XCUIElement+ClearText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74A770228269F1C004D81CB /* XCUIElement+ClearText.swift */; };
+		F7565AFA28133D3200D1D64F /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7565AF928133D3200D1D64F /* CoreDataController.swift */; };
 		F763FF1E27E678F100E0A2CF /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F763FF1C27E678F100E0A2CF /* Person+CoreDataClass.swift */; };
 		F763FF1F27E678F100E0A2CF /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F763FF1D27E678F100E0A2CF /* Person+CoreDataProperties.swift */; };
 		F77264E527A41F0F0012E783 /* EditPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77264E427A41F0F0012E783 /* EditPersonViewController.swift */; };
+		F77878B028254716009EEAD2 /* AddContactNameFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77878AF28254716009EEAD2 /* AddContactNameFieldTests.swift */; };
 		F784173026EB2899001553D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F784172F26EB2899001553D7 /* AppDelegate.swift */; };
 		F784173226EB2899001553D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F784173126EB2899001553D7 /* SceneDelegate.swift */; };
 		F784173426EB2899001553D7 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F784173326EB2899001553D7 /* ContactsViewController.swift */; };
@@ -19,8 +23,15 @@
 		F784173F26EB289C001553D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F784173D26EB289C001553D7 /* LaunchScreen.storyboard */; };
 		F784174A26EB289C001553D7 /* CoreDataDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F784174926EB289C001553D7 /* CoreDataDemoTests.swift */; };
 		F784175526EB289C001553D7 /* CoreDataDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F784175426EB289C001553D7 /* CoreDataDemoUITests.swift */; };
+		F7A0158528032BEB00533FE2 /* AddContactInitialStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A0158428032BEB00533FE2 /* AddContactInitialStateTests.swift */; };
 		F7B0705E27E63BE500BA37E8 /* AddPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B0705D27E63BE500BA37E8 /* AddPersonViewController.swift */; };
 		F7BA230C2791B552000E8ADC /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BA230B2791B552000E8ADC /* PersonCell.swift */; };
+		F7C0BCC227F8824F00EDA802 /* ContactListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C0BCC127F8824F00EDA802 /* ContactListScreen.swift */; };
+		F7C0BCC427F8827C00EDA802 /* AddContactScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C0BCC327F8827C00EDA802 /* AddContactScreen.swift */; };
+		F7C0BCC627F8829B00EDA802 /* EditPersonScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C0BCC527F8829B00EDA802 /* EditPersonScreen.swift */; };
+		F7C0BCC827F8833300EDA802 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C0BCC727F8833300EDA802 /* Screen.swift */; };
+		F7C0BCCA27F8862300EDA802 /* BaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C0BCC927F8862300EDA802 /* BaseTest.swift */; };
+		F7C0BCCC27F8939D00EDA802 /* ContactListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C0BCCB27F8939D00EDA802 /* ContactListTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,9 +52,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F74A770028268D46004D81CB /* AddContactAgeTextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactAgeTextFieldTests.swift; sourceTree = "<group>"; };
+		F74A770228269F1C004D81CB /* XCUIElement+ClearText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "XCUIElement+ClearText.swift"; path = "CoreDataDemoUITests/Tests/XCUIElement+ClearText.swift"; sourceTree = SOURCE_ROOT; };
+		F7565AF928133D3200D1D64F /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
 		F763FF1C27E678F100E0A2CF /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F763FF1D27E678F100E0A2CF /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F77264E427A41F0F0012E783 /* EditPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPersonViewController.swift; sourceTree = "<group>"; };
+		F77878AF28254716009EEAD2 /* AddContactNameFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactNameFieldTests.swift; sourceTree = "<group>"; };
 		F784172C26EB2899001553D7 /* CoreDataDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F784172F26EB2899001553D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F784173126EB2899001553D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,8 +74,15 @@
 		F784175026EB289C001553D7 /* CoreDataDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F784175426EB289C001553D7 /* CoreDataDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDemoUITests.swift; sourceTree = "<group>"; };
 		F784175626EB289C001553D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7A0158428032BEB00533FE2 /* AddContactInitialStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactInitialStateTests.swift; sourceTree = "<group>"; };
 		F7B0705D27E63BE500BA37E8 /* AddPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonViewController.swift; sourceTree = "<group>"; };
 		F7BA230B2791B552000E8ADC /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
+		F7C0BCC127F8824F00EDA802 /* ContactListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListScreen.swift; sourceTree = "<group>"; };
+		F7C0BCC327F8827C00EDA802 /* AddContactScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactScreen.swift; sourceTree = "<group>"; };
+		F7C0BCC527F8829B00EDA802 /* EditPersonScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPersonScreen.swift; sourceTree = "<group>"; };
+		F7C0BCC727F8833300EDA802 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
+		F7C0BCC927F8862300EDA802 /* BaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTest.swift; sourceTree = "<group>"; };
+		F7C0BCCB27F8939D00EDA802 /* ContactListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +133,7 @@
 		F784172E26EB2899001553D7 /* CoreDataDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F7A839782803370200562D6F /* Handlers */,
 				F784176C26EB2A79001553D7 /* Model */,
 				F784172F26EB2899001553D7 /* AppDelegate.swift */,
 				F784173126EB2899001553D7 /* SceneDelegate.swift */,
@@ -137,7 +160,11 @@
 		F784175326EB289C001553D7 /* CoreDataDemoUITests */ = {
 			isa = PBXGroup;
 			children = (
-				F784175426EB289C001553D7 /* CoreDataDemoUITests.swift */,
+				F7EDEB1127F3722F00B1EB39 /* Tests */,
+				F7EDEB1027F3722100B1EB39 /* Screens */,
+				F7EDEB0F27F3721100B1EB39 /* TestData */,
+				F7EDEB0E27F371F700B1EB39 /* Utility */,
+				F7EDEB0D27F371D300B1EB39 /* Extensions */,
 				F784175626EB289C001553D7 /* Info.plist */,
 			);
 			path = CoreDataDemoUITests;
@@ -148,8 +175,16 @@
 			children = (
 				F763FF1C27E678F100E0A2CF /* Person+CoreDataClass.swift */,
 				F763FF1D27E678F100E0A2CF /* Person+CoreDataProperties.swift */,
+				F7565AF928133D3200D1D64F /* CoreDataController.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F7A839782803370200562D6F /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Handlers;
 			sourceTree = "<group>";
 		};
 		F7DF287727EB78F400F0B9B7 /* View Controllers */ = {
@@ -168,6 +203,52 @@
 				F7BA230B2791B552000E8ADC /* PersonCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		F7EDEB0D27F371D300B1EB39 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F74A770228269F1C004D81CB /* XCUIElement+ClearText.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F7EDEB0E27F371F700B1EB39 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		F7EDEB0F27F3721100B1EB39 /* TestData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TestData;
+			sourceTree = "<group>";
+		};
+		F7EDEB1027F3722100B1EB39 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				F7C0BCC127F8824F00EDA802 /* ContactListScreen.swift */,
+				F7C0BCC327F8827C00EDA802 /* AddContactScreen.swift */,
+				F7C0BCC527F8829B00EDA802 /* EditPersonScreen.swift */,
+				F7C0BCC727F8833300EDA802 /* Screen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		F7EDEB1127F3722F00B1EB39 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F784175426EB289C001553D7 /* CoreDataDemoUITests.swift */,
+				F7C0BCC927F8862300EDA802 /* BaseTest.swift */,
+				F7C0BCCB27F8939D00EDA802 /* ContactListTests.swift */,
+				F7A0158428032BEB00533FE2 /* AddContactInitialStateTests.swift */,
+				F77878AF28254716009EEAD2 /* AddContactNameFieldTests.swift */,
+				F74A770028268D46004D81CB /* AddContactAgeTextFieldTests.swift */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +385,7 @@
 				F7BA230C2791B552000E8ADC /* PersonCell.swift in Sources */,
 				F763FF1F27E678F100E0A2CF /* Person+CoreDataProperties.swift in Sources */,
 				F784173426EB2899001553D7 /* ContactsViewController.swift in Sources */,
+				F7565AFA28133D3200D1D64F /* CoreDataController.swift in Sources */,
 				F784173A26EB2899001553D7 /* CoreDataDemo.xcdatamodeld in Sources */,
 				F784173026EB2899001553D7 /* AppDelegate.swift in Sources */,
 				F784173226EB2899001553D7 /* SceneDelegate.swift in Sources */,
@@ -324,6 +406,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7C0BCCC27F8939D00EDA802 /* ContactListTests.swift in Sources */,
+				F74A770328269F1C004D81CB /* XCUIElement+ClearText.swift in Sources */,
+				F7C0BCC827F8833300EDA802 /* Screen.swift in Sources */,
+				F74A770128268D46004D81CB /* AddContactAgeTextFieldTests.swift in Sources */,
+				F7C0BCC427F8827C00EDA802 /* AddContactScreen.swift in Sources */,
+				F77878B028254716009EEAD2 /* AddContactNameFieldTests.swift in Sources */,
+				F7C0BCC227F8824F00EDA802 /* ContactListScreen.swift in Sources */,
+				F7A0158528032BEB00533FE2 /* AddContactInitialStateTests.swift in Sources */,
+				F7C0BCC627F8829B00EDA802 /* EditPersonScreen.swift in Sources */,
+				F7C0BCCA27F8862300EDA802 /* BaseTest.swift in Sources */,
 				F784175526EB289C001553D7 /* CoreDataDemoUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -565,6 +657,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 98H8Q69ZJ4;
 				INFOPLIST_FILE = CoreDataDemoUITests/Info.plist;
@@ -585,6 +678,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 98H8Q69ZJ4;
 				INFOPLIST_FILE = CoreDataDemoUITests/Info.plist;
