@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F74A770128268D46004D81CB /* AddContactAgeTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74A770028268D46004D81CB /* AddContactAgeTextFieldTests.swift */; };
 		F74A770328269F1C004D81CB /* XCUIElement+ClearText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74A770228269F1C004D81CB /* XCUIElement+ClearText.swift */; };
+		F74A77062826CC2E004D81CB /* AddContactGenderTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74A77052826CC2E004D81CB /* AddContactGenderTextFieldTests.swift */; };
 		F7565AFA28133D3200D1D64F /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7565AF928133D3200D1D64F /* CoreDataController.swift */; };
 		F763FF1E27E678F100E0A2CF /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F763FF1C27E678F100E0A2CF /* Person+CoreDataClass.swift */; };
 		F763FF1F27E678F100E0A2CF /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F763FF1D27E678F100E0A2CF /* Person+CoreDataProperties.swift */; };
@@ -22,7 +23,6 @@
 		F784173C26EB289C001553D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F784173B26EB289C001553D7 /* Assets.xcassets */; };
 		F784173F26EB289C001553D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F784173D26EB289C001553D7 /* LaunchScreen.storyboard */; };
 		F784174A26EB289C001553D7 /* CoreDataDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F784174926EB289C001553D7 /* CoreDataDemoTests.swift */; };
-		F784175526EB289C001553D7 /* CoreDataDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F784175426EB289C001553D7 /* CoreDataDemoUITests.swift */; };
 		F7A0158528032BEB00533FE2 /* AddContactInitialStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A0158428032BEB00533FE2 /* AddContactInitialStateTests.swift */; };
 		F7B0705E27E63BE500BA37E8 /* AddPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B0705D27E63BE500BA37E8 /* AddPersonViewController.swift */; };
 		F7BA230C2791B552000E8ADC /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BA230B2791B552000E8ADC /* PersonCell.swift */; };
@@ -54,6 +54,7 @@
 /* Begin PBXFileReference section */
 		F74A770028268D46004D81CB /* AddContactAgeTextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactAgeTextFieldTests.swift; sourceTree = "<group>"; };
 		F74A770228269F1C004D81CB /* XCUIElement+ClearText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "XCUIElement+ClearText.swift"; path = "CoreDataDemoUITests/Tests/XCUIElement+ClearText.swift"; sourceTree = SOURCE_ROOT; };
+		F74A77052826CC2E004D81CB /* AddContactGenderTextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactGenderTextFieldTests.swift; sourceTree = "<group>"; };
 		F7565AF928133D3200D1D64F /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
 		F763FF1C27E678F100E0A2CF /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F763FF1D27E678F100E0A2CF /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -72,7 +73,6 @@
 		F784174926EB289C001553D7 /* CoreDataDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDemoTests.swift; sourceTree = "<group>"; };
 		F784174B26EB289C001553D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F784175026EB289C001553D7 /* CoreDataDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F784175426EB289C001553D7 /* CoreDataDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDemoUITests.swift; sourceTree = "<group>"; };
 		F784175626EB289C001553D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7A0158428032BEB00533FE2 /* AddContactInitialStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactInitialStateTests.swift; sourceTree = "<group>"; };
 		F7B0705D27E63BE500BA37E8 /* AddPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +110,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F74A77042826CAC6004D81CB /* AddContactScreenTests */ = {
+			isa = PBXGroup;
+			children = (
+				F7A0158428032BEB00533FE2 /* AddContactInitialStateTests.swift */,
+				F77878AF28254716009EEAD2 /* AddContactNameFieldTests.swift */,
+				F74A770028268D46004D81CB /* AddContactAgeTextFieldTests.swift */,
+				F74A77052826CC2E004D81CB /* AddContactGenderTextFieldTests.swift */,
+			);
+			path = AddContactScreenTests;
+			sourceTree = "<group>";
+		};
 		F784172326EB2899001553D7 = {
 			isa = PBXGroup;
 			children = (
@@ -241,12 +252,9 @@
 		F7EDEB1127F3722F00B1EB39 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				F784175426EB289C001553D7 /* CoreDataDemoUITests.swift */,
 				F7C0BCC927F8862300EDA802 /* BaseTest.swift */,
 				F7C0BCCB27F8939D00EDA802 /* ContactListTests.swift */,
-				F7A0158428032BEB00533FE2 /* AddContactInitialStateTests.swift */,
-				F77878AF28254716009EEAD2 /* AddContactNameFieldTests.swift */,
-				F74A770028268D46004D81CB /* AddContactAgeTextFieldTests.swift */,
+				F74A77042826CAC6004D81CB /* AddContactScreenTests */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -411,12 +419,12 @@
 				F7C0BCC827F8833300EDA802 /* Screen.swift in Sources */,
 				F74A770128268D46004D81CB /* AddContactAgeTextFieldTests.swift in Sources */,
 				F7C0BCC427F8827C00EDA802 /* AddContactScreen.swift in Sources */,
+				F74A77062826CC2E004D81CB /* AddContactGenderTextFieldTests.swift in Sources */,
 				F77878B028254716009EEAD2 /* AddContactNameFieldTests.swift in Sources */,
 				F7C0BCC227F8824F00EDA802 /* ContactListScreen.swift in Sources */,
 				F7A0158528032BEB00533FE2 /* AddContactInitialStateTests.swift in Sources */,
 				F7C0BCC627F8829B00EDA802 /* EditPersonScreen.swift in Sources */,
 				F7C0BCCA27F8862300EDA802 /* BaseTest.swift in Sources */,
-				F784175526EB289C001553D7 /* CoreDataDemoUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

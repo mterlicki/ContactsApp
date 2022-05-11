@@ -143,11 +143,10 @@ class AddPersonViewController: UIViewController {
             if let errorMessage = invalidGender(gender)
             {
                 genderErrorLabel.text = errorMessage
-                genderErrorLabel.isHidden = false
             }
             else
             {
-                genderErrorLabel.text = ""
+                genderErrorLabel.text = " "
             }
         }
     }
@@ -168,6 +167,6 @@ class AddPersonViewController: UIViewController {
     
     private func formHasError() -> Bool
     {
-        return nameErrorLabel.text != "" || ageErrorLabel.text != "" || genderErrorLabel.text != ""
+        return nameErrorLabel.text != "" || ageErrorLabel.text != "" || genderErrorLabel.text != " "
     }
 }
