@@ -3,6 +3,8 @@
 //  CoreDataDemoUITests
 //
 //  Created by Michał Terlicki on 07/05/2022.
+//  Copyright © 2022 Michal Terlicki. All rights reserved.
+
 //
 
 import XCTest

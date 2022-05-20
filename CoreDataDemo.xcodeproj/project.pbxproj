@@ -13,6 +13,7 @@
 		F7565AFA28133D3200D1D64F /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7565AF928133D3200D1D64F /* CoreDataController.swift */; };
 		F763FF1E27E678F100E0A2CF /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F763FF1C27E678F100E0A2CF /* Person+CoreDataClass.swift */; };
 		F763FF1F27E678F100E0A2CF /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F763FF1D27E678F100E0A2CF /* Person+CoreDataProperties.swift */; };
+		F76EFDA828379AB300BF3EE7 /* AddContactValidationErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76EFDA728379AB300BF3EE7 /* AddContactValidationErrorTests.swift */; };
 		F77264E527A41F0F0012E783 /* EditPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77264E427A41F0F0012E783 /* EditPersonViewController.swift */; };
 		F77878B028254716009EEAD2 /* AddContactNameFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77878AF28254716009EEAD2 /* AddContactNameFieldTests.swift */; };
 		F784173026EB2899001553D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F784172F26EB2899001553D7 /* AppDelegate.swift */; };
@@ -58,6 +59,7 @@
 		F7565AF928133D3200D1D64F /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
 		F763FF1C27E678F100E0A2CF /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F763FF1D27E678F100E0A2CF /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F76EFDA728379AB300BF3EE7 /* AddContactValidationErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactValidationErrorTests.swift; sourceTree = "<group>"; };
 		F77264E427A41F0F0012E783 /* EditPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPersonViewController.swift; sourceTree = "<group>"; };
 		F77878AF28254716009EEAD2 /* AddContactNameFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactNameFieldTests.swift; sourceTree = "<group>"; };
 		F784172C26EB2899001553D7 /* CoreDataDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +119,7 @@
 				F77878AF28254716009EEAD2 /* AddContactNameFieldTests.swift */,
 				F74A770028268D46004D81CB /* AddContactAgeTextFieldTests.swift */,
 				F74A77052826CC2E004D81CB /* AddContactGenderTextFieldTests.swift */,
+				F76EFDA728379AB300BF3EE7 /* AddContactValidationErrorTests.swift */,
 			);
 			path = AddContactScreenTests;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1220;
+				ORGANIZATIONNAME = "Michal Terlicki";
 				TargetAttributes = {
 					F784172B26EB2899001553D7 = {
 						CreatedOnToolsVersion = 12.2;
@@ -414,6 +418,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F76EFDA828379AB300BF3EE7 /* AddContactValidationErrorTests.swift in Sources */,
 				F7C0BCCC27F8939D00EDA802 /* ContactListTests.swift in Sources */,
 				F74A770328269F1C004D81CB /* XCUIElement+ClearText.swift in Sources */,
 				F7C0BCC827F8833300EDA802 /* Screen.swift in Sources */,

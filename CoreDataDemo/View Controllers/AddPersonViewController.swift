@@ -3,6 +3,7 @@
 //  CoreDataDemo
 //
 //  Created by Michal Terlicki on 19/03/2022.
+//  Copyright © 2022 Michal Terlicki. All rights reserved.
 //
 
 import UIKit
