@@ -85,4 +85,10 @@ struct ContactListScreen: Screen {
     func verifyNumberOfContactsEquals(_ number:Int){
         XCTAssertTrue(app.tables[Identifiers.contactList].cells.count == number)
     }
+    
+    func verifyNameOfContactOnPosition (_ name:String, _ position: Int){
+        let cell = app.tables[Identifiers.contactList].cells.element(boundBy: position)
+        
+        XCTAssertTrue(cell.staticTexts[name].exists, "Cell \(name) at positon \(position) does not exist.")
+    }
 }

@@ -131,7 +131,7 @@ extension ContactsViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let person = persons[indexPath.row]
-        let personCell = tableView.dequeueReusableCell(withIdentifier: "Person", for: indexPath) as? PersonCell
+        lazy var personCell = tableView.dequeueReusableCell(withIdentifier: "Person", for: indexPath) as? PersonCell
         personCell?.setCell(with: person)
         
         return personCell ?? UITableViewCell()
