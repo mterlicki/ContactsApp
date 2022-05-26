@@ -28,6 +28,7 @@ class EditPersonViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
         super.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style:.plain , target: self, action: #selector(didTapEdit))
+        super.navigationItem.rightBarButtonItem?.accessibilityIdentifier = "editContactButton"
         super.navigationItem.title = person?.name?.uppercased()
         
         nameLabel.text = person?.name
@@ -87,6 +88,7 @@ class EditPersonViewController: UIViewController {
         
         alert.addTextField(configurationHandler: nil)
         alert.textFields?.first?.text = label.text
+        alert.textFields?.first?.accessibilityIdentifier = "alertTextField"
         alert.view.accessibilityIdentifier = "editAlert"
         
         let submitButton = UIAlertAction(title: "Submit", style: .default, handler: { _ in

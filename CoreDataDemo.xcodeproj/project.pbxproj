@@ -26,6 +26,7 @@
 		F784174A26EB289C001553D7 /* CoreDataDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F784174926EB289C001553D7 /* CoreDataDemoTests.swift */; };
 		F7A0158528032BEB00533FE2 /* AddContactInitialStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A0158428032BEB00533FE2 /* AddContactInitialStateTests.swift */; };
 		F7B0705E27E63BE500BA37E8 /* AddPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B0705D27E63BE500BA37E8 /* AddPersonViewController.swift */; };
+		F7B07A582840132900927EB4 /* EditContactInitialStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B07A572840132900927EB4 /* EditContactInitialStateTests.swift */; };
 		F7BA230C2791B552000E8ADC /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BA230B2791B552000E8ADC /* PersonCell.swift */; };
 		F7C0BCC227F8824F00EDA802 /* ContactListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C0BCC127F8824F00EDA802 /* ContactListScreen.swift */; };
 		F7C0BCC427F8827C00EDA802 /* AddContactScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C0BCC327F8827C00EDA802 /* AddContactScreen.swift */; };
@@ -78,6 +79,7 @@
 		F784175626EB289C001553D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7A0158428032BEB00533FE2 /* AddContactInitialStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactInitialStateTests.swift; sourceTree = "<group>"; };
 		F7B0705D27E63BE500BA37E8 /* AddPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonViewController.swift; sourceTree = "<group>"; };
+		F7B07A572840132900927EB4 /* EditContactInitialStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactInitialStateTests.swift; sourceTree = "<group>"; };
 		F7BA230B2791B552000E8ADC /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 		F7C0BCC127F8824F00EDA802 /* ContactListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListScreen.swift; sourceTree = "<group>"; };
 		F7C0BCC327F8827C00EDA802 /* AddContactScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactScreen.swift; sourceTree = "<group>"; };
@@ -201,6 +203,14 @@
 			path = Handlers;
 			sourceTree = "<group>";
 		};
+		F7B07A56284012BF00927EB4 /* EditContactTests */ = {
+			isa = PBXGroup;
+			children = (
+				F7B07A572840132900927EB4 /* EditContactInitialStateTests.swift */,
+			);
+			path = EditContactTests;
+			sourceTree = "<group>";
+		};
 		F7DF287727EB78F400F0B9B7 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +265,7 @@
 		F7EDEB1127F3722F00B1EB39 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				F7B07A56284012BF00927EB4 /* EditContactTests */,
 				F7C0BCC927F8862300EDA802 /* BaseTest.swift */,
 				F7C0BCCB27F8939D00EDA802 /* ContactListTests.swift */,
 				F74A77042826CAC6004D81CB /* AddContactScreenTests */,
@@ -428,6 +439,7 @@
 				F77878B028254716009EEAD2 /* AddContactNameFieldTests.swift in Sources */,
 				F7C0BCC227F8824F00EDA802 /* ContactListScreen.swift in Sources */,
 				F7A0158528032BEB00533FE2 /* AddContactInitialStateTests.swift in Sources */,
+				F7B07A582840132900927EB4 /* EditContactInitialStateTests.swift in Sources */,
 				F7C0BCC627F8829B00EDA802 /* EditPersonScreen.swift in Sources */,
 				F7C0BCCA27F8862300EDA802 /* BaseTest.swift in Sources */,
 			);

@@ -86,6 +86,14 @@ struct ContactListScreen: Screen {
         XCTAssertTrue(app.tables[Identifiers.contactList].cells.count == number)
     }
     
+    func verifyContactWithNameExists (_ name:String){
+        XCTAssertTrue(app.tables[Identifiers.contactList].cells[name].exists, "Contact with name \(name) does not exists.")
+    }
+    
+    func verifyContactWithNameDoesNotExists (_ name:String){
+        XCTAssertFalse(app.tables[Identifiers.contactList].cells[name].exists, "Contact with name \(name) exists.")
+    }
+    
     func verifyNameOfContactOnPosition (_ name:String, _ position: Int){
         let cell = app.tables[Identifiers.contactList].cells.element(boundBy: position)
         

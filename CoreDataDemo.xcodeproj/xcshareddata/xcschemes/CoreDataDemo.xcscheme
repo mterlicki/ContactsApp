@@ -52,6 +52,9 @@
                   Identifier = "BaseTest">
                </Test>
                <Test
+                  Identifier = "ContactListTests/testAfterDeletingContactNumberOFContactsIsZero()">
+               </Test>
+               <Test
                   Identifier = "CoreDataDemoUITests">
                </Test>
             </SkippedTests>

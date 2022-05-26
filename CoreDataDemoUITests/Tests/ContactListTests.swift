@@ -55,6 +55,8 @@ class ContactListTests: BaseTest {
             .tapAddContact()
             .fillFormAndSave("John", "12", "men")
             .deleteContact(0)
-            .verifyNumberOfContactsEquals(1)
+            .tapAddContact()
+            .tapCancel()
+            .verifyContactWithNameDoesNotExists("John")
     }
 }
