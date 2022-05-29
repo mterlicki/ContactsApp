@@ -38,7 +38,7 @@ class AddContactInitialStateTests:BaseTest {
     func testAgeTextFieldHasInitialValue() throws{
         ContactListScreen(app: app)
             .tapAddContact()
-            .ageTextFieldValueEqualsTo(18)
+            .ageTextFieldValueEqualsTo("18")
     }
     
     func testGenderTextFiledHasProperPlaceholder() throws{

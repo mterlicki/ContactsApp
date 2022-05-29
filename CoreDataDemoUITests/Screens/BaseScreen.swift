@@ -1,5 +1,5 @@
 //
-//  Screen.swift
+//  BaseScreen.swift
 //  CoreDataDemoUITests
 //
 //  Created by Michal Terlicki on 02/04/2022.
@@ -8,6 +8,6 @@
 
 import XCTest
 
-protocol Screen {
+protocol BaseScreen {
     var app: XCUIApplication { get }
 }

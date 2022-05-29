@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F731B9782842491200373813 /* BaseScreen+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F731B9772842491200373813 /* BaseScreen+Extenstions.swift */; };
 		F74A770128268D46004D81CB /* AddContactAgeTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74A770028268D46004D81CB /* AddContactAgeTextFieldTests.swift */; };
 		F74A770328269F1C004D81CB /* XCUIElement+ClearText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74A770228269F1C004D81CB /* XCUIElement+ClearText.swift */; };
 		F74A77062826CC2E004D81CB /* AddContactGenderTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74A77052826CC2E004D81CB /* AddContactGenderTextFieldTests.swift */; };
@@ -31,7 +32,7 @@
 		F7C0BCC227F8824F00EDA802 /* ContactListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C0BCC127F8824F00EDA802 /* ContactListScreen.swift */; };
 		F7C0BCC427F8827C00EDA802 /* AddContactScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C0BCC327F8827C00EDA802 /* AddContactScreen.swift */; };
 		F7C0BCC627F8829B00EDA802 /* EditPersonScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C0BCC527F8829B00EDA802 /* EditPersonScreen.swift */; };
-		F7C0BCC827F8833300EDA802 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C0BCC727F8833300EDA802 /* Screen.swift */; };
+		F7C0BCC827F8833300EDA802 /* BaseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C0BCC727F8833300EDA802 /* BaseScreen.swift */; };
 		F7C0BCCA27F8862300EDA802 /* BaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C0BCC927F8862300EDA802 /* BaseTest.swift */; };
 		F7C0BCCC27F8939D00EDA802 /* ContactListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C0BCCB27F8939D00EDA802 /* ContactListTests.swift */; };
 /* End PBXBuildFile section */
@@ -54,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F731B9772842491200373813 /* BaseScreen+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "BaseScreen+Extenstions.swift"; path = "CoreDataDemoUITests/Tests/EditContactTests/BaseScreen+Extenstions.swift"; sourceTree = SOURCE_ROOT; };
 		F74A770028268D46004D81CB /* AddContactAgeTextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactAgeTextFieldTests.swift; sourceTree = "<group>"; };
 		F74A770228269F1C004D81CB /* XCUIElement+ClearText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "XCUIElement+ClearText.swift"; path = "CoreDataDemoUITests/Tests/XCUIElement+ClearText.swift"; sourceTree = SOURCE_ROOT; };
 		F74A77052826CC2E004D81CB /* AddContactGenderTextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactGenderTextFieldTests.swift; sourceTree = "<group>"; };
@@ -84,7 +86,7 @@
 		F7C0BCC127F8824F00EDA802 /* ContactListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListScreen.swift; sourceTree = "<group>"; };
 		F7C0BCC327F8827C00EDA802 /* AddContactScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactScreen.swift; sourceTree = "<group>"; };
 		F7C0BCC527F8829B00EDA802 /* EditPersonScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPersonScreen.swift; sourceTree = "<group>"; };
-		F7C0BCC727F8833300EDA802 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
+		F7C0BCC727F8833300EDA802 /* BaseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseScreen.swift; sourceTree = "<group>"; };
 		F7C0BCC927F8862300EDA802 /* BaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTest.swift; sourceTree = "<group>"; };
 		F7C0BCCB27F8939D00EDA802 /* ContactListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -233,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				F74A770228269F1C004D81CB /* XCUIElement+ClearText.swift */,
+				F731B9772842491200373813 /* BaseScreen+Extenstions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -257,7 +260,7 @@
 				F7C0BCC127F8824F00EDA802 /* ContactListScreen.swift */,
 				F7C0BCC327F8827C00EDA802 /* AddContactScreen.swift */,
 				F7C0BCC527F8829B00EDA802 /* EditPersonScreen.swift */,
-				F7C0BCC727F8833300EDA802 /* Screen.swift */,
+				F7C0BCC727F8833300EDA802 /* BaseScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -432,10 +435,11 @@
 				F76EFDA828379AB300BF3EE7 /* AddContactValidationErrorTests.swift in Sources */,
 				F7C0BCCC27F8939D00EDA802 /* ContactListTests.swift in Sources */,
 				F74A770328269F1C004D81CB /* XCUIElement+ClearText.swift in Sources */,
-				F7C0BCC827F8833300EDA802 /* Screen.swift in Sources */,
+				F7C0BCC827F8833300EDA802 /* BaseScreen.swift in Sources */,
 				F74A770128268D46004D81CB /* AddContactAgeTextFieldTests.swift in Sources */,
 				F7C0BCC427F8827C00EDA802 /* AddContactScreen.swift in Sources */,
 				F74A77062826CC2E004D81CB /* AddContactGenderTextFieldTests.swift in Sources */,
+				F731B9782842491200373813 /* BaseScreen+Extenstions.swift in Sources */,
 				F77878B028254716009EEAD2 /* AddContactNameFieldTests.swift in Sources */,
 				F7C0BCC227F8824F00EDA802 /* ContactListScreen.swift in Sources */,
 				F7A0158528032BEB00533FE2 /* AddContactInitialStateTests.swift in Sources */,

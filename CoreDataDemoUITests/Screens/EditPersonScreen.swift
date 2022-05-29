@@ -8,7 +8,7 @@
 
 import XCTest
 
-struct EditPersonScreen: Screen {
+struct EditPersonScreen: BaseScreen {
     var app: XCUIApplication
     
     // MARK: Identifiers
@@ -41,34 +41,34 @@ struct EditPersonScreen: Screen {
     // Naviagation bar
     
     func tapBackButton() -> ContactListScreen{
-        buttonTap(Identifiers.backButton)
+        tapButton(Identifiers.backButton)
         return ContactListScreen(app: app)
     }
     
     func tapEdit() -> Self{
-        buttonTap(Identifiers.editButton)
+        tapButton(Identifiers.editButton)
         return self
     }
     
     func tapDone() -> Self{
-        buttonTap(Identifiers.doneButton)
+        tapButton(Identifiers.doneButton)
         return self
     }
     
     // Edit buttons
     
     func tapEditName() -> Self{
-        buttonTap(Identifiers.nameEditButton)
+        tapButton(Identifiers.nameEditButton)
         return self
     }
     
     func tapEditAge() -> Self{
-        buttonTap(Identifiers.ageEditButton)
+        tapButton(Identifiers.ageEditButton)
         return self
     }
     
     func tapEditGender() -> Self{
-        buttonTap(Identifiers.genderEditButton)
+        tapButton(Identifiers.genderEditButton)
         return self
     }
     
@@ -173,49 +173,5 @@ struct EditPersonScreen: Screen {
     
     func verifyGenderLabelHasValue(_ gender:String) {
         labelHasValue(Identifiers.contactGenderLabel, gender)
-    }
-    
-    
-    // MARK: Helpers
-    
-    // Labels
-    
-    private func labelHasValue (_ identifier:String, _ value:String) {
-        let labelValue = app.staticTexts[identifier].description
-        XCTAssertTrue(labelValue == value, "Value is \(labelValue) not \(value) as expected")
-    }
-    
-    // Buttons
-    
-    private func buttonTap(_ identifier:String){
-        app.buttons[identifier].tap()
-    }
-    
-    private func buttonExists(_ identifier:String){
-        XCTAssertTrue(app.buttons[identifier].exists, "\(identifier) button does not exist")
-    }
-    
-    private func buttonIsEnabled(_ identifier:String) {
-        XCTAssertTrue(app.buttons[identifier].isEnabled, "\(identifier) button is disabled")
-    }
-    
-    func ButtonIsDisabled(_ identifier:String) {
-        XCTAssertFalse(app.buttons[identifier].isEnabled, "\(identifier) button is enabled")
-    }
-    
-    // Alerts
-    
-    private func clearAlertTextField(_ alertIdentifier:String, _ textFieldIdentifier:String) {
-        app.alerts[alertIdentifier].textFields[textFieldIdentifier].tap()
-        app.alerts[alertIdentifier].textFields[textFieldIdentifier].clearText()
-    }
-    
-    private func alertButtonTap(_ alertIdentifier:String, _ buttonIdentifier:String) {
-        app.alerts[alertIdentifier].buttons[buttonIdentifier].tap()
-    }
-    
-    private func alertTextFieldTypeText(_ alertIdentifier:String, _ textFieldIdentifier:String, _ text:String) {
-        app.alerts[alertIdentifier].textFields[textFieldIdentifier].tap()
-        app.alerts[alertIdentifier].textFields[textFieldIdentifier].typeText(text)
     }
 }

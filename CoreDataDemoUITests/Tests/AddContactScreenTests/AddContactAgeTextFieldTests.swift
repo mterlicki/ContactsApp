@@ -53,7 +53,7 @@ class AddContactAgeTextFieldTests: BaseTest {
     }
     
     func testIncementButtonIncreasesAgeValue() throws{
-        let expectedAge = 19
+        let expectedAge = "19"
         
         ContactListScreen(app: app)
             .tapAddContact()
@@ -62,7 +62,7 @@ class AddContactAgeTextFieldTests: BaseTest {
     }
     
     func testDecrementButtonDecreasesAgeValue() throws{
-        let expectedAge = 17
+        let expectedAge = "17"
         
         ContactListScreen(app: app)
             .tapAddContact()
@@ -71,7 +71,7 @@ class AddContactAgeTextFieldTests: BaseTest {
     }
     
     func testMultipleIncrisingAgeChangesAgeValue() throws{
-        let expectedAge = 22
+        let expectedAge = "22"
         
         ContactListScreen(app: app)
             .tapAddContact()
@@ -84,7 +84,7 @@ class AddContactAgeTextFieldTests: BaseTest {
     }
     
     func testMultipleDecisingAgeChangesAgeValue() throws{
-        let expectedAge = 14
+        let expectedAge = "14"
         
         ContactListScreen(app: app)
             .tapAddContact()
@@ -97,7 +97,7 @@ class AddContactAgeTextFieldTests: BaseTest {
     }
     
     func testIncreasingAndDecreasingAgeChangesValue() throws{
-        let expectedAge = 18
+        let expectedAge = "18"
         
         ContactListScreen(app: app)
             .tapAddContact()
@@ -107,7 +107,7 @@ class AddContactAgeTextFieldTests: BaseTest {
     }
     
     func testDecreasingAndIncreasingAgeChangesValue() throws{
-        let expectedAge = 18
+        let expectedAge = "18"
         
         ContactListScreen(app: app)
             .tapAddContact()
@@ -118,7 +118,7 @@ class AddContactAgeTextFieldTests: BaseTest {
     
     func testTypingAgeFormKeyboardAndIncresingByStepper() throws{
         let age = "35"
-        let expectedAge = 36
+        let expectedAge = "36"
         
         ContactListScreen(app: app)
             .tapAddContact()
@@ -131,7 +131,7 @@ class AddContactAgeTextFieldTests: BaseTest {
     
     func testTypingAgeFormKeyboardAndDecresingByStepper() throws{
         let age = "45"
-        let expectedAge = 44
+        let expectedAge = "44"
         
         ContactListScreen(app: app)
             .tapAddContact()
@@ -144,7 +144,7 @@ class AddContactAgeTextFieldTests: BaseTest {
     
     func testTypingAgeFromKeyboardAndIncresingAndThenDecreasingByStepper() throws{
         let age = "45"
-        let expectedAge = 45
+        let expectedAge = "45"
         
         ContactListScreen(app: app)
             .tapAddContact()
@@ -158,7 +158,7 @@ class AddContactAgeTextFieldTests: BaseTest {
     
     func testTypingAgeFromKeyboardAndDecresingAndThenIncreasingByStepper() throws{
         let age = "45"
-        let expectedAge = 45
+        let expectedAge = "45"
         
         ContactListScreen(app: app)
             .tapAddContact()

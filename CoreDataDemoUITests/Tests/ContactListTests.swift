@@ -50,7 +50,7 @@ class ContactListTests: BaseTest {
             .verifyNameOfContactOnPosition("Alex", 1)
     }
     
-    func testAfterDeletingContactNumberOFContactsIsZero() throws{
+    func testAfterDeletingContactIsNotAvailableOnList() throws{
         ContactListScreen(app: app)
             .tapAddContact()
             .fillFormAndSave("John", "12", "men")

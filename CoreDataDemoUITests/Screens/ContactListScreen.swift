@@ -9,7 +9,7 @@
 import XCTest
 import CoreDataDemo
 
-struct ContactListScreen: Screen {
+struct ContactListScreen: BaseScreen {
     let app: XCUIApplication
     
     // MARK: Identifiers
@@ -31,47 +31,45 @@ struct ContactListScreen: Screen {
     // MARK: Handlers
     
     func tapAddContact() -> AddContactScreen {
-        app.buttons[Identifiers.addContact].tap()
+        tapButton(Identifiers.addContact)
         return AddContactScreen(app: app)
     }
     
     func selectContact(_ name: String) -> EditPersonScreen {
-        app.tables[Identifiers.contactList].cells[name].tap()
+        tapTableViewCell(Identifiers.contactList, name)
         return EditPersonScreen(app: app)
     }
     
     func selectContact(_ index: Int) -> EditPersonScreen {
-        app.tables[Identifiers.contactList].cells.element(boundBy: index).tap()
+        tapTableViewCell(Identifiers.contactList, index)
         return EditPersonScreen(app: app)
     }
     
     func numberOfContacts() -> Int {
-        return app.tables[Identifiers.contactList].cells.count
+        return numberOfCells(Identifiers.contactList)
     }
     
     func swipeToDeleteContact(_ index:Int) -> Self {
-        app.tables[Identifiers.contactList].cells.element(boundBy: index).swipeLeft()
+        swipeLeftCell(Identifiers.contactList, index)
         return self
     }
     
     
     func deleteContact(_ index: Int) -> Self {
-        app.tables[Identifiers.contactList].cells.element(boundBy: index).swipeLeft()
-        app.tables[Identifiers.contactList].buttons[Identifiers.deleteButton].tap()
+        swipeLeftCell(Identifiers.contactList, index)
+        tapTableViewCellButton(Identifiers.contactList, index, Identifiers.deleteButton)
         return self
     }
     
     func swipeToDeleteContact(_ name:String) -> Self {
-        app.tables[Identifiers.contactList].cells[name].swipeLeft()
+        swipeLeftCell(Identifiers.contactList, name)
         return self
     }
     
     // MARK: Assertions
 
     func verifyContactsName(_ name:String) {
-        
-        let nameLabelValue = app.tables[Identifiers.contactList].cells[name].staticTexts[Identifiers.personName].label
-        XCTAssertTrue(nameLabelValue == name)
+        tableViewCellLabelHasValue(Identifiers.contactList, name, Identifiers.personName, name)
     }
     
     func verifyDeleteButtonIsHittable(){
@@ -87,16 +85,14 @@ struct ContactListScreen: Screen {
     }
     
     func verifyContactWithNameExists (_ name:String){
-        XCTAssertTrue(app.tables[Identifiers.contactList].cells[name].exists, "Contact with name \(name) does not exists.")
+        tableViewCellExist(Identifiers.contactList, name)
     }
     
     func verifyContactWithNameDoesNotExists (_ name:String){
-        XCTAssertFalse(app.tables[Identifiers.contactList].cells[name].exists, "Contact with name \(name) exists.")
+        tableViewCellDoesNotExist(Identifiers.contactList, name)
     }
     
     func verifyNameOfContactOnPosition (_ name:String, _ position: Int){
-        let cell = app.tables[Identifiers.contactList].cells.element(boundBy: position)
-        
-        XCTAssertTrue(cell.staticTexts[name].exists, "Cell \(name) at positon \(position) does not exist.")
+        tableViewCellLabelHasValue(Identifiers.contactList, position, Identifiers.personName, name)
     }
 }
