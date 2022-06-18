@@ -26,7 +26,7 @@ class EditPersonViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.white
+        self.view.backgroundColor = UIColor.systemBackground
         super.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style:.plain , target: self, action: #selector(didTapEdit))
         super.navigationItem.rightBarButtonItem?.accessibilityIdentifier = "editContactButton"
         super.navigationItem.title = person?.name?.uppercased()
