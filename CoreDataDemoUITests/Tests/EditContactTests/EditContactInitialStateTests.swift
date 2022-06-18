@@ -9,36 +9,52 @@
 import XCTest
 
 class EditContactInitialStateTests: BaseTest {
+    
+    let contactName = "John"
+    let age = "22"
+    let gender = "men"
+    
+    override func setUp() {
+        continueAfterFailure = false
+        app = XCUIApplication()
+        app.launchArguments = ["UITesting"]
+        app.launch()
+        
+        ContactListScreen(app: app)
+            .tapAddContact()
+            .fillFormAndSave(contactName, age, gender)
+    }
 
     func testEditContactHasInitialState() throws{
         ContactListScreen(app: app)
-            .tapAddContact()
-            .fillFormAndSave("John", "22", "men")
-            .selectContact("John")
+            .selectContact(contactName)
             .editContactHasInitialState()
     }
     
     func testContactsNameShowsSelectedContactName() throws{
-        let name = "John"
-        let age = "22"
-        let gender = "men"
         
         ContactListScreen(app: app)
-            .tapAddContact()
-            .fillFormAndSave(name, age, gender)
-            .selectContact(name)
-            .verifyContactNameLabelHasValue(name)
+            .selectContact(contactName)
+            .verifyContactNameLabelHasValue(contactName)
     }
     
-    func testContactsAgeShowsSelectedContactName() throws{
-        let name = "John"
-        let age = "22"
-        let gender = "men"
-        
+    func testContactsAgeShowsSelectedContactAge() throws{
+        ContactListScreen(app: app)
+            .selectContact(contactName)
+            .verifyContactAgeLabelHasValue(age)
+    }
+    
+    func testContactsGenderShowsSelectedContactGender() throws{
         ContactListScreen(app: app)
             .tapAddContact()
-            .fillFormAndSave(name, age, gender)
-            .selectContact(name)
-            .verifyContactAgeLabelHasValue(age)
+            .fillFormAndSave(contactName, age, gender)
+            .selectContact(contactName)
+            .verifyContactGenderLabelHasValue(gender)
+    }
+    
+    func testContactsDetailsShowsContactData() throws{
+        ContactListScreen(app: app)
+            .selectContact(contactName)
+            .editContactHasContactData(contactName, age, gender)
     }
 }

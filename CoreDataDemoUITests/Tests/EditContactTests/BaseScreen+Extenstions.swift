@@ -54,9 +54,15 @@ extension BaseScreen{
         app.alerts[alertIdentifier].textFields[textFieldIdentifier].typeText(text)
     }
     
-    func alertHasText (_ identifier: String, _ text: String){
+    func alertHasText (_ identifier: String, _ text: String) {
         
         XCTAssertTrue(app.alerts[identifier].staticTexts[text].exists, "Alert text \(text) does not exists")
+    }
+    
+    func alertTextFieldHasValue(_ identifier: String, _ value: String) {
+        let textFieldValue = app.alerts[identifier].textFields.firstMatch.value
+        
+        XCTAssertTrue(textFieldValue as! String == value, "Text field value is \(textFieldValue) not \(value) as expceted")
     }
     
     // MARK: Text field
@@ -83,9 +89,9 @@ extension BaseScreen{
     }
     
     func textFieldValueEqualsTo (_ identifier: String, _ value: String){
-        let nameTextFieldValue = app.textFields[identifier].value as! String
+        let textFieldValue = app.textFields[identifier].value as! String
         
-        XCTAssertTrue(nameTextFieldValue == value, "Text field value is not \(value)")
+        XCTAssertTrue(textFieldValue == value, "Text field value is not \(value)")
     }
     
     // MARK: Navigation bar

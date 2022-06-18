@@ -106,6 +106,12 @@ struct EditPersonScreen: BaseScreen {
         editGenderButtonIsDisabled()
     }
     
+    func editContactHasContactData(_ name: String, _ age: String, _ gender: String) {
+        verifyContactNameLabelHasValue(name)
+        verifyContactAgeLabelHasValue(age)
+        verifyContactGenderLabelHasValue(gender)
+    }
+    
     // Navigation bar
     
     func doneButtonExists() {
@@ -169,24 +175,6 @@ struct EditPersonScreen: BaseScreen {
         buttonExists(Identifiers.genderEditButton)
     }
     
-    // Name label
-    
-    func verifyNameLabelHasValue(_ name:String) {
-        labelHasValue(Identifiers.contactNameLabel, name)
-    }
-    
-    // Age label
-    
-    func verifyAgeLabelHasValue(_ age:String) {
-        labelHasValue(Identifiers.contactAgeLabel, age)
-    }
-    
-    // Gender label
-    
-    func verifyGenderLabelHasValue(_ gender:String) {
-        labelHasValue(Identifiers.contactGenderLabel, gender)
-    }
-    
     // Labels
     
     func verifyContactNameLabelHasValue(_ name:String) {
@@ -199,5 +187,15 @@ struct EditPersonScreen: BaseScreen {
     
     func verifyContactGenderLabelHasValue(_ gender: String) {
         labelHasValue(Identifiers.contactGenderLabel, gender)
+    }
+    
+    // Alerts
+    
+    func verifyAlertHasText(_ text: String) {
+        alertHasText(Identifiers.editAlert, text)
+    }
+    
+    func verifyAlertTextFieldHasText(_ text:String) {
+        alertTextFieldHasValue(Identifiers.editAlert, text)
     }
 }
