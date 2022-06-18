@@ -257,10 +257,10 @@
 		F7EDEB1027F3722100B1EB39 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				F7C0BCC727F8833300EDA802 /* BaseScreen.swift */,
 				F7C0BCC127F8824F00EDA802 /* ContactListScreen.swift */,
 				F7C0BCC327F8827C00EDA802 /* AddContactScreen.swift */,
 				F7C0BCC527F8829B00EDA802 /* EditPersonScreen.swift */,
-				F7C0BCC727F8833300EDA802 /* BaseScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";

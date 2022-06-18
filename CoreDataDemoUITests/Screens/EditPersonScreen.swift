@@ -96,6 +96,16 @@ struct EditPersonScreen: BaseScreen {
     
     // MARK: Assertions
     
+    func editContactHasInitialState() {
+        editButtonExists()
+        editNameButtonExists()
+        editNameButtonIsDisabled()
+        editAgeButtonExists()
+        editAgeButtonIsDisabled()
+        editGenderButtonExists()
+        editGenderButtonIsDisabled()
+    }
+    
     // Navigation bar
     
     func doneButtonExists() {
@@ -113,6 +123,8 @@ struct EditPersonScreen: BaseScreen {
     func editButtonIsEnabled() {
         buttonIsEnabled(Identifiers.editButton)
     }
+    
+    
     
     // Edit buttons
     // Name
@@ -172,6 +184,20 @@ struct EditPersonScreen: BaseScreen {
     // Gender label
     
     func verifyGenderLabelHasValue(_ gender:String) {
+        labelHasValue(Identifiers.contactGenderLabel, gender)
+    }
+    
+    // Labels
+    
+    func verifyContactNameLabelHasValue(_ name:String) {
+        labelHasValue(Identifiers.contactNameLabel, name)
+    }
+    
+    func verifyContactAgeLabelHasValue(_ age: String) {
+        labelHasValue(Identifiers.contactAgeLabel, age)
+    }
+    
+    func verifyContactGenderLabelHasValue(_ gender: String) {
         labelHasValue(Identifiers.contactGenderLabel, gender)
     }
 }

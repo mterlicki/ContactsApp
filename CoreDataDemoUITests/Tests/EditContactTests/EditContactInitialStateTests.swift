@@ -10,17 +10,35 @@ import XCTest
 
 class EditContactInitialStateTests: BaseTest {
 
-    func test() throws{
+    func testEditContactHasInitialState() throws{
         ContactListScreen(app: app)
             .tapAddContact()
             .fillFormAndSave("John", "22", "men")
             .selectContact("John")
-            .tapEdit()
-            .tapDone()
-            .tapEdit()
-            .tapEditAge()
-            .alertClearText()
-            .alertTypeText("34")
-            .alertTapSubmit()
+            .editContactHasInitialState()
+    }
+    
+    func testContactsNameShowsSelectedContactName() throws{
+        let name = "John"
+        let age = "22"
+        let gender = "men"
+        
+        ContactListScreen(app: app)
+            .tapAddContact()
+            .fillFormAndSave(name, age, gender)
+            .selectContact(name)
+            .verifyContactNameLabelHasValue(name)
+    }
+    
+    func testContactsAgeShowsSelectedContactName() throws{
+        let name = "John"
+        let age = "22"
+        let gender = "men"
+        
+        ContactListScreen(app: app)
+            .tapAddContact()
+            .fillFormAndSave(name, age, gender)
+            .selectContact(name)
+            .verifyContactAgeLabelHasValue(age)
     }
 }
