@@ -4,6 +4,9 @@ Contacts App is a app with list of contacts. Each contact contains information a
 
 Data is stored in CoreData.
 
+<img src="https://github.com/mterlicki/ContactsApp/blob/main/Contact_list.png" alt="Contact List" width=20% height=20%> <img src="https://github.com/mterlicki/ContactsApp/blob/main/Add_new%20_contact.png" alt="Add new contact" width=20% height=20%>
+<img src="https://github.com/mterlicki/ContactsApp/blob/main/Edit_contact.png" alt="Contact preview" width=20% height=20%> <img src="https://github.com/mterlicki/ContactsApp/blob/main/Edit_contact_name.png" alt="Edit contacts name" width=20% height=20%>
+
 ## App requirements
 
 ### Contacts List
