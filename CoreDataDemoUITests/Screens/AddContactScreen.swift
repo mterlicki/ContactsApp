@@ -132,7 +132,7 @@ struct AddContactScreen: BaseScreen {
     }
 
     // Add contact
-
+    @discardableResult
     func fillFormAndSave (_ name: String, _ age: String, _ gender: String) -> ContactListScreen {
         typeText(Identifiers.nameTextField, name)
         tapTextField(Identifiers.ageTextField)

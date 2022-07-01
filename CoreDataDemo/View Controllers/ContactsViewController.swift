@@ -5,6 +5,8 @@
 //  Created by Michal Terlicki on 10/09/2021.
 //  Copyright © 2022 Michal Terlicki. All rights reserved.
 //
+// swiftlint:disable force_cast
+// swiftlint:disable line_length
 
 import UIKit
 
