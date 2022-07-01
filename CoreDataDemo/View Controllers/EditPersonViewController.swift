@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol EditPersonDelegate {
+protocol EditPersonDelegate: AnyObject {
     func editPerson()
 }
 
@@ -22,12 +22,13 @@ class EditPersonViewController: UIViewController {
     @IBOutlet weak var editGenderButton: UIButton!
 
     public var person: Person?
-    var delegate: EditPersonDelegate?
+    weak var delegate: EditPersonDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.systemBackground
-        super.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(didTapEdit))
+        super.navigationItem.rightBarButtonItem =
+        UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(didTapEdit))
         super.navigationItem.rightBarButtonItem?.accessibilityIdentifier = "editContactButton"
         super.navigationItem.title = person?.name?.uppercased()
 
@@ -64,14 +65,16 @@ class EditPersonViewController: UIViewController {
         editAgeButton.isUserInteractionEnabled = false
         editGenderButton.isUserInteractionEnabled = false
 
-        super.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(didTapEdit))
+        super.navigationItem.rightBarButtonItem =
+        UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(didTapEdit))
         delegate?.editPerson()
         super.navigationItem.title = person?.name?.uppercased()
         super.navigationItem.rightBarButtonItem?.accessibilityIdentifier = "editContactButton"
     }
 
     @objc private func didTapEdit() {
-        super.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(didTapDone))
+        super.navigationItem.rightBarButtonItem =
+        UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(didTapDone))
         super.navigationItem.rightBarButtonItem?.accessibilityIdentifier = "doneButton"
 
         editNameButton.isUserInteractionEnabled = true

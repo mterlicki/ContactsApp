@@ -11,8 +11,8 @@ import UIKit
 class PersonCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var AgeLabel: UILabel!
-    @IBOutlet weak var GenderLabel: UILabel!
+    @IBOutlet weak var ageLabel: UILabel!
+    @IBOutlet weak var genderLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,8 +20,8 @@ class PersonCell: UITableViewCell {
 
     func setCell(with person: Person) {
         nameLabel.text = person.name
-        AgeLabel.text = "Age: \(person.age)"
-        GenderLabel.text = "Gender: \(person.gender ?? "nn")"
+        ageLabel.text = "Age: \(person.age)"
+        genderLabel.text = "Gender: \(person.gender ?? "nn")"
         accessibilityIdentifier = person.name
     }
 

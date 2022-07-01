@@ -34,7 +34,7 @@ extension BaseScreen {
         XCTAssertTrue(app.buttons[identifier].isEnabled, "\(identifier) button is disabled")
     }
 
-    func ButtonIsDisabled(_ identifier: String) {
+    func buttonIsDisabled(_ identifier: String) {
         XCTAssertFalse(app.buttons[identifier].isEnabled, "\(identifier) button is enabled")
     }
 
@@ -62,7 +62,8 @@ extension BaseScreen {
     func alertTextFieldHasValue(_ identifier: String, _ value: String) {
         let textFieldValue = app.alerts[identifier].textFields.firstMatch.value
 
-        XCTAssertTrue(textFieldValue as! String == value, "Text field value is \(textFieldValue) not \(value) as expceted")
+        XCTAssertTrue(textFieldValue as? String == value,
+                      "Text field value is \(textFieldValue ?? "") not \(value) as expceted")
     }
 
     // MARK: Text field
@@ -89,7 +90,7 @@ extension BaseScreen {
     }
 
     func textFieldValueEqualsTo (_ identifier: String, _ value: String) {
-        let textFieldValue = app.textFields[identifier].value as! String
+        let textFieldValue = app.textFields[identifier].value as? String
 
         XCTAssertTrue(textFieldValue == value, "Text field value is not \(value)")
     }
@@ -144,22 +145,31 @@ extension BaseScreen {
         app.tables[tableViewIdentifier].cells.element(boundBy: cellNumber).buttons[buttonIdentifier].tap()
     }
 
-    func tableViewCellLabelHasValue(_ tableViewIdentifier: String, _ cellIdentifier: String, _ labelIdentifier: String, _ value: String) {
+    func tableViewCellLabelHasValue(_ tableViewIdentifier: String,
+                                    _ cellIdentifier: String,
+                                    _ labelIdentifier: String,
+                                    _ value: String) {
         let labelValue = app.tables[tableViewIdentifier].cells[cellIdentifier].staticTexts[labelIdentifier].label
         XCTAssertTrue(labelValue == value, "Cell label value is \(labelValue) not \(value) as expected")
     }
 
-    func tableViewCellLabelHasValue(_ tableViewIdentifier: String, _ cellNumber: Int, _ labelIdentifier: String, _ value: String) {
-        let labelValue = app.tables[tableViewIdentifier].cells.element(boundBy: cellNumber).staticTexts[labelIdentifier].label
+    func tableViewCellLabelHasValue(_ tableViewIdentifier: String,
+                                    _ cellNumber: Int,
+                                    _ labelIdentifier: String,
+                                    _ value: String) {
+        let labelValue =
+        app.tables[tableViewIdentifier].cells.element(boundBy: cellNumber).staticTexts[labelIdentifier].label
         XCTAssertTrue(labelValue == value, "Cell label value is \(labelValue) not \(value) as expected")
     }
 
     func tableViewCellExist(_ tableViewIdentifier: String, _ cellIdentifier: String) {
-        XCTAssertTrue(app.tables[tableViewIdentifier].cells[cellIdentifier].isHittable, "Table View Cell \(cellIdentifier) does not exist")
+        XCTAssertTrue(app.tables[tableViewIdentifier].cells[cellIdentifier].isHittable,
+                      "Table View Cell \(cellIdentifier) does not exist")
     }
 
     func tableViewCellDoesNotExist (_ tableViewIdentifier: String, _ cellIdentifier: String) {
-        XCTAssertFalse(app.tables[tableViewIdentifier].cells[cellIdentifier].isHittable, "Table View Cell \(cellIdentifier) exists")
+        XCTAssertFalse(app.tables[tableViewIdentifier].cells[cellIdentifier].isHittable,
+                       "Table View Cell \(cellIdentifier) exists")
     }
 
 }

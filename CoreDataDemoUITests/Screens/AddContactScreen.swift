@@ -189,7 +189,7 @@ struct AddContactScreen: BaseScreen {
     }
 
     func ageIncreaseButtonIsNotEnabled() {
-        ButtonIsDisabled(Identifiers.ageIncrement)
+        buttonIsDisabled(Identifiers.ageIncrement)
     }
 
     func ageDecreaseButtonIsEnabled() {
@@ -197,7 +197,7 @@ struct AddContactScreen: BaseScreen {
     }
 
     func ageDecreaseButtonIsNotEnabled() {
-        ButtonIsDisabled(Identifiers.ageDecrement)
+        buttonIsDisabled(Identifiers.ageDecrement)
     }
 
     // Gender text field

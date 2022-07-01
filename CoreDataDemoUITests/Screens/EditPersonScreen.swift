@@ -138,7 +138,7 @@ struct EditPersonScreen: BaseScreen {
     }
 
     func editNameButtonIsDisabled() {
-        ButtonIsDisabled(Identifiers.nameEditButton)
+        buttonIsDisabled(Identifiers.nameEditButton)
     }
 
     func editNameButtonExists() {
@@ -152,7 +152,7 @@ struct EditPersonScreen: BaseScreen {
     }
 
     func editAgeButtonIsDisabled() {
-        ButtonIsDisabled(Identifiers.ageEditButton)
+        buttonIsDisabled(Identifiers.ageEditButton)
     }
 
     func editAgeButtonExists() {
@@ -166,7 +166,7 @@ struct EditPersonScreen: BaseScreen {
     }
 
     func editGenderButtonIsDisabled() {
-        ButtonIsDisabled(Identifiers.genderEditButton)
+        buttonIsDisabled(Identifiers.genderEditButton)
     }
 
     func editGenderButtonExists() {

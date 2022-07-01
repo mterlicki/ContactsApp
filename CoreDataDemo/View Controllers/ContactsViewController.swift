@@ -13,7 +13,7 @@ class ContactsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
-    let context = (UIApplication.shared.delegate as! AppDelegate).CoreDataStack.persistentContainer.viewContext
+    let context = (UIApplication.shared.delegate as! AppDelegate).coreDataStack.persistentContainer.viewContext
 
     private var persons = [Person]()
 
@@ -28,7 +28,9 @@ class ContactsViewController: UIViewController {
         self.tableView.rowHeight = UITableView.automaticDimension
         tableView.accessibilityIdentifier = "contactTableView"
 
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapAdd))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
+                                                            target: self,
+                                                            action: #selector(didTapAdd))
         navigationItem.rightBarButtonItem?.accessibilityIdentifier = "addContactButton"
     }
 
@@ -37,7 +39,9 @@ class ContactsViewController: UIViewController {
         guard let addPersonViewController = storyboard?.instantiateViewController(withIdentifier: "addPersonViewController") as? AddPersonViewController else { return }
 
         addPersonViewController.delegate = self
-        self.present(UINavigationController(rootViewController: addPersonViewController), animated: true, completion: nil)
+        self.present(UINavigationController(rootViewController: addPersonViewController),
+                     animated: true,
+                     completion: nil)
     }
 
     // MARK: Core data functions
@@ -129,7 +133,8 @@ extension ContactsViewController: UITableViewDataSource {
         return personCell ?? UITableViewCell()
     }
 
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    func tableView(_ tableView: UITableView,
+                   trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
 
         let action = UIContextualAction(style: .destructive, title: "Delete") { (_, _, _) in
 

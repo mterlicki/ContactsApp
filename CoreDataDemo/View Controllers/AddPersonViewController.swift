@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol AddPersonDelegate {
+protocol AddPersonDelegate: AnyObject {
     func addPerson(name: String, age: Int64, gender: String)
 }
 
@@ -22,12 +22,14 @@ class AddPersonViewController: UIViewController {
     @IBOutlet weak var genderErrorLabel: UILabel!
     @IBOutlet weak var stepper: UIStepper!
 
-    var delegate: AddPersonDelegate?
+    weak var delegate: AddPersonDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         super.navigationItem.title = "Add contact"
-        super.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(didTapCancel))
+        super.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel,
+                                                                 target: self,
+                                                                 action: #selector(didTapCancel))
         super.navigationItem.leftBarButtonItem?.accessibilityIdentifier = "cancelButton"
 
         super.navigationItem.rightBarButtonItem =
@@ -49,7 +51,9 @@ class AddPersonViewController: UIViewController {
     @objc func didTapSave() {
 
         if formHasError() {
-            let alert = UIAlertController(title: "Validation error", message: "The form has errors. Correct the data to save.", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Validation error",
+                                          message: "The form has errors. Correct the data to save.",
+                                          preferredStyle: .alert)
             alert.view.accessibilityIdentifier = "formErrorAlert"
 
             let okButton = UIAlertAction(title: "Ok", style: .default, handler: { _ in
