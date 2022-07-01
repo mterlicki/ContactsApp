@@ -10,18 +10,18 @@ import XCTest
 
 class ContactListTests: BaseTest {
 
-    func testAddContactButtonOpensForm() throws{
+    func testAddContactButtonOpensForm() throws {
         ContactListScreen(app: app)
             .tapAddContact()
             .addPersonScreenIsLoaded()
     }
-    
-    func testEmptyListHasZeroContacts() throws{
+
+    func testEmptyListHasZeroContacts() throws {
         ContactListScreen(app: app)
             .verifyNumberOfContactsEquals(0)
     }
-    
-    func testAfterSavingContactIsVisibleOnList() throws{
+
+    func testAfterSavingContactIsVisibleOnList() throws {
         ContactListScreen(app: app)
             .tapAddContact()
             .typeName("John")
@@ -30,8 +30,8 @@ class ContactListTests: BaseTest {
             .tapSave()
             .verifyNumberOfContactsEquals(1)
     }
-    
-    func testAfterCancelingAddContactFormContactIsNotAdded() throws{
+
+    func testAfterCancelingAddContactFormContactIsNotAdded() throws {
         ContactListScreen(app: app)
             .tapAddContact()
             .typeName("John")
@@ -40,8 +40,8 @@ class ContactListTests: BaseTest {
             .tapCancel()
             .verifyNumberOfContactsEquals(0)
     }
-    
-    func testAddedSecondContactIsAddedAtTheEndOfList() throws{
+
+    func testAddedSecondContactIsAddedAtTheEndOfList() throws {
         ContactListScreen(app: app)
             .tapAddContact()
             .fillFormAndSave("John", "21", "men")
@@ -49,8 +49,8 @@ class ContactListTests: BaseTest {
             .fillFormAndSave("Alex", "32", "men")
             .verifyNameOfContactOnPosition("Alex", 1)
     }
-    
-    func testAfterDeletingContactIsNotAvailableOnList() throws{
+
+    func testAfterDeletingContactIsNotAvailableOnList() throws {
         ContactListScreen(app: app)
             .tapAddContact()
             .fillFormAndSave("John", "12", "men")

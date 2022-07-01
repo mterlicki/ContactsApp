@@ -10,9 +10,9 @@ import Foundation
 import XCTest
 
 extension XCUIElement {
-    
+
     func clearText() {
-        
+
         //
         // cf. and tip courtesy of
         //    https://stackoverflow.com/questions/32821880/ui-test-deleting-text-in-text-field
@@ -24,14 +24,14 @@ extension XCUIElement {
         if let placeholderString = self.placeholderValue, placeholderString == stringValue {
             return
         }
-        
+
         var deleteString = String()
         for _ in stringValue {
             deleteString += XCUIKeyboardKey.delete.rawValue
         }
         self.typeText(deleteString)
     }
-    
+
     func typeTextAndPressEnter(_ text: String) {
         self.typeText("\(text)\n")
     }

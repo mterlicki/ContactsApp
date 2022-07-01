@@ -10,7 +10,7 @@ import XCTest
 
 class AddContactValidationErrorTests: BaseTest {
 
-    func testSavingEmptyContactGeneratesErrorMessageWithProperTitle() throws{
+    func testSavingEmptyContactGeneratesErrorMessageWithProperTitle() throws {
         ContactListScreen(app: app)
             .tapAddContact()
             .tapAgeTextField()
@@ -19,7 +19,7 @@ class AddContactValidationErrorTests: BaseTest {
             .alertHasProperTiltle()
     }
 
-    func testSavingEmptyContactGeneratesErrorMessageWithProperMessage() throws{
+    func testSavingEmptyContactGeneratesErrorMessageWithProperMessage() throws {
         ContactListScreen(app: app)
             .tapAddContact()
             .tapAgeTextField()
@@ -27,8 +27,8 @@ class AddContactValidationErrorTests: BaseTest {
             .tapSave()
             .alertHasProperMessage()
     }
-    
-    func testSavingEmptyContactGeneratesErrorMessageWithOkButton() throws{
+
+    func testSavingEmptyContactGeneratesErrorMessageWithOkButton() throws {
         ContactListScreen(app: app)
             .tapAddContact()
             .tapAgeTextField()
@@ -36,8 +36,8 @@ class AddContactValidationErrorTests: BaseTest {
             .tapSave()
             .alertHasOkButton()
     }
-    
-    func testAfterTapingOkButttonScreenIsInInitialState() throws{
+
+    func testAfterTapingOkButttonScreenIsInInitialState() throws {
         ContactListScreen(app: app)
             .tapAddContact()
             .tapSave()

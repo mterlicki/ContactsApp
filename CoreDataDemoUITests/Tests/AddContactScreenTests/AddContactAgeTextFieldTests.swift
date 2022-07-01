@@ -10,10 +10,10 @@
 import XCTest
 
 class AddContactAgeTextFieldTests: BaseTest {
-    
-    func testTypingCharactersShowsError() throws{
+
+    func testTypingCharactersShowsError() throws {
         let age = "abcd12345"
-        
+
         ContactListScreen(app: app)
             .tapAddContact()
             .tapAgeTextField()
@@ -21,10 +21,10 @@ class AddContactAgeTextFieldTests: BaseTest {
             .typeAge(age)
             .ageErrorLabelValueEqualsTo("Age must contain only digits")
     }
-    
-    func testTypingSpecialCharactersShowsError() throws{
+
+    func testTypingSpecialCharactersShowsError() throws {
         let age = "!@#$%^&*()-+=-[]\\;',./{}|:<>?"
-        
+
         ContactListScreen(app: app)
             .tapAddContact()
             .tapAgeTextField()
@@ -32,10 +32,10 @@ class AddContactAgeTextFieldTests: BaseTest {
             .typeAge(age)
             .ageErrorLabelValueEqualsTo("Age must contain only digits")
     }
-    
-    func testTypingToHighNumerShowsError() throws{
+
+    func testTypingToHighNumerShowsError() throws {
         let age = "100"
-        
+
         ContactListScreen(app: app)
             .tapAddContact()
             .tapAgeTextField()
@@ -43,36 +43,36 @@ class AddContactAgeTextFieldTests: BaseTest {
             .typeAge(age)
             .ageErrorLabelValueEqualsTo("Age must be between 0 and 99")
     }
-    
-    func testEmptyValueShowsError() throws{
+
+    func testEmptyValueShowsError() throws {
         ContactListScreen(app: app)
             .tapAddContact()
             .tapAgeTextField()
             .clearAge()
             .ageErrorLabelValueEqualsTo("Age is required")
     }
-    
-    func testIncementButtonIncreasesAgeValue() throws{
+
+    func testIncementButtonIncreasesAgeValue() throws {
         let expectedAge = "19"
-        
+
         ContactListScreen(app: app)
             .tapAddContact()
             .tapIncreaseAge()
             .ageTextFieldValueEqualsTo(expectedAge)
     }
-    
-    func testDecrementButtonDecreasesAgeValue() throws{
+
+    func testDecrementButtonDecreasesAgeValue() throws {
         let expectedAge = "17"
-        
+
         ContactListScreen(app: app)
             .tapAddContact()
             .tapDecreaseAge()
             .ageTextFieldValueEqualsTo(expectedAge)
     }
-    
-    func testMultipleIncrisingAgeChangesAgeValue() throws{
+
+    func testMultipleIncrisingAgeChangesAgeValue() throws {
         let expectedAge = "22"
-        
+
         ContactListScreen(app: app)
             .tapAddContact()
             .tapIncreaseAge()
@@ -82,10 +82,10 @@ class AddContactAgeTextFieldTests: BaseTest {
             .tapAgeTextField()
             .ageTextFieldValueEqualsTo(expectedAge)
     }
-    
-    func testMultipleDecisingAgeChangesAgeValue() throws{
+
+    func testMultipleDecisingAgeChangesAgeValue() throws {
         let expectedAge = "14"
-        
+
         ContactListScreen(app: app)
             .tapAddContact()
             .tapDecreaseAge()
@@ -95,31 +95,31 @@ class AddContactAgeTextFieldTests: BaseTest {
             .tapAgeTextField()
             .ageTextFieldValueEqualsTo(expectedAge)
     }
-    
-    func testIncreasingAndDecreasingAgeChangesValue() throws{
+
+    func testIncreasingAndDecreasingAgeChangesValue() throws {
         let expectedAge = "18"
-        
+
         ContactListScreen(app: app)
             .tapAddContact()
             .tapIncreaseAge()
             .tapDecreaseAge()
             .ageTextFieldValueEqualsTo(expectedAge)
     }
-    
-    func testDecreasingAndIncreasingAgeChangesValue() throws{
+
+    func testDecreasingAndIncreasingAgeChangesValue() throws {
         let expectedAge = "18"
-        
+
         ContactListScreen(app: app)
             .tapAddContact()
             .tapDecreaseAge()
             .tapIncreaseAge()
             .ageTextFieldValueEqualsTo(expectedAge)
     }
-    
-    func testTypingAgeFormKeyboardAndIncresingByStepper() throws{
+
+    func testTypingAgeFormKeyboardAndIncresingByStepper() throws {
         let age = "35"
         let expectedAge = "36"
-        
+
         ContactListScreen(app: app)
             .tapAddContact()
             .tapAgeTextField()
@@ -128,11 +128,11 @@ class AddContactAgeTextFieldTests: BaseTest {
             .tapIncreaseAge()
             .ageTextFieldValueEqualsTo(expectedAge)
     }
-    
-    func testTypingAgeFormKeyboardAndDecresingByStepper() throws{
+
+    func testTypingAgeFormKeyboardAndDecresingByStepper() throws {
         let age = "45"
         let expectedAge = "44"
-        
+
         ContactListScreen(app: app)
             .tapAddContact()
             .tapAgeTextField()
@@ -141,11 +141,11 @@ class AddContactAgeTextFieldTests: BaseTest {
             .tapDecreaseAge()
             .ageTextFieldValueEqualsTo(expectedAge)
     }
-    
-    func testTypingAgeFromKeyboardAndIncresingAndThenDecreasingByStepper() throws{
+
+    func testTypingAgeFromKeyboardAndIncresingAndThenDecreasingByStepper() throws {
         let age = "45"
         let expectedAge = "45"
-        
+
         ContactListScreen(app: app)
             .tapAddContact()
             .tapAgeTextField()
@@ -155,11 +155,11 @@ class AddContactAgeTextFieldTests: BaseTest {
             .tapDecreaseAge()
             .ageTextFieldValueEqualsTo(expectedAge)
     }
-    
-    func testTypingAgeFromKeyboardAndDecresingAndThenIncreasingByStepper() throws{
+
+    func testTypingAgeFromKeyboardAndDecresingAndThenIncreasingByStepper() throws {
         let age = "45"
         let expectedAge = "45"
-        
+
         ContactListScreen(app: app)
             .tapAddContact()
             .tapAgeTextField()
@@ -169,10 +169,10 @@ class AddContactAgeTextFieldTests: BaseTest {
             .tapIncreaseAge()
             .ageTextFieldValueEqualsTo(expectedAge)
     }
-    
-    func testAfterTypingMinimumValueDecreaseStepperIsInactive() throws{
+
+    func testAfterTypingMinimumValueDecreaseStepperIsInactive() throws {
         let minimumAge = "0"
-        
+
         ContactListScreen(app: app)
             .tapAddContact()
             .tapAgeTextField()
@@ -180,10 +180,10 @@ class AddContactAgeTextFieldTests: BaseTest {
             .typeAge(minimumAge)
             .ageDecreaseButtonIsNotEnabled()
     }
-    
-    func testAfterTypingMinimumValueIncreaseStepperIsActive() throws{
+
+    func testAfterTypingMinimumValueIncreaseStepperIsActive() throws {
         let minimumAge = "0"
-        
+
         ContactListScreen(app: app)
             .tapAddContact()
             .tapAgeTextField()
@@ -191,10 +191,10 @@ class AddContactAgeTextFieldTests: BaseTest {
             .typeAge(minimumAge)
             .ageIncreaseButtonIsEnabled()
     }
-    
-    func testAfterTypingMaximumValueIncreaseStepperIsInactive() throws{
+
+    func testAfterTypingMaximumValueIncreaseStepperIsInactive() throws {
         let maximumAge = "99"
-        
+
         ContactListScreen(app: app)
             .tapAddContact()
             .tapAgeTextField()
@@ -202,10 +202,10 @@ class AddContactAgeTextFieldTests: BaseTest {
             .typeAge(maximumAge)
             .ageIncreaseButtonIsNotEnabled()
     }
-    
-    func testAfterTypingMaximumValueDecreaseStepperIsActive() throws{
+
+    func testAfterTypingMaximumValueDecreaseStepperIsActive() throws {
         let maximumAge = "99"
-        
+
         ContactListScreen(app: app)
             .tapAddContact()
             .tapAgeTextField()
@@ -213,10 +213,10 @@ class AddContactAgeTextFieldTests: BaseTest {
             .typeAge(maximumAge)
             .ageDecreaseButtonIsEnabled()
     }
-    
-    func testAfterIncreasingToMaximumValueByStepperIncreaseStepperIsInactive(){
+
+    func testAfterIncreasingToMaximumValueByStepperIncreaseStepperIsInactive() {
         let age = "98"
-        
+
         ContactListScreen(app: app)
             .tapAddContact()
             .tapAgeTextField()
@@ -225,10 +225,10 @@ class AddContactAgeTextFieldTests: BaseTest {
             .tapIncreaseAge()
             .ageIncreaseButtonIsNotEnabled()
     }
-    
-    func testAfterIncreasingToMaximumValueByStepperDecreaseStepperIsActive(){
+
+    func testAfterIncreasingToMaximumValueByStepperDecreaseStepperIsActive() {
         let age = "98"
-        
+
         ContactListScreen(app: app)
             .tapAddContact()
             .tapAgeTextField()
@@ -237,10 +237,10 @@ class AddContactAgeTextFieldTests: BaseTest {
             .tapIncreaseAge()
             .ageDecreaseButtonIsEnabled()
     }
-    
-    func testAfterDecreasingToMinimumValueByStepperDecreaseStepperIsInactive(){
+
+    func testAfterDecreasingToMinimumValueByStepperDecreaseStepperIsInactive() {
         let age = "1"
-        
+
         ContactListScreen(app: app)
             .tapAddContact()
             .tapAgeTextField()
@@ -249,10 +249,10 @@ class AddContactAgeTextFieldTests: BaseTest {
             .tapDecreaseAge()
             .ageDecreaseButtonIsNotEnabled()
     }
-    
-    func testAfterDecreasingToMinimumValueByStepperIncreaseStepperIsActive(){
+
+    func testAfterDecreasingToMinimumValueByStepperIncreaseStepperIsActive() {
         let age = "1"
-        
+
         ContactListScreen(app: app)
             .tapAddContact()
             .tapAgeTextField()
