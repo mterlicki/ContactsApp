@@ -8,7 +8,6 @@
 import Foundation
 import CoreData
 
-
 class CoreDataController {
   let persistentContainer: NSPersistentContainer
 
@@ -21,13 +20,13 @@ class CoreDataController {
       self.persistentContainer.persistentStoreDescriptions = [description]
     }
 
-    self.persistentContainer.loadPersistentStores(completionHandler: { (storeDescription, error) in
+    self.persistentContainer.loadPersistentStores(completionHandler: { (_, error) in
       if let error = error as NSError? {
         fatalError("Unresolved error \(error), \(error.userInfo)")
       }
     })
   }
-    
+
     func saveContext () {
         let context = persistentContainer.viewContext
         if context.hasChanges {

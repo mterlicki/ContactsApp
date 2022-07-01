@@ -10,22 +10,22 @@ import XCTest
 
 class AddContactNameFieldTests: BaseTest {
 
-    func testErrorLabelIsEmptyAfterTypingName() throws{
+    func testErrorLabelIsEmptyAfterTypingName() throws {
         ContactListScreen(app: app)
             .tapAddContact()
             .typeName("John")
             .nameErrorLabelValueEqualsTo("")
     }
-    
-    func testErrorLabelShowsMessageWhenTypedNameIsEmpty() throws{
+
+    func testErrorLabelShowsMessageWhenTypedNameIsEmpty() throws {
         ContactListScreen(app: app)
             .tapAddContact()
             .typeName("")
             .tapAgeTextField()
             .nameErrorLabelValueEqualsTo("Name is required")
     }
-    
-    func testErrorLabelIsEmptyAfterRetypingName() throws{
+
+    func testErrorLabelIsEmptyAfterRetypingName() throws {
         ContactListScreen(app: app)
             .tapAddContact()
             .tapNameTextField()
@@ -33,16 +33,16 @@ class AddContactNameFieldTests: BaseTest {
             .typeName("John")
             .nameErrorLabelValueEqualsTo("")
     }
-    
-    func testErrorLabelShowsMessageAfterDeletingName() throws{
+
+    func testErrorLabelShowsMessageAfterDeletingName() throws {
         ContactListScreen(app: app)
             .tapAddContact()
             .typeName("John")
             .clearName()
             .nameErrorLabelValueEqualsTo("Name is required")
     }
-    
-    func testErrorLabelIsEmptyAfterSavingWithErrorWithEmptyGender() throws{
+
+    func testErrorLabelIsEmptyAfterSavingWithErrorWithEmptyGender() throws {
         ContactListScreen(app: app)
             .tapAddContact()
             .typeName("John")
@@ -50,8 +50,8 @@ class AddContactNameFieldTests: BaseTest {
             .tapAlertOkButton()
             .nameErrorLabelValueEqualsTo("")
     }
-    
-    func testErrorLabelShowsErrorAfterSavingWithEmptyName() throws{
+
+    func testErrorLabelShowsErrorAfterSavingWithEmptyName() throws {
         ContactListScreen(app: app)
             .tapAddContact()
             .tapNameTextField()
@@ -59,29 +59,29 @@ class AddContactNameFieldTests: BaseTest {
             .tapAlertOkButton()
             .nameErrorLabelValueEqualsTo("Name is required")
     }
-    
-    func testTypingLongName() throws{
+
+    func testTypingLongName() throws {
         let name = "John Emanuel Hernandez the third to the crown"
-        
+
         ContactListScreen(app: app)
             .tapAddContact()
             .typeName(name)
             .nameTextFiledValueEqualsTo(name)
     }
-    
-    func testTypingSpecialCharackters() throws{
+
+    func testTypingSpecialCharackters() throws {
         let name = "!@#$%&*()_+-=[]\\{}|;'<>?,./"
-        
+
         ContactListScreen(app: app)
             .tapAddContact()
             .typeName(name)
             .nameTextFiledValueEqualsTo(name)
     }
-    
-    func testRetypingAppendsName() throws{
+
+    func testRetypingAppendsName() throws {
         let firstName = "John Emanuel"
         let secondName = " Snow"
-        
+
         ContactListScreen(app: app)
             .tapAddContact()
             .typeName(firstName)
