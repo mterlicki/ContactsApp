@@ -14,6 +14,7 @@
 		F7565AFA28133D3200D1D64F /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7565AF928133D3200D1D64F /* CoreDataController.swift */; };
 		F763FF1E27E678F100E0A2CF /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F763FF1C27E678F100E0A2CF /* Person+CoreDataClass.swift */; };
 		F763FF1F27E678F100E0A2CF /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F763FF1D27E678F100E0A2CF /* Person+CoreDataProperties.swift */; };
+		F76732A72917D9B400533AA8 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76732A62917D9B400533AA8 /* EditViewController.swift */; };
 		F76EFDA828379AB300BF3EE7 /* AddContactValidationErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76EFDA728379AB300BF3EE7 /* AddContactValidationErrorTests.swift */; };
 		F77264E527A41F0F0012E783 /* EditPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77264E427A41F0F0012E783 /* EditPersonViewController.swift */; };
 		F77878B028254716009EEAD2 /* AddContactNameFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77878AF28254716009EEAD2 /* AddContactNameFieldTests.swift */; };
@@ -29,6 +30,7 @@
 		F7A0158528032BEB00533FE2 /* AddContactInitialStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A0158428032BEB00533FE2 /* AddContactInitialStateTests.swift */; };
 		F7B0705E27E63BE500BA37E8 /* AddPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B0705D27E63BE500BA37E8 /* AddPersonViewController.swift */; };
 		F7B07A582840132900927EB4 /* EditContactInitialStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B07A572840132900927EB4 /* EditContactInitialStateTests.swift */; };
+		F7B31BD2291FC2DE00C42452 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B31BD1291FC2DE00C42452 /* DetailView.swift */; };
 		F7BA230C2791B552000E8ADC /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BA230B2791B552000E8ADC /* PersonCell.swift */; };
 		F7C0BCC227F8824F00EDA802 /* ContactListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C0BCC127F8824F00EDA802 /* ContactListScreen.swift */; };
 		F7C0BCC427F8827C00EDA802 /* AddContactScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C0BCC327F8827C00EDA802 /* AddContactScreen.swift */; };
@@ -63,6 +65,7 @@
 		F7565AF928133D3200D1D64F /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
 		F763FF1C27E678F100E0A2CF /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F763FF1D27E678F100E0A2CF /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F76732A62917D9B400533AA8 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		F76EFDA728379AB300BF3EE7 /* AddContactValidationErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactValidationErrorTests.swift; sourceTree = "<group>"; };
 		F77264E427A41F0F0012E783 /* EditPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPersonViewController.swift; sourceTree = "<group>"; };
 		F77878AF28254716009EEAD2 /* AddContactNameFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactNameFieldTests.swift; sourceTree = "<group>"; };
@@ -84,6 +87,7 @@
 		F7A0158428032BEB00533FE2 /* AddContactInitialStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactInitialStateTests.swift; sourceTree = "<group>"; };
 		F7B0705D27E63BE500BA37E8 /* AddPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonViewController.swift; sourceTree = "<group>"; };
 		F7B07A572840132900927EB4 /* EditContactInitialStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactInitialStateTests.swift; sourceTree = "<group>"; };
+		F7B31BD1291FC2DE00C42452 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		F7BA230B2791B552000E8ADC /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 		F7C0BCC127F8824F00EDA802 /* ContactListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListScreen.swift; sourceTree = "<group>"; };
 		F7C0BCC327F8827C00EDA802 /* AddContactScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactScreen.swift; sourceTree = "<group>"; };
@@ -153,6 +157,7 @@
 		F784172E26EB2899001553D7 /* CoreDataDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F7B31BD0291FC29200C42452 /* Views */,
 				F7A839782803370200562D6F /* Handlers */,
 				F784176C26EB2A79001553D7 /* Model */,
 				F784172F26EB2899001553D7 /* AppDelegate.swift */,
@@ -216,12 +221,21 @@
 			path = EditContactTests;
 			sourceTree = "<group>";
 		};
+		F7B31BD0291FC29200C42452 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F7B31BD1291FC2DE00C42452 /* DetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		F7DF287727EB78F400F0B9B7 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				F7B0705D27E63BE500BA37E8 /* AddPersonViewController.swift */,
 				F784173326EB2899001553D7 /* ContactsViewController.swift */,
 				F77264E427A41F0F0012E783 /* EditPersonViewController.swift */,
+				F76732A62917D9B400533AA8 /* EditViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -433,6 +447,7 @@
 			files = (
 				F763FF1E27E678F100E0A2CF /* Person+CoreDataClass.swift in Sources */,
 				F7BA230C2791B552000E8ADC /* PersonCell.swift in Sources */,
+				F7B31BD2291FC2DE00C42452 /* DetailView.swift in Sources */,
 				F763FF1F27E678F100E0A2CF /* Person+CoreDataProperties.swift in Sources */,
 				F784173426EB2899001553D7 /* ContactsViewController.swift in Sources */,
 				F7565AFA28133D3200D1D64F /* CoreDataController.swift in Sources */,
@@ -440,6 +455,7 @@
 				F784173026EB2899001553D7 /* AppDelegate.swift in Sources */,
 				F784173226EB2899001553D7 /* SceneDelegate.swift in Sources */,
 				F77264E527A41F0F0012E783 /* EditPersonViewController.swift in Sources */,
+				F76732A72917D9B400533AA8 /* EditViewController.swift in Sources */,
 				F7B0705E27E63BE500BA37E8 /* AddPersonViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

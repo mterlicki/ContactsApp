@@ -83,7 +83,7 @@ class EditPersonViewController: UIViewController {
 
     }
 
-    func createAlert(title: String, message: String, label: UILabel) {
+    private func createAlert(title: String, message: String, label: UILabel) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
 
         alert.addTextField(configurationHandler: nil)

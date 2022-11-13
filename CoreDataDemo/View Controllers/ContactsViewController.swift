@@ -109,7 +109,7 @@ extension ContactsViewController: UITableViewDelegate {
         //  Selected person
         let selectedPerson = self.persons[indexPath.row]
 
-        guard let personViewController = storyboard?.instantiateViewController(withIdentifier: "personVC") as? EditPersonViewController else { return  }
+        let personViewController = EditViewController()
         personViewController.delegate = self
         personViewController.person = selectedPerson
         self.navigationController?.pushViewController(personViewController, animated: true)
