@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol EditDelegate: AnyObject {
+    func editPerson()
+}
+
 class EditViewController: UIViewController {
 
     let stackView = UIStackView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: 200, height: 100)))
@@ -16,7 +20,7 @@ class EditViewController: UIViewController {
     let genderView = DetailView()
 
     public var person: Person?
-    weak var delegate: EditPersonDelegate?
+    weak var delegate: EditDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,7 +88,7 @@ class EditViewController: UIViewController {
         genderView.keyLabel.accessibilityIdentifier = "genderLabel"
         genderView.editButton.accessibilityIdentifier = "genderEditButton"
         genderView.valueLabel.accessibilityIdentifier = "contactGenderLabel"
-        
+
 
     }
 
@@ -95,7 +99,7 @@ class EditViewController: UIViewController {
         stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10).isActive = true
 
     }
-    
+
     @objc private func didTapEdit() {
         super.navigationItem.rightBarButtonItem =
         UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(didTapDone))
@@ -106,7 +110,7 @@ class EditViewController: UIViewController {
         genderView.editButton.isUserInteractionEnabled = true
 
     }
-    
+
     @objc private func didTapDone() {
         person?.name = nameView.valueLabel.text
         let age = Int(ageView.valueLabel.text ?? "")

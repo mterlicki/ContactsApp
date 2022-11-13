@@ -36,6 +36,7 @@ class ContactsViewController: UIViewController {
         navigationItem.rightBarButtonItem?.accessibilityIdentifier = "addContactButton"
     }
 
+
     @objc private func didTapAdd() {
 
         guard let addPersonViewController = storyboard?.instantiateViewController(withIdentifier: "addPersonViewController") as? AddPersonViewController else { return }
@@ -159,7 +160,7 @@ extension ContactsViewController: UITableViewDataSource {
 
 // MARK: Extensions
 
-extension ContactsViewController: EditPersonDelegate {
+extension ContactsViewController: EditDelegate {
 
     func editPerson() {
         do {
