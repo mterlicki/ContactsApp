@@ -46,8 +46,6 @@ class EditContactInitialStateTests: BaseTest {
 
     func testContactsGenderShowsSelectedContactGender() throws {
         ContactListScreen(app: app)
-            .tapAddContact()
-            .fillFormAndSave(contactName, age, gender)
             .selectContact(contactName)
             .verifyContactGenderLabelHasValue(gender)
     }
