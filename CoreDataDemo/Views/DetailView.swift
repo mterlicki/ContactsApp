@@ -21,7 +21,7 @@ class DetailView: UIView {
         configureMainStack(key: key, value: value)
     }
 
-    func configureMainStack (key: String, value: String) {
+    private func configureMainStack (key: String, value: String) {
         mainStack.clipsToBounds = true
         mainStack.translatesAutoresizingMaskIntoConstraints = false
         mainStack.spacing = 20
@@ -46,7 +46,7 @@ class DetailView: UIView {
         ])
     }
 
-    func configureLabelStackView (key: String, value: String) {
+    private func configureLabelStackView (key: String, value: String) {
         labelStack.clipsToBounds = true
         labelStack.translatesAutoresizingMaskIntoConstraints = false
         labelStack.spacing = 4
@@ -62,7 +62,7 @@ class DetailView: UIView {
 
     }
 
-    func configureLabel (text: String, label: UILabel, isBold: Bool) {
+    private func configureLabel (text: String, label: UILabel, isBold: Bool) {
         if isBold {
             let atributes: [NSAttributedString.Key: Any] = [
                 .font: UIFont.boldSystemFont(ofSize: 17)
@@ -81,7 +81,7 @@ class DetailView: UIView {
 
     }
 
-    func configureEditButton () {
+    private func configureEditButton () {
 
         editButton.setImage(UIImage(systemName: "pencil"), for: .normal)
         editButton.isAccessibilityElement = true
@@ -96,7 +96,7 @@ class DetailView: UIView {
         let keyName = keyLabel.text?.lowercased()
         createAlert(title: "Edit \(keyName ?? "")", message: "Type new \(keyName ?? "")", label: valueLabel)
     }
-    
+
     private func createAlert(title: String, message: String, label: UILabel) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
 

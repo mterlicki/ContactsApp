@@ -6,12 +6,11 @@
 //  Copyright © 2022 Michal Terlicki. All rights reserved.
 //
 // swiftlint:disable force_cast
-// swiftlint:disable line_length
 
 import UIKit
 
 // MARK: - View Controler
-class ContactsViewController: UIViewController {
+class ContactsViewController: UIViewController, AddDelegete {
 
     @IBOutlet weak var tableView: UITableView!
 
@@ -36,13 +35,12 @@ class ContactsViewController: UIViewController {
         navigationItem.rightBarButtonItem?.accessibilityIdentifier = "addContactButton"
     }
 
-
     @objc private func didTapAdd() {
 
-        guard let addPersonViewController = storyboard?.instantiateViewController(withIdentifier: "addPersonViewController") as? AddPersonViewController else { return }
+        let addViewController = AddViewController()
 
-        addPersonViewController.delegate = self
-        self.present(UINavigationController(rootViewController: addPersonViewController),
+        addViewController.delegate = self
+        self.present(UINavigationController(rootViewController: addViewController),
                      animated: true,
                      completion: nil)
     }

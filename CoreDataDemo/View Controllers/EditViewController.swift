@@ -27,6 +27,12 @@ class EditViewController: UIViewController {
         self.view.backgroundColor = .systemBackground
         view.addSubview(stackView)
 
+        setupView()
+
+    }
+
+    private func setupView() {
+
         configureStackView()
         setStackViewConstraints()
         setKeyAndValue()
@@ -88,7 +94,6 @@ class EditViewController: UIViewController {
         genderView.keyLabel.accessibilityIdentifier = "genderLabel"
         genderView.editButton.accessibilityIdentifier = "genderEditButton"
         genderView.valueLabel.accessibilityIdentifier = "contactGenderLabel"
-
 
     }
 

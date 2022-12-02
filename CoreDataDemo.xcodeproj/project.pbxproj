@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F71A7D9229314AEA00618CB4 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71A7D9129314AEA00618CB4 /* AddViewController.swift */; };
+		F71A7D942931504000618CB4 /* TextEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71A7D932931504000618CB4 /* TextEditView.swift */; };
+		F71A7D962931506600618CB4 /* NumberEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71A7D952931506600618CB4 /* NumberEditView.swift */; };
 		F731B9782842491200373813 /* BaseScreen+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F731B9772842491200373813 /* BaseScreen+Extenstions.swift */; };
 		F74A770128268D46004D81CB /* AddContactAgeTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74A770028268D46004D81CB /* AddContactAgeTextFieldTests.swift */; };
 		F74A770328269F1C004D81CB /* XCUIElement+ClearText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74A770228269F1C004D81CB /* XCUIElement+ClearText.swift */; };
@@ -57,6 +60,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F71A7D9129314AEA00618CB4 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		F71A7D932931504000618CB4 /* TextEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditView.swift; sourceTree = "<group>"; };
+		F71A7D952931506600618CB4 /* NumberEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberEditView.swift; sourceTree = "<group>"; };
 		F731B9772842491200373813 /* BaseScreen+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "BaseScreen+Extenstions.swift"; path = "CoreDataDemoUITests/Tests/EditContactTests/BaseScreen+Extenstions.swift"; sourceTree = SOURCE_ROOT; };
 		F74A770028268D46004D81CB /* AddContactAgeTextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactAgeTextFieldTests.swift; sourceTree = "<group>"; };
 		F74A770228269F1C004D81CB /* XCUIElement+ClearText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "XCUIElement+ClearText.swift"; path = "CoreDataDemoUITests/Tests/XCUIElement+ClearText.swift"; sourceTree = SOURCE_ROOT; };
@@ -223,6 +229,8 @@
 			isa = PBXGroup;
 			children = (
 				F7B31BD1291FC2DE00C42452 /* DetailView.swift */,
+				F71A7D932931504000618CB4 /* TextEditView.swift */,
+				F71A7D952931506600618CB4 /* NumberEditView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -233,6 +241,7 @@
 				F7B0705D27E63BE500BA37E8 /* AddPersonViewController.swift */,
 				F784173326EB2899001553D7 /* ContactsViewController.swift */,
 				F76732A62917D9B400533AA8 /* EditViewController.swift */,
+				F71A7D9129314AEA00618CB4 /* AddViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -442,13 +451,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F71A7D942931504000618CB4 /* TextEditView.swift in Sources */,
 				F763FF1E27E678F100E0A2CF /* Person+CoreDataClass.swift in Sources */,
 				F7BA230C2791B552000E8ADC /* PersonCell.swift in Sources */,
+				F71A7D9229314AEA00618CB4 /* AddViewController.swift in Sources */,
 				F7B31BD2291FC2DE00C42452 /* DetailView.swift in Sources */,
 				F763FF1F27E678F100E0A2CF /* Person+CoreDataProperties.swift in Sources */,
 				F784173426EB2899001553D7 /* ContactsViewController.swift in Sources */,
 				F7565AFA28133D3200D1D64F /* CoreDataController.swift in Sources */,
 				F784173A26EB2899001553D7 /* CoreDataDemo.xcdatamodeld in Sources */,
+				F71A7D962931506600618CB4 /* NumberEditView.swift in Sources */,
 				F784173026EB2899001553D7 /* AppDelegate.swift in Sources */,
 				F784173226EB2899001553D7 /* SceneDelegate.swift in Sources */,
 				F76732A72917D9B400533AA8 /* EditViewController.swift in Sources */,
