@@ -77,9 +77,13 @@ class AddViewController: UIViewController {
 
     @objc func didTapCancel() {
 
+        self.dismiss(animated: true, completion: nil)
+
     }
 
     @objc func didTapSave() {
+
+        self.dismiss(animated: true, completion: nil)
 
     }
 
