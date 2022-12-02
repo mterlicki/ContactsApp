@@ -1,5 +1,5 @@
 //
-//  KeyValueView.swift
+//  DetailView.swift
 //  CoreDataDemo
 //
 //  Created by Michal Terlicki on 12/11/2022.
