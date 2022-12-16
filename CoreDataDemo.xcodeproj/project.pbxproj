@@ -162,7 +162,6 @@
 			isa = PBXGroup;
 			children = (
 				F7B31BD0291FC29200C42452 /* Views */,
-				F7A839782803370200562D6F /* Handlers */,
 				F784176C26EB2A79001553D7 /* Model */,
 				F784172F26EB2899001553D7 /* AppDelegate.swift */,
 				F784173126EB2899001553D7 /* SceneDelegate.swift */,
@@ -207,13 +206,6 @@
 				F7565AF928133D3200D1D64F /* CoreDataController.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		F7A839782803370200562D6F /* Handlers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Handlers;
 			sourceTree = "<group>";
 		};
 		F7B07A56284012BF00927EB4 /* EditContactTests */ = {

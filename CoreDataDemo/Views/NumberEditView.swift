@@ -8,6 +8,10 @@
 
 import UIKit
 
+enum NumberFieldType {
+    case age
+}
+
 class NumberEditView: UIView {
 
     let mainStack = UIStackView()
@@ -16,6 +20,16 @@ class NumberEditView: UIView {
     let textField = UITextField()
     let stepper = UIStepper()
     let errorLabel = UILabel()
+    let type: NumberFieldType
+
+    init (with fieldType: NumberFieldType) {
+        type = fieldType
+        super.init(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     func set(key: String, placeholder: String?, errorMessage: String, value: String) {
         self.addSubview(mainStack)
@@ -94,6 +108,7 @@ class NumberEditView: UIView {
         textField.placeholder = placeholder
         textField.text = value
         textField.keyboardType = .numberPad
+        textField.addTarget(self, action: #selector(NumberEditView.numberFieldDidChange(_:)), for: .editingChanged)
 
     }
 
@@ -102,6 +117,35 @@ class NumberEditView: UIView {
         configureLabel(text: value, label: errorLabel, isBold: false)
         errorLabel.textColor = .systemRed
 
+    }
+
+    @objc private func numberFieldDidChange(_ textField: UITextField) {
+        let textFieldValue = textField.text ?? ""
+        numberValidator(number: textFieldValue)
+    }
+
+    private func numberValidator (number: String) {
+        let errorMessage: String
+        switch type {
+        case .age:
+            errorMessage = validateAge(number: number)
+        }
+        setErrorLabelValue(value: errorMessage)
+    }
+
+    private func validateAge(number: String) -> String {
+        if number.count == 0 {
+            return "Age is required"
+        }
+        let set = CharacterSet(charactersIn: number)
+        if !CharacterSet.decimalDigits.isSuperset(of: set) {
+            return "Age must contain only digits"
+        }
+
+        if number.count > 2 {
+            return "Age must be between 0 and 99"
+        }
+        return ""
     }
 
 }

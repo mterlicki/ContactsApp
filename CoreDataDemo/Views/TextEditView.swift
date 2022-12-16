@@ -8,6 +8,11 @@
 
 import UIKit
 
+enum TextFieldType {
+    case name
+    case gender
+}
+
 class TextEditView: UIView {
 
     let mainStack = UIStackView()
@@ -15,6 +20,16 @@ class TextEditView: UIView {
     let keyLabel = UILabel()
     let textField = UITextField()
     let errorLabel = UILabel()
+    let type: TextFieldType
+
+    init (with fieldType: TextFieldType) {
+        type = fieldType
+        super.init(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     func set(key: String, placeholder: String?, errorMessage: String) {
         self.addSubview(mainStack)
@@ -90,14 +105,48 @@ class TextEditView: UIView {
         textField.widthAnchor.constraint(equalToConstant: 200).isActive = true
         textField.heightAnchor.constraint(equalToConstant: 50).isActive = true
         textField.placeholder = placeholder
+        textField.addTarget(self, action: #selector(TextEditView.textFieldDidChange(_:)), for: .editingChanged)
 
     }
 
-    private func setErrorLabelValue(value: String) {
+    func setErrorLabelValue(value: String) {
 
         configureLabel(text: value, label: errorLabel, isBold: false)
         errorLabel.textColor = .systemRed
 
+    }
+
+    @objc private func textFieldDidChange(_ textField: UITextField) {
+        let textFieldValue = textField.text ?? ""
+        textValidator(text: textFieldValue)
+    }
+
+    private func textValidator(text: String) {
+        let errorMessage: String
+        switch type {
+        case .name:
+            errorMessage = validateName(text: text)
+        case .gender:
+            errorMessage = validateGender(text: text)
+        }
+
+        setErrorLabelValue(value: errorMessage)
+    }
+    private func validateName(text: String) -> String {
+        if text.count == 0 {
+            return "Name is required"
+        }
+        return ""
+    }
+
+    private func validateGender(text: String) -> String {
+        if text.count == 0 {
+            return "Gender is required"
+        }
+        if text != "men" && text != "woman" && text != "nn" {
+            return "Invalid gender, type: men/woman/nn"
+        }
+        return ""
     }
 
 }

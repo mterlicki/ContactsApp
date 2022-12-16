@@ -16,9 +16,9 @@ class AddViewController: UIViewController {
 
     let stackView = UIStackView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: 200, height: 100)))
 
-    let nameTextField = TextEditView()
-    let ageTextField = NumberEditView()
-    let genderTextField = TextEditView()
+    let nameTextField = TextEditView(with: .name)
+    let ageTextField = NumberEditView(with: .age)
+    let genderTextField = TextEditView(with: .gender)
 
     weak var delegate: AddDelegete?
 
