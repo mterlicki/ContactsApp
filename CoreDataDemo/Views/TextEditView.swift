@@ -136,7 +136,7 @@ class TextEditView: UIView {
         if text.count == 0 {
             return "Name is required"
         }
-        return ""
+        return " "
     }
 
     private func validateGender(text: String) -> String {
@@ -146,7 +146,7 @@ class TextEditView: UIView {
         if text != "men" && text != "woman" && text != "nn" {
             return "Invalid gender, type: men/woman/nn"
         }
-        return ""
+        return " "
     }
 
 }

@@ -10,7 +10,7 @@
 import UIKit
 
 // MARK: - View Controler
-class ContactsViewController: UIViewController, AddDelegete {
+class ContactsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
@@ -170,7 +170,7 @@ extension ContactsViewController: EditDelegate {
     }
 }
 
-extension ContactsViewController: AddPersonDelegate {
+extension ContactsViewController: AddDelegete {
     func addPerson(name: String, age: Int64, gender: String) {
 
         addNewPerson(name: name, age: age, gender: gender)

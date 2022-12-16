@@ -160,7 +160,7 @@ class NumberEditView: UIView {
         if number.count > 2 {
             return "Age must be between 0 and 99"
         }
-        return ""
+        return " "
     }
 
 }

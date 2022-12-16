@@ -30,7 +30,6 @@
 		F784173F26EB289C001553D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F784173D26EB289C001553D7 /* LaunchScreen.storyboard */; };
 		F784174A26EB289C001553D7 /* CoreDataDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F784174926EB289C001553D7 /* CoreDataDemoTests.swift */; };
 		F7A0158528032BEB00533FE2 /* AddContactInitialStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A0158428032BEB00533FE2 /* AddContactInitialStateTests.swift */; };
-		F7B0705E27E63BE500BA37E8 /* AddPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B0705D27E63BE500BA37E8 /* AddPersonViewController.swift */; };
 		F7B07A582840132900927EB4 /* EditContactInitialStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B07A572840132900927EB4 /* EditContactInitialStateTests.swift */; };
 		F7B31BD2291FC2DE00C42452 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B31BD1291FC2DE00C42452 /* DetailView.swift */; };
 		F7BA230C2791B552000E8ADC /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BA230B2791B552000E8ADC /* PersonCell.swift */; };
@@ -89,7 +88,6 @@
 		F784175026EB289C001553D7 /* CoreDataDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F784175626EB289C001553D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7A0158428032BEB00533FE2 /* AddContactInitialStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactInitialStateTests.swift; sourceTree = "<group>"; };
-		F7B0705D27E63BE500BA37E8 /* AddPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonViewController.swift; sourceTree = "<group>"; };
 		F7B07A572840132900927EB4 /* EditContactInitialStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactInitialStateTests.swift; sourceTree = "<group>"; };
 		F7B31BD1291FC2DE00C42452 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		F7BA230B2791B552000E8ADC /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
@@ -230,7 +228,6 @@
 		F7DF287727EB78F400F0B9B7 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F7B0705D27E63BE500BA37E8 /* AddPersonViewController.swift */,
 				F784173326EB2899001553D7 /* ContactsViewController.swift */,
 				F76732A62917D9B400533AA8 /* EditViewController.swift */,
 				F71A7D9129314AEA00618CB4 /* AddViewController.swift */,
@@ -456,7 +453,6 @@
 				F784173026EB2899001553D7 /* AppDelegate.swift in Sources */,
 				F784173226EB2899001553D7 /* SceneDelegate.swift in Sources */,
 				F76732A72917D9B400533AA8 /* EditViewController.swift in Sources */,
-				F7B0705E27E63BE500BA37E8 /* AddPersonViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
