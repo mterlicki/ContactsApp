@@ -93,6 +93,7 @@ class NumberEditView: UIView {
         textField.heightAnchor.constraint(equalToConstant: 50).isActive = true
         textField.placeholder = placeholder
         textField.text = value
+        textField.keyboardType = .numberPad
 
     }
 
