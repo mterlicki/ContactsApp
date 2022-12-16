@@ -75,6 +75,7 @@ class NumberEditView: UIView {
 
         configureLabel(text: key, label: keyLabel, isBold: true)
         configureTextField(placeholder: placeholder, value: value)
+        configureStepper()
 
         textEditStack.addArrangedSubview(keyLabel)
         textEditStack.addArrangedSubview(textField)
@@ -112,6 +113,13 @@ class NumberEditView: UIView {
 
     }
 
+    private func configureStepper() {
+        stepper.value = 18
+        stepper.addTarget(self, action: #selector(NumberEditView.stepperValueChanged), for: .valueChanged)
+        stepper.minimumValue = 0
+        stepper.maximumValue = 99
+    }
+
     private func setErrorLabelValue(value: String) {
 
         configureLabel(text: value, label: errorLabel, isBold: false)
@@ -120,8 +128,15 @@ class NumberEditView: UIView {
     }
 
     @objc private func numberFieldDidChange(_ textField: UITextField) {
-        let textFieldValue = textField.text ?? ""
-        numberValidator(number: textFieldValue)
+        let value = textField.text ?? ""
+        numberValidator(number: value)
+        if errorLabel.text == "" {
+            stepper.value = Double(value) ?? 0.0
+        }
+    }
+
+    @objc func stepperValueChanged(_ sender: UIStepper) {
+        textField.text = Int(sender.value).description
     }
 
     private func numberValidator (number: String) {
