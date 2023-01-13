@@ -16,7 +16,7 @@ class AddContactGenderTextFieldTests: BaseTest {
             .tapGenderTextField()
             .typeGender("")
             .tapNameTextField()
-            .genderErrorLabelValueEqualsTo("Required")
+            .genderErrorLabelValueEqualsTo("Gender is required")
     }
 
     func testErrorLabelIsEmptyAfterTypingMen() throws {

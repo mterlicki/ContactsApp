@@ -1,0 +1,34 @@
+{
+  "configurations" : [
+    {
+      "id" : "C46D8987-01F0-459F-8811-F6322D699A36",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "language" : "en",
+    "region" : "GB",
+    "testExecutionOrdering" : "random",
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "skippedTests" : [
+        "BaseTest",
+        "ContactListTests",
+        "EditContactEditModeTests",
+        "EditContactInitialStateTests"
+      ],
+      "target" : {
+        "containerPath" : "container:CoreDataDemo.xcodeproj",
+        "identifier" : "F784174F26EB289C001553D7",
+        "name" : "CoreDataDemoUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
