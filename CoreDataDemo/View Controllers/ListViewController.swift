@@ -1,37 +1,76 @@
 //
-//  ViewController.swift
+//  ListViewController.swift
 //  CoreDataDemo
 //
-//  Created by Michal Terlicki on 10/09/2021.
-//  Copyright © 2022 Michal Terlicki. All rights reserved.
+//  Created by Michal Terlicki on 13/01/2023.
+//  Copyright © 2023 Michal Terlicki. All rights reserved.
 //
 // swiftlint:disable force_cast
 
 import UIKit
 
-// MARK: - View Controler
-class ContactsViewController: UIViewController {
-
-    @IBOutlet weak var tableView: UITableView!
+class ListViewController: UIViewController {
 
     let context = (UIApplication.shared.delegate as! AppDelegate).coreDataStack.persistentContainer.viewContext
 
     private var persons = [Person]()
 
+    let tableView = UITableView()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.title = "Contacts"
         getAllPersons()
+        self.view.backgroundColor = .systemBackground
+        view.addSubview(tableView)
+        setupView()
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        tableView.frame = view.bounds
+    }
+
+    private func setupView() {
+
+        setupTableView()
+        setNavigationBar()
+        setAccesability()
+    }
+
+    private func setupTableView() {
+
+        setTableViewConstraints()
+
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(ContactCell.self, forCellReuseIdentifier: "ContactCell")
 
         self.tableView.estimatedRowHeight = 44.0
         self.tableView.rowHeight = UITableView.automaticDimension
-        tableView.accessibilityIdentifier = "contactTableView"
+
+    }
+
+    private func setTableViewConstraints() {
+        tableView.clipsToBounds = true
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0).isActive = true
+        tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 0).isActive = true
+        tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 0).isActive = true
+    }
+
+    private func setNavigationBar () {
 
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
                                                             target: self,
                                                             action: #selector(didTapAdd))
+        navigationItem.title = "Contacts"
+
+    }
+
+    private func setAccesability() {
+
+        tableView.accessibilityIdentifier = "contactTableView"
         navigationItem.rightBarButtonItem?.accessibilityIdentifier = "addContactButton"
     }
 
@@ -44,7 +83,7 @@ class ContactsViewController: UIViewController {
                      animated: true,
                      completion: nil)
     }
-
+    
     // MARK: Core data functions
 
     func getAllPersons() {
@@ -97,11 +136,12 @@ class ContactsViewController: UIViewController {
             fatalError("Error saving context update person")
         }
     }
+
 }
 
 // MARK: Table View functions
 
-extension ContactsViewController: UITableViewDelegate {
+extension ListViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
@@ -116,7 +156,7 @@ extension ContactsViewController: UITableViewDelegate {
     }
 }
 
-extension ContactsViewController: UITableViewDataSource {
+extension ListViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 85
@@ -128,10 +168,10 @@ extension ContactsViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let person = persons[indexPath.row]
-        lazy var personCell = tableView.dequeueReusableCell(withIdentifier: "Person", for: indexPath) as? PersonCell
-        personCell?.setCell(with: person)
+        lazy var cell: ContactCell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath) as! ContactCell
+        cell.set(contact: person)
 
-        return personCell ?? UITableViewCell()
+        return cell
     }
 
     func tableView(_ tableView: UITableView,
@@ -158,7 +198,7 @@ extension ContactsViewController: UITableViewDataSource {
 
 // MARK: Extensions
 
-extension ContactsViewController: EditDelegate {
+extension ListViewController: EditDelegate {
 
     func editPerson() {
         do {
@@ -170,7 +210,7 @@ extension ContactsViewController: EditDelegate {
     }
 }
 
-extension ContactsViewController: AddDelegete {
+extension ListViewController: AddDelegete {
     func addPerson(name: String, age: Int64, gender: String) {
 
         addNewPerson(name: name, age: age, gender: gender)

@@ -47,7 +47,7 @@ class TextEditView: UIView {
         mainStack.backgroundColor = .systemGray5
         mainStack.layer.cornerRadius = 10
         mainStack.isLayoutMarginsRelativeArrangement = true
-        mainStack.layoutMargins = UIEdgeInsets(top: 10, left: 10, bottom: 20, right: 10)
+        mainStack.layoutMargins = UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
 
         configureTextEditStack(key: key, placeholder: placeholder)
         setErrorLabelValue(value: errorMessage)
@@ -106,6 +106,7 @@ class TextEditView: UIView {
         textField.heightAnchor.constraint(equalToConstant: 50).isActive = true
         textField.placeholder = placeholder
         textField.addTarget(self, action: #selector(TextEditView.textFieldDidChange(_:)), for: .editingChanged)
+        textField.addTarget(self, action: #selector(TextEditView.textFieldDidChange(_:)), for: .editingDidEnd)
 
     }
 

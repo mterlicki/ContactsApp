@@ -128,9 +128,9 @@ class NumberEditView: UIView {
     }
 
     @objc private func numberFieldDidChange(_ textField: UITextField) {
-        let value = textField.text ?? ""
+        let value = textField.text ?? " "
         numberValidator(number: value)
-        if errorLabel.text == "" {
+        if errorLabel.text == " " {
             stepper.value = Double(value) ?? 0.0
         }
     }
