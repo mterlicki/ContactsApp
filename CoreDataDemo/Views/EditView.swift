@@ -1,5 +1,5 @@
 //
-//  EditViewController.swift
+//  EditView.swift
 //  CoreDataDemo
 //
 //  Created by Michal Terlicki on 06/11/2022.
@@ -8,19 +8,14 @@
 
 import UIKit
 
-protocol EditDelegate: AnyObject {
-    func editPerson()
-}
-
-class EditViewController: UIViewController {
+class EditView: UIViewController {
 
     let stackView = UIStackView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: 200, height: 100)))
     let nameView = DetailView()
     let ageView = DetailView()
     let genderView = DetailView()
 
-    public var person: Person?
-    weak var delegate: EditDelegate?
+    let editViewModel = EditViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +45,7 @@ class EditViewController: UIViewController {
 
     private func setNavigationBar() {
         super.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(didTapEdit))
-        super.navigationItem.title = person?.name?.uppercased()
+        super.navigationItem.title = editViewModel.person?.name?.uppercased()
         super.navigationItem.rightBarButtonItem?.accessibilityIdentifier = "editContactButton"
     }
 
@@ -71,9 +66,9 @@ class EditViewController: UIViewController {
 
     private func setKeyAndValue() {
 
-        let name = person?.name ?? ""
-        let age = "\(person?.age ?? 0)"
-        let gender = person?.gender ?? ""
+        let name = editViewModel.person?.name ?? ""
+        let age = "\(editViewModel.person?.age ?? 0)"
+        let gender = editViewModel.person?.gender ?? ""
 
         nameView.set(key: "Name", value: name)
         ageView.set(key: "Age", value: age)
@@ -117,10 +112,10 @@ class EditViewController: UIViewController {
     }
 
     @objc private func didTapDone() {
-        person?.name = nameView.valueLabel.text
+        editViewModel.person?.name = nameView.valueLabel.text
         let age = Int(ageView.valueLabel.text ?? "")
-        person?.age = Int64(age ?? 0)
-        person?.gender = genderView.valueLabel.text
+        editViewModel.person?.age = Int64(age ?? 0)
+        editViewModel.person?.gender = genderView.valueLabel.text
 
         nameView.editButton.isUserInteractionEnabled = false
         ageView.editButton.isUserInteractionEnabled = false
@@ -128,8 +123,8 @@ class EditViewController: UIViewController {
 
         super.navigationItem.rightBarButtonItem =
         UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(didTapEdit))
-        delegate?.editPerson()
-        super.navigationItem.title = person?.name?.uppercased()
+        editViewModel.delegate?.editPerson()
+        super.navigationItem.title = editViewModel.person?.name?.uppercased()
         super.navigationItem.rightBarButtonItem?.accessibilityIdentifier = "editContactButton"
     }
 

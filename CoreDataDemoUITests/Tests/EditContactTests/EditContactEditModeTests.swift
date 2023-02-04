@@ -18,11 +18,9 @@ class EditContactEditModeTests: BaseTest {
         continueAfterFailure = false
         app = XCUIApplication()
         app.launchArguments = ["UITesting"]
+        app.launchEnvironment = ["TestData": "1contact.json"]
         app.launch()
 
-        ContactListScreen(app: app)
-            .tapAddContact()
-            .fillFormAndSave(contactName, age, gender)
     }
 
     func testAfterHittingEditButtonNameEditButtonsIsActive() throws {
