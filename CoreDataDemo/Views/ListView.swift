@@ -88,7 +88,7 @@ class ListView: UIViewController {
                      completion: nil)
     }
 
-    private func reloadTableView () {
+    func reloadTableView () {
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
@@ -152,28 +152,4 @@ extension ListView: UITableViewDataSource {
     }
 }
 
-// MARK: Extensions
 
-extension ListView: EditDelegate {
-
-    func editPerson() {
-        do {
-            try listViewModel.context.save()
-        } catch {
-            fatalError("Error saving context edit person")
-        }
-        listViewModel.getAllPersons()
-        reloadTableView()
-    }
-}
-
-extension ListView: AddDelegete {
-    func addPerson(name: String, age: Int64, gender: String) {
-
-        listViewModel.addNewPerson(name: name, age: age, gender: gender)
-
-        listViewModel.getAllPersons()
-        reloadTableView()
-
-    }
-}
