@@ -26,7 +26,6 @@ class ListView: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        listViewModel.loadTestDataIfNeeded()
     }
 
     override func viewDidLayoutSubviews() {
@@ -38,7 +37,7 @@ class ListView: UIViewController {
 
         setupTableView()
         setNavigationBar()
-        setAccesability()
+
     }
 
     private func setupTableView() {
@@ -70,12 +69,6 @@ class ListView: UIViewController {
                                                             action: #selector(didTapAdd))
         navigationItem.title = "Contacts"
 
-    }
-
-    private func setAccesability() {
-
-        tableView.accessibilityIdentifier = "contactTableView"
-        navigationItem.rightBarButtonItem?.accessibilityIdentifier = "addContactButton"
     }
 
     @objc private func didTapAdd() {

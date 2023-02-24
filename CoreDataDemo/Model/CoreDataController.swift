@@ -14,12 +14,6 @@ class CoreDataController {
   init() {
     self.persistentContainer = NSPersistentContainer(name: "CoreDataDemo")
 
-      if CommandLine.arguments.contains("UITesting") {
-      let description = NSPersistentStoreDescription()
-      description.url = URL(fileURLWithPath: "/dev/null")
-      self.persistentContainer.persistentStoreDescriptions = [description]
-    }
-
     self.persistentContainer.loadPersistentStores(completionHandler: { (_, error) in
       if let error = error as NSError? {
         fatalError("Unresolved error \(error), \(error.userInfo)")

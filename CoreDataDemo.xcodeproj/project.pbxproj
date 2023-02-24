@@ -12,40 +12,22 @@
 		F71A7D9229314AEA00618CB4 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71A7D9129314AEA00618CB4 /* AddView.swift */; };
 		F71A7D942931504000618CB4 /* TextEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71A7D932931504000618CB4 /* TextEditView.swift */; };
 		F71A7D962931506600618CB4 /* NumberEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71A7D952931506600618CB4 /* NumberEditView.swift */; };
-		F731B9782842491200373813 /* BaseScreen+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F731B9772842491200373813 /* BaseScreen+Extenstions.swift */; };
-		F74A770128268D46004D81CB /* AddContactAgeTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74A770028268D46004D81CB /* AddContactAgeTextFieldTests.swift */; };
-		F74A770328269F1C004D81CB /* XCUIElement+ClearText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74A770228269F1C004D81CB /* XCUIElement+ClearText.swift */; };
-		F74A77062826CC2E004D81CB /* AddContactGenderTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74A77052826CC2E004D81CB /* AddContactGenderTextFieldTests.swift */; };
 		F7565AFA28133D3200D1D64F /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7565AF928133D3200D1D64F /* CoreDataController.swift */; };
 		F763FF1E27E678F100E0A2CF /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F763FF1C27E678F100E0A2CF /* Person+CoreDataClass.swift */; };
 		F763FF1F27E678F100E0A2CF /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F763FF1D27E678F100E0A2CF /* Person+CoreDataProperties.swift */; };
 		F76732A72917D9B400533AA8 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76732A62917D9B400533AA8 /* EditView.swift */; };
 		F76EAA1F298D8A4F005FD295 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76EAA1E298D8A4F005FD295 /* Contact.swift */; };
 		F76EAA22298EAC67005FD295 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76EAA21298EAC67005FD295 /* Bundle-Decodable.swift */; };
-		F76EAA25298EACDB005FD295 /* 1contact.json in Resources */ = {isa = PBXBuildFile; fileRef = F76EAA24298EACDB005FD295 /* 1contact.json */; };
-		F76EAA27298EAF10005FD295 /* 2contacts.json in Resources */ = {isa = PBXBuildFile; fileRef = F76EAA26298EAF10005FD295 /* 2contacts.json */; };
-		F76EAA2B298EAF5C005FD295 /* 3contacts.json in Resources */ = {isa = PBXBuildFile; fileRef = F76EAA2A298EAF5C005FD295 /* 3contacts.json */; };
 		F76EAA2E298ED7F2005FD295 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76EAA2D298ED7F2005FD295 /* ListViewModel.swift */; };
 		F76EAA30298F00AB005FD295 /* EditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76EAA2F298F00AB005FD295 /* EditViewModel.swift */; };
 		F76EAA32298F00C2005FD295 /* AddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76EAA31298F00C2005FD295 /* AddViewModel.swift */; };
-		F76EFDA828379AB300BF3EE7 /* AddContactValidationErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76EFDA728379AB300BF3EE7 /* AddContactValidationErrorTests.swift */; };
-		F77878B028254716009EEAD2 /* AddContactNameFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77878AF28254716009EEAD2 /* AddContactNameFieldTests.swift */; };
-		F780F580285E2D220076AC59 /* EditContactEditModeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F780F57F285E2D210076AC59 /* EditContactEditModeTests.swift */; };
 		F784173026EB2899001553D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F784172F26EB2899001553D7 /* AppDelegate.swift */; };
 		F784173226EB2899001553D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F784173126EB2899001553D7 /* SceneDelegate.swift */; };
 		F784173A26EB2899001553D7 /* CoreDataDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F784173826EB2899001553D7 /* CoreDataDemo.xcdatamodeld */; };
 		F784173C26EB289C001553D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F784173B26EB289C001553D7 /* Assets.xcassets */; };
 		F784173F26EB289C001553D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F784173D26EB289C001553D7 /* LaunchScreen.storyboard */; };
 		F784174A26EB289C001553D7 /* CoreDataDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F784174926EB289C001553D7 /* CoreDataDemoTests.swift */; };
-		F7A0158528032BEB00533FE2 /* AddContactInitialStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A0158428032BEB00533FE2 /* AddContactInitialStateTests.swift */; };
-		F7B07A582840132900927EB4 /* EditContactInitialStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B07A572840132900927EB4 /* EditContactInitialStateTests.swift */; };
 		F7B31BD2291FC2DE00C42452 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B31BD1291FC2DE00C42452 /* DetailView.swift */; };
-		F7C0BCC227F8824F00EDA802 /* ContactListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C0BCC127F8824F00EDA802 /* ContactListScreen.swift */; };
-		F7C0BCC427F8827C00EDA802 /* AddContactScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C0BCC327F8827C00EDA802 /* AddContactScreen.swift */; };
-		F7C0BCC627F8829B00EDA802 /* EditPersonScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C0BCC527F8829B00EDA802 /* EditPersonScreen.swift */; };
-		F7C0BCC827F8833300EDA802 /* BaseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C0BCC727F8833300EDA802 /* BaseScreen.swift */; };
-		F7C0BCCA27F8862300EDA802 /* BaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C0BCC927F8862300EDA802 /* BaseTest.swift */; };
-		F7C0BCCC27F8939D00EDA802 /* ContactListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C0BCCB27F8939D00EDA802 /* ContactListTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +38,7 @@
 			remoteGlobalIDString = F784172B26EB2899001553D7;
 			remoteInfo = CoreDataDemo;
 		};
-		F784175126EB289C001553D7 /* PBXContainerItemProxy */ = {
+		F7C99ABD29A8B670007ABB07 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F784172426EB2899001553D7 /* Project object */;
 			proxyType = 1;
@@ -71,25 +53,15 @@
 		F71A7D9129314AEA00618CB4 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		F71A7D932931504000618CB4 /* TextEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditView.swift; sourceTree = "<group>"; };
 		F71A7D952931506600618CB4 /* NumberEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberEditView.swift; sourceTree = "<group>"; };
-		F731B9772842491200373813 /* BaseScreen+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "BaseScreen+Extenstions.swift"; path = "CoreDataDemoUITests/Tests/EditContactTests/BaseScreen+Extenstions.swift"; sourceTree = SOURCE_ROOT; };
-		F74A770028268D46004D81CB /* AddContactAgeTextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactAgeTextFieldTests.swift; sourceTree = "<group>"; };
-		F74A770228269F1C004D81CB /* XCUIElement+ClearText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "XCUIElement+ClearText.swift"; path = "CoreDataDemoUITests/Tests/XCUIElement+ClearText.swift"; sourceTree = SOURCE_ROOT; };
-		F74A77052826CC2E004D81CB /* AddContactGenderTextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactGenderTextFieldTests.swift; sourceTree = "<group>"; };
 		F7565AF928133D3200D1D64F /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
 		F763FF1C27E678F100E0A2CF /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F763FF1D27E678F100E0A2CF /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F76732A62917D9B400533AA8 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		F76EAA1E298D8A4F005FD295 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		F76EAA21298EAC67005FD295 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
-		F76EAA24298EACDB005FD295 /* 1contact.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = 1contact.json; sourceTree = "<group>"; };
-		F76EAA26298EAF10005FD295 /* 2contacts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = 2contacts.json; sourceTree = "<group>"; };
-		F76EAA2A298EAF5C005FD295 /* 3contacts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = 3contacts.json; sourceTree = "<group>"; };
 		F76EAA2D298ED7F2005FD295 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		F76EAA2F298F00AB005FD295 /* EditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewModel.swift; sourceTree = "<group>"; };
 		F76EAA31298F00C2005FD295 /* AddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewModel.swift; sourceTree = "<group>"; };
-		F76EFDA728379AB300BF3EE7 /* AddContactValidationErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactValidationErrorTests.swift; sourceTree = "<group>"; };
-		F77878AF28254716009EEAD2 /* AddContactNameFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactNameFieldTests.swift; sourceTree = "<group>"; };
-		F780F57F285E2D210076AC59 /* EditContactEditModeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactEditModeTests.swift; sourceTree = "<group>"; };
 		F784172C26EB2899001553D7 /* CoreDataDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F784172F26EB2899001553D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F784173126EB2899001553D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,20 +72,8 @@
 		F784174526EB289C001553D7 /* CoreDataDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F784174926EB289C001553D7 /* CoreDataDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDemoTests.swift; sourceTree = "<group>"; };
 		F784174B26EB289C001553D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F784175026EB289C001553D7 /* CoreDataDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F784175626EB289C001553D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F7A0158428032BEB00533FE2 /* AddContactInitialStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactInitialStateTests.swift; sourceTree = "<group>"; };
-		F7B07A572840132900927EB4 /* EditContactInitialStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactInitialStateTests.swift; sourceTree = "<group>"; };
 		F7B31BD1291FC2DE00C42452 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
-		F7C0BCC127F8824F00EDA802 /* ContactListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListScreen.swift; sourceTree = "<group>"; };
-		F7C0BCC327F8827C00EDA802 /* AddContactScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactScreen.swift; sourceTree = "<group>"; };
-		F7C0BCC527F8829B00EDA802 /* EditPersonScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPersonScreen.swift; sourceTree = "<group>"; };
-		F7C0BCC727F8833300EDA802 /* BaseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseScreen.swift; sourceTree = "<group>"; };
-		F7C0BCC927F8862300EDA802 /* BaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTest.swift; sourceTree = "<group>"; };
-		F7C0BCCB27F8939D00EDA802 /* ContactListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListTests.swift; sourceTree = "<group>"; };
-		F7C8C6B2294CD97C00E4D49E /* AddContactTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = AddContactTests.xctestplan; sourceTree = "<group>"; };
-		F7C8C6B3294CDB0C00E4D49E /* CoreDataDemo.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = CoreDataDemo.xctestplan; path = CoreDataDemo.xcodeproj/CoreDataDemo.xctestplan; sourceTree = "<group>"; };
-		F7C8C6B4294CDBA500E4D49E /* EditContactTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = EditContactTests.xctestplan; sourceTree = "<group>"; };
+		F7C99AB729A8B670007ABB07 /* CoreDataDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +91,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F784174D26EB289C001553D7 /* Frameworks */ = {
+		F7C99AB429A8B670007ABB07 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -141,35 +101,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F74A77042826CAC6004D81CB /* AddContactScreenTests */ = {
-			isa = PBXGroup;
-			children = (
-				F7C8C6B2294CD97C00E4D49E /* AddContactTests.xctestplan */,
-				F7A0158428032BEB00533FE2 /* AddContactInitialStateTests.swift */,
-				F77878AF28254716009EEAD2 /* AddContactNameFieldTests.swift */,
-				F74A770028268D46004D81CB /* AddContactAgeTextFieldTests.swift */,
-				F74A77052826CC2E004D81CB /* AddContactGenderTextFieldTests.swift */,
-				F76EFDA728379AB300BF3EE7 /* AddContactValidationErrorTests.swift */,
-			);
-			path = AddContactScreenTests;
-			sourceTree = "<group>";
-		};
 		F76EAA20298EAC37005FD295 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				F76EAA21298EAC67005FD295 /* Bundle-Decodable.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		F76EAA23298EACA4005FD295 /* Test Data */ = {
-			isa = PBXGroup;
-			children = (
-				F76EAA24298EACDB005FD295 /* 1contact.json */,
-				F76EAA26298EAF10005FD295 /* 2contacts.json */,
-				F76EAA2A298EAF5C005FD295 /* 3contacts.json */,
-			);
-			path = "Test Data";
 			sourceTree = "<group>";
 		};
 		F76EAA2C298ED777005FD295 /* View Model */ = {
@@ -185,10 +122,8 @@
 		F784172326EB2899001553D7 = {
 			isa = PBXGroup;
 			children = (
-				F7C8C6B3294CDB0C00E4D49E /* CoreDataDemo.xctestplan */,
 				F784172E26EB2899001553D7 /* CoreDataDemo */,
 				F784174826EB289C001553D7 /* CoreDataDemoTests */,
-				F784175326EB289C001553D7 /* CoreDataDemoUITests */,
 				F784172D26EB2899001553D7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -198,7 +133,7 @@
 			children = (
 				F784172C26EB2899001553D7 /* CoreDataDemo.app */,
 				F784174526EB289C001553D7 /* CoreDataDemoTests.xctest */,
-				F784175026EB289C001553D7 /* CoreDataDemoUITests.xctest */,
+				F7C99AB729A8B670007ABB07 /* CoreDataDemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -209,7 +144,6 @@
 				F784176C26EB2A79001553D7 /* Model */,
 				F7B31BD0291FC29200C42452 /* Views */,
 				F76EAA2C298ED777005FD295 /* View Model */,
-				F76EAA23298EACA4005FD295 /* Test Data */,
 				F76EAA20298EAC37005FD295 /* Extensions */,
 				F784172F26EB2899001553D7 /* AppDelegate.swift */,
 				F784173126EB2899001553D7 /* SceneDelegate.swift */,
@@ -231,19 +165,6 @@
 			path = CoreDataDemoTests;
 			sourceTree = "<group>";
 		};
-		F784175326EB289C001553D7 /* CoreDataDemoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				F7EDEB1127F3722F00B1EB39 /* Tests */,
-				F7EDEB1027F3722100B1EB39 /* Screens */,
-				F7EDEB0F27F3721100B1EB39 /* TestData */,
-				F7EDEB0E27F371F700B1EB39 /* Utility */,
-				F7EDEB0D27F371D300B1EB39 /* Extensions */,
-				F784175626EB289C001553D7 /* Info.plist */,
-			);
-			path = CoreDataDemoUITests;
-			sourceTree = "<group>";
-		};
 		F784176C26EB2A79001553D7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,16 +174,6 @@
 				F76EAA1E298D8A4F005FD295 /* Contact.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		F7B07A56284012BF00927EB4 /* EditContactTests */ = {
-			isa = PBXGroup;
-			children = (
-				F7C8C6B4294CDBA500E4D49E /* EditContactTests.xctestplan */,
-				F7B07A572840132900927EB4 /* EditContactInitialStateTests.swift */,
-				F780F57F285E2D210076AC59 /* EditContactEditModeTests.swift */,
-			);
-			path = EditContactTests;
 			sourceTree = "<group>";
 		};
 		F7B31BD0291FC29200C42452 /* Views */ = {
@@ -284,51 +195,6 @@
 				F703AF75297192D9002AB83A /* ContactCell.swift */,
 			);
 			path = Cells;
-			sourceTree = "<group>";
-		};
-		F7EDEB0D27F371D300B1EB39 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				F74A770228269F1C004D81CB /* XCUIElement+ClearText.swift */,
-				F731B9772842491200373813 /* BaseScreen+Extenstions.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		F7EDEB0E27F371F700B1EB39 /* Utility */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utility;
-			sourceTree = "<group>";
-		};
-		F7EDEB0F27F3721100B1EB39 /* TestData */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = TestData;
-			sourceTree = "<group>";
-		};
-		F7EDEB1027F3722100B1EB39 /* Screens */ = {
-			isa = PBXGroup;
-			children = (
-				F7C0BCC727F8833300EDA802 /* BaseScreen.swift */,
-				F7C0BCC127F8824F00EDA802 /* ContactListScreen.swift */,
-				F7C0BCC327F8827C00EDA802 /* AddContactScreen.swift */,
-				F7C0BCC527F8829B00EDA802 /* EditPersonScreen.swift */,
-			);
-			path = Screens;
-			sourceTree = "<group>";
-		};
-		F7EDEB1127F3722F00B1EB39 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				F7B07A56284012BF00927EB4 /* EditContactTests */,
-				F7C0BCC927F8862300EDA802 /* BaseTest.swift */,
-				F7C0BCCB27F8939D00EDA802 /* ContactListTests.swift */,
-				F74A77042826CAC6004D81CB /* AddContactScreenTests */,
-			);
-			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,22 +236,22 @@
 			productReference = F784174526EB289C001553D7 /* CoreDataDemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F784174F26EB289C001553D7 /* CoreDataDemoUITests */ = {
+		F7C99AB629A8B670007ABB07 /* CoreDataDemoUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F784175F26EB289C001553D7 /* Build configuration list for PBXNativeTarget "CoreDataDemoUITests" */;
+			buildConfigurationList = F7C99ABF29A8B670007ABB07 /* Build configuration list for PBXNativeTarget "CoreDataDemoUITests" */;
 			buildPhases = (
-				F784174C26EB289C001553D7 /* Sources */,
-				F784174D26EB289C001553D7 /* Frameworks */,
-				F784174E26EB289C001553D7 /* Resources */,
+				F7C99AB329A8B670007ABB07 /* Sources */,
+				F7C99AB429A8B670007ABB07 /* Frameworks */,
+				F7C99AB529A8B670007ABB07 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F784175226EB289C001553D7 /* PBXTargetDependency */,
+				F7C99ABE29A8B670007ABB07 /* PBXTargetDependency */,
 			);
 			name = CoreDataDemoUITests;
 			productName = CoreDataDemoUITests;
-			productReference = F784175026EB289C001553D7 /* CoreDataDemoUITests.xctest */;
+			productReference = F7C99AB729A8B670007ABB07 /* CoreDataDemoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -394,7 +260,7 @@
 		F784172426EB2899001553D7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1220;
+				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = "Michal Terlicki";
 				TargetAttributes = {
@@ -405,8 +271,8 @@
 						CreatedOnToolsVersion = 12.2;
 						TestTargetID = F784172B26EB2899001553D7;
 					};
-					F784174F26EB289C001553D7 = {
-						CreatedOnToolsVersion = 12.2;
+					F7C99AB629A8B670007ABB07 = {
+						CreatedOnToolsVersion = 14.1;
 						TestTargetID = F784172B26EB2899001553D7;
 					};
 				};
@@ -426,7 +292,7 @@
 			targets = (
 				F784172B26EB2899001553D7 /* CoreDataDemo */,
 				F784174426EB289C001553D7 /* CoreDataDemoTests */,
-				F784174F26EB289C001553D7 /* CoreDataDemoUITests */,
+				F7C99AB629A8B670007ABB07 /* CoreDataDemoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -436,11 +302,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F76EAA2B298EAF5C005FD295 /* 3contacts.json in Resources */,
 				F784173F26EB289C001553D7 /* LaunchScreen.storyboard in Resources */,
-				F76EAA25298EACDB005FD295 /* 1contact.json in Resources */,
 				F784173C26EB289C001553D7 /* Assets.xcassets in Resources */,
-				F76EAA27298EAF10005FD295 /* 2contacts.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,7 +314,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F784174E26EB289C001553D7 /* Resources */ = {
+		F7C99AB529A8B670007ABB07 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -514,25 +377,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F784174C26EB289C001553D7 /* Sources */ = {
+		F7C99AB329A8B670007ABB07 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F780F580285E2D220076AC59 /* EditContactEditModeTests.swift in Sources */,
-				F76EFDA828379AB300BF3EE7 /* AddContactValidationErrorTests.swift in Sources */,
-				F7C0BCCC27F8939D00EDA802 /* ContactListTests.swift in Sources */,
-				F74A770328269F1C004D81CB /* XCUIElement+ClearText.swift in Sources */,
-				F7C0BCC827F8833300EDA802 /* BaseScreen.swift in Sources */,
-				F74A770128268D46004D81CB /* AddContactAgeTextFieldTests.swift in Sources */,
-				F7C0BCC427F8827C00EDA802 /* AddContactScreen.swift in Sources */,
-				F74A77062826CC2E004D81CB /* AddContactGenderTextFieldTests.swift in Sources */,
-				F731B9782842491200373813 /* BaseScreen+Extenstions.swift in Sources */,
-				F77878B028254716009EEAD2 /* AddContactNameFieldTests.swift in Sources */,
-				F7C0BCC227F8824F00EDA802 /* ContactListScreen.swift in Sources */,
-				F7A0158528032BEB00533FE2 /* AddContactInitialStateTests.swift in Sources */,
-				F7B07A582840132900927EB4 /* EditContactInitialStateTests.swift in Sources */,
-				F7C0BCC627F8829B00EDA802 /* EditPersonScreen.swift in Sources */,
-				F7C0BCCA27F8862300EDA802 /* BaseTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,10 +392,10 @@
 			target = F784172B26EB2899001553D7 /* CoreDataDemo */;
 			targetProxy = F784174626EB289C001553D7 /* PBXContainerItemProxy */;
 		};
-		F784175226EB289C001553D7 /* PBXTargetDependency */ = {
+		F7C99ABE29A8B670007ABB07 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F784172B26EB2899001553D7 /* CoreDataDemo */;
-			targetProxy = F784175126EB289C001553D7 /* PBXContainerItemProxy */;
+			targetProxy = F7C99ABD29A8B670007ABB07 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -761,42 +609,38 @@
 			};
 			name = Release;
 		};
-		F784176026EB289C001553D7 /* Debug */ = {
+		F7C99AC029A8B670007ABB07 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 98H8Q69ZJ4;
-				INFOPLIST_FILE = CoreDataDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = mterlicki.CoreDataDemoUITests;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TDGTP37XSL;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = farmaprom.CoreDataDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = CoreDataDemo;
 			};
 			name = Debug;
 		};
-		F784176126EB289C001553D7 /* Release */ = {
+		F7C99AC129A8B670007ABB07 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 98H8Q69ZJ4;
-				INFOPLIST_FILE = CoreDataDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = mterlicki.CoreDataDemoUITests;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TDGTP37XSL;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = farmaprom.CoreDataDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = CoreDataDemo;
@@ -833,11 +677,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F784175F26EB289C001553D7 /* Build configuration list for PBXNativeTarget "CoreDataDemoUITests" */ = {
+		F7C99ABF29A8B670007ABB07 /* Build configuration list for PBXNativeTarget "CoreDataDemoUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F784176026EB289C001553D7 /* Debug */,
-				F784176126EB289C001553D7 /* Release */,
+				F7C99AC029A8B670007ABB07 /* Debug */,
+				F7C99AC129A8B670007ABB07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

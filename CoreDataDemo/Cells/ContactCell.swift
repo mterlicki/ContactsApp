@@ -24,7 +24,6 @@ class ContactCell: UITableViewCell {
         configureMainStackView()
         setMainStackViewConstraints()
         configureSecondaryStackView()
-        setAccessibility()
     }
 
     required init?(coder: NSCoder) {
@@ -35,13 +34,6 @@ class ContactCell: UITableViewCell {
         configureLabel(text: contact.name ?? "", label: nameLabel, isBold: true)
         configureLabel(text: "Age: \(contact.age)", label: ageLabel, isBold: false)
         configureLabel(text: "Gender: \(contact.gender ?? "")", label: genderLabel, isBold: false)
-        self.accessibilityIdentifier = contact.name
-    }
-
-    private func setAccessibility() {
-        nameLabel.accessibilityIdentifier = "personNameLabel"
-        genderLabel.accessibilityIdentifier = "personGenderLabel"
-        ageLabel.accessibilityIdentifier = "personAgeLabel"
     }
 
     private func configureMainStackView() {

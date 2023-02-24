@@ -84,7 +84,6 @@ class DetailView: UIView {
     private func configureEditButton () {
 
         editButton.setImage(UIImage(systemName: "pencil"), for: .normal)
-        editButton.isAccessibilityElement = true
         editButton.addTarget(self, action: #selector(showEditView), for: .touchUpInside)
         editButton.isEnabled = true
         editButton.widthAnchor.constraint(equalToConstant: 32).isActive = true
@@ -102,8 +101,6 @@ class DetailView: UIView {
 
         alert.addTextField(configurationHandler: nil)
         alert.textFields?.first?.text = label.text
-        alert.textFields?.first?.accessibilityIdentifier = "alertTextField"
-        alert.view.accessibilityIdentifier = "editAlert"
 
         let submitButton = UIAlertAction(title: "Submit", style: .default, handler: { _ in
 
@@ -114,12 +111,10 @@ class DetailView: UIView {
 
             label.text = text
         })
-        submitButton.accessibilityIdentifier = "alertSubmitButton"
 
         let cancelButton = UIAlertAction(title: "Cancel", style: .destructive, handler: { _ in
             return
         })
-        cancelButton.accessibilityIdentifier = "alertCancelButton"
 
         alert.addAction(submitButton)
         alert.addAction(cancelButton)

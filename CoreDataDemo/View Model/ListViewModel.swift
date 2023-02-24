@@ -16,19 +16,6 @@ class ListViewModel {
 
     var persons = [Person]()
 
-    func loadTestDataIfNeeded() {
-
-        if let testData = ProcessInfo.processInfo.environment["TestData"] {
-
-            let contacts: [Contact] = Bundle.main.decode(testData)
-
-            for contact in contacts {
-                addNewPerson(name: contact.name, age: Int64(contact.age), gender: contact.gender)
-            }
-        }
-
-    }
-
     // MARK: Core data functions
 
     func getAllPersons() {

@@ -29,11 +29,8 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:CoreDataDemo.xcodeproj/CoreDataDemo.xctestplan"
+            reference = "container:CoreDataDemoUITests/Tests/EditContactTests/EditContactTests.xctestplan"
             default = "YES">
-         </TestPlanReference>
-         <TestPlanReference
-            reference = "container:CoreDataDemoUITests/Tests/EditContactTests/EditContactTests.xctestplan">
          </TestPlanReference>
          <TestPlanReference
             reference = "container:CoreDataDemoUITests/Tests/AddContactScreenTests/AddContactTests.xctestplan">

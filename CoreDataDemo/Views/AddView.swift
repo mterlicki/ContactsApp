@@ -35,7 +35,6 @@ class AddView: UIViewController {
         configureNameTextField()
         configureGenederTextField()
         configureAgeTextField()
-        setAccessability()
     }
 
     private func configureNavigationBar() {
@@ -70,24 +69,6 @@ class AddView: UIViewController {
         stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10).isActive = true
     }
 
-    private func setAccessability () {
-
-        nameTextField.keyLabel.accessibilityIdentifier = "nameLabel"
-        nameTextField.textField.accessibilityIdentifier = "nameTextField"
-        nameTextField.errorLabel.accessibilityIdentifier = "nameErrorLabel"
-
-        ageTextField.keyLabel.accessibilityIdentifier = "ageLabel"
-        ageTextField.textField.accessibilityIdentifier = "ageTextField"
-        ageTextField.errorLabel.accessibilityIdentifier = "ageErrorLabel"
-
-        genderTextField.keyLabel.accessibilityIdentifier = "genderLabel"
-        genderTextField.textField.accessibilityIdentifier = "genderTextField"
-        genderTextField.errorLabel.accessibilityIdentifier = "genderErrorLabel"
-
-        super.navigationItem.leftBarButtonItem?.accessibilityIdentifier = "cancelButton"
-        super.navigationItem.rightBarButtonItem?.accessibilityIdentifier = "saveButton"
-    }
-
     @objc func didTapCancel() {
 
         self.dismiss(animated: true, completion: nil)
@@ -99,12 +80,10 @@ class AddView: UIViewController {
             let alert = UIAlertController(title: "Validation error",
                                           message: "The form has errors. Correct the data to save.",
                                           preferredStyle: .alert)
-            alert.view.accessibilityIdentifier = "formErrorAlert"
 
             let okButton = UIAlertAction(title: "Ok", style: .default, handler: { _ in
                 return
             })
-            okButton.accessibilityIdentifier = "alertOkButton"
             alert.addAction(okButton)
 
             present(alert, animated: true)

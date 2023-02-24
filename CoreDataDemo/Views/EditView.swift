@@ -31,7 +31,6 @@ class EditView: UIViewController {
         configureStackView()
         setStackViewConstraints()
         setKeyAndValue()
-        setAccessability()
         setEditButtons()
         setNavigationBar()
 
@@ -46,7 +45,6 @@ class EditView: UIViewController {
     private func setNavigationBar() {
         super.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(didTapEdit))
         super.navigationItem.title = editViewModel.person?.name?.uppercased()
-        super.navigationItem.rightBarButtonItem?.accessibilityIdentifier = "editContactButton"
     }
 
     private func configureStackView() {
@@ -76,22 +74,6 @@ class EditView: UIViewController {
 
     }
 
-    private func setAccessability() {
-
-        nameView.keyLabel.accessibilityIdentifier = "nameLabel"
-        nameView.editButton.accessibilityIdentifier = "nameEditButton"
-        nameView.valueLabel.accessibilityIdentifier = "contactNameLabel"
-
-        ageView.keyLabel.accessibilityIdentifier = "ageLabel"
-        ageView.editButton.accessibilityIdentifier = "ageEditButton"
-        ageView.valueLabel.accessibilityIdentifier = "contactAgeLabel"
-
-        genderView.keyLabel.accessibilityIdentifier = "genderLabel"
-        genderView.editButton.accessibilityIdentifier = "genderEditButton"
-        genderView.valueLabel.accessibilityIdentifier = "contactGenderLabel"
-
-    }
-
     private func setStackViewConstraints() {
 
         stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10).isActive = true
@@ -103,7 +85,6 @@ class EditView: UIViewController {
     @objc private func didTapEdit() {
         super.navigationItem.rightBarButtonItem =
         UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(didTapDone))
-        super.navigationItem.rightBarButtonItem?.accessibilityIdentifier = "doneButton"
 
         nameView.editButton.isUserInteractionEnabled = true
         ageView.editButton.isUserInteractionEnabled = true
@@ -125,7 +106,6 @@ class EditView: UIViewController {
         UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(didTapEdit))
         editViewModel.delegate?.editPerson()
         super.navigationItem.title = editViewModel.person?.name?.uppercased()
-        super.navigationItem.rightBarButtonItem?.accessibilityIdentifier = "editContactButton"
     }
 
 }
