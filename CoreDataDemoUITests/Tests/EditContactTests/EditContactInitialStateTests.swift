@@ -22,12 +22,14 @@ class EditContactInitialStateTests: BaseTest {
 
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .fillFormAndSave(contactName, age, gender)
     }
 
     func testEditContactHasInitialState() throws {
         ContactListScreen(app: app)
             .selectContact(contactName)
+        EditPersonScreen(app: app)
             .editContactHasInitialState()
     }
 
@@ -35,24 +37,28 @@ class EditContactInitialStateTests: BaseTest {
 
         ContactListScreen(app: app)
             .selectContact(contactName)
+        EditPersonScreen(app: app)
             .verifyContactNameLabelHasValue(contactName)
     }
 
     func testContactsAgeShowsSelectedContactAge() throws {
         ContactListScreen(app: app)
             .selectContact(contactName)
+        EditPersonScreen(app: app)
             .verifyContactAgeLabelHasValue(age)
     }
 
     func testContactsGenderShowsSelectedContactGender() throws {
         ContactListScreen(app: app)
             .selectContact(contactName)
+        EditPersonScreen(app: app)
             .verifyContactGenderLabelHasValue(gender)
     }
 
     func testContactsDetailsShowsContactData() throws {
         ContactListScreen(app: app)
             .selectContact(contactName)
+        EditPersonScreen(app: app)
             .editContactHasContactData(contactName, age, gender)
     }
 }

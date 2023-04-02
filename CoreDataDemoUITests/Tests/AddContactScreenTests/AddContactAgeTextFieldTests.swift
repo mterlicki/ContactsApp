@@ -16,6 +16,7 @@ class AddContactAgeTextFieldTests: BaseTest {
 
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .tapAgeTextField()
             .clearAge()
             .typeAge(age)
@@ -27,6 +28,7 @@ class AddContactAgeTextFieldTests: BaseTest {
 
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .tapAgeTextField()
             .clearAge()
             .typeAge(age)
@@ -38,6 +40,7 @@ class AddContactAgeTextFieldTests: BaseTest {
 
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .tapAgeTextField()
             .clearAge()
             .typeAge(age)
@@ -47,6 +50,7 @@ class AddContactAgeTextFieldTests: BaseTest {
     func testEmptyValueShowsError() throws {
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .tapAgeTextField()
             .clearAge()
             .ageErrorLabelValueEqualsTo("Age is required")
@@ -57,6 +61,7 @@ class AddContactAgeTextFieldTests: BaseTest {
 
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .tapIncreaseAge()
             .ageTextFieldValueEqualsTo(expectedAge)
     }
@@ -66,6 +71,7 @@ class AddContactAgeTextFieldTests: BaseTest {
 
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .tapDecreaseAge()
             .ageTextFieldValueEqualsTo(expectedAge)
     }
@@ -75,6 +81,7 @@ class AddContactAgeTextFieldTests: BaseTest {
 
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .tapIncreaseAge()
             .tapIncreaseAge()
             .tapIncreaseAge()
@@ -88,6 +95,7 @@ class AddContactAgeTextFieldTests: BaseTest {
 
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .tapDecreaseAge()
             .tapDecreaseAge()
             .tapDecreaseAge()
@@ -101,6 +109,7 @@ class AddContactAgeTextFieldTests: BaseTest {
 
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .tapIncreaseAge()
             .tapDecreaseAge()
             .ageTextFieldValueEqualsTo(expectedAge)
@@ -111,6 +120,7 @@ class AddContactAgeTextFieldTests: BaseTest {
 
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .tapDecreaseAge()
             .tapIncreaseAge()
             .ageTextFieldValueEqualsTo(expectedAge)
@@ -122,6 +132,7 @@ class AddContactAgeTextFieldTests: BaseTest {
 
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .tapAgeTextField()
             .clearAge()
             .typeAge(age)
@@ -135,6 +146,7 @@ class AddContactAgeTextFieldTests: BaseTest {
 
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .tapAgeTextField()
             .clearAge()
             .typeAge(age)
@@ -148,6 +160,7 @@ class AddContactAgeTextFieldTests: BaseTest {
 
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .tapAgeTextField()
             .clearAge()
             .typeAge(age)
@@ -162,6 +175,7 @@ class AddContactAgeTextFieldTests: BaseTest {
 
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .tapAgeTextField()
             .clearAge()
             .typeAge(age)
@@ -175,6 +189,7 @@ class AddContactAgeTextFieldTests: BaseTest {
 
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .tapAgeTextField()
             .clearAge()
             .typeAge(minimumAge)
@@ -186,6 +201,7 @@ class AddContactAgeTextFieldTests: BaseTest {
 
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .tapAgeTextField()
             .clearAge()
             .typeAge(minimumAge)
@@ -197,6 +213,7 @@ class AddContactAgeTextFieldTests: BaseTest {
 
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .tapAgeTextField()
             .clearAge()
             .typeAge(maximumAge)
@@ -208,6 +225,7 @@ class AddContactAgeTextFieldTests: BaseTest {
 
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .tapAgeTextField()
             .clearAge()
             .typeAge(maximumAge)
@@ -219,6 +237,7 @@ class AddContactAgeTextFieldTests: BaseTest {
 
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .tapAgeTextField()
             .clearAge()
             .typeAge(age)
@@ -231,6 +250,7 @@ class AddContactAgeTextFieldTests: BaseTest {
 
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .tapAgeTextField()
             .clearAge()
             .typeAge(age)
@@ -243,6 +263,7 @@ class AddContactAgeTextFieldTests: BaseTest {
 
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .tapAgeTextField()
             .clearAge()
             .typeAge(age)
@@ -255,6 +276,7 @@ class AddContactAgeTextFieldTests: BaseTest {
 
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .tapAgeTextField()
             .clearAge()
             .typeAge(age)

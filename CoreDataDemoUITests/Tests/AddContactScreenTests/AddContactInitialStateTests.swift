@@ -16,6 +16,7 @@ class AddContactInitialStateTests: BaseTest {
 
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .navigationBarHasTitle(navigationBarTitle)
     }
 
@@ -24,6 +25,7 @@ class AddContactInitialStateTests: BaseTest {
 
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .nameTextFieldPalaceholderEqualsTo(placeholderValue)
     }
 
@@ -32,12 +34,14 @@ class AddContactInitialStateTests: BaseTest {
 
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .nameErrorLabelValueEqualsTo(errorLabelValue)
     }
 
     func testAgeTextFieldHasInitialValue() throws {
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .ageTextFieldValueEqualsTo("18")
     }
 
@@ -46,6 +50,7 @@ class AddContactInitialStateTests: BaseTest {
 
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .genderTextFieldPalaceholderEqualsTo(placeholderValue)
     }
 
@@ -54,6 +59,7 @@ class AddContactInitialStateTests: BaseTest {
 
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .genderErrorLabelValueEqualsTo(errorLabelValue)
     }
 
