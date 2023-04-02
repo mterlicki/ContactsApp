@@ -41,91 +41,102 @@ struct AddContactScreen: BaseScreen {
     // MARK: Handlers
 
     // Naviation bar
-    func tapCancel() -> ContactListScreen {
+    @discardableResult
+    func tapCancel() -> Self {
         tapNavigationBarButton(Identifiers.navigationBar, Identifiers.cancelButton)
-        return ContactListScreen(app: app)
+        return self
     }
 
-    func tapSave() -> ContactListScreen {
-        tapNavigationBarButton(Identifiers.navigationBar, Identifiers.saveButton)
-        return ContactListScreen(app: app)
-    }
-
+    @discardableResult
     func tapSave() -> Self {
         tapNavigationBarButton(Identifiers.navigationBar, Identifiers.saveButton)
         return self
     }
 
     // Name text field
+    @discardableResult
     func tapNameTextField() -> Self {
         tapTextField(Identifiers.nameTextField)
         return self
     }
 
+    @discardableResult
     func typeName(_ name: String) -> Self {
         typeText(Identifiers.nameTextField, name)
         return self
     }
 
+    @discardableResult
     func clearName() -> Self {
         clearTextField(Identifiers.nameTextField)
         return self
     }
 
     // Age text field
+    @discardableResult
     func tapAgeTextField() -> Self {
         tapTextField(Identifiers.ageTextField)
         return self
     }
 
+    @discardableResult
     func typeAge(_ age: String) -> Self {
         typeText(Identifiers.ageTextField, age)
         return self
     }
 
+    @discardableResult
     func tapIncreaseAge() -> Self {
         tapButton(Identifiers.ageIncrement)
         return self
     }
 
+    @discardableResult
     func tapIncreaseAgeWith(_ number: Int) -> Self {
         app.buttons[Identifiers.ageIncrement].tap(withNumberOfTaps: number, numberOfTouches: 1)
 
         return self
     }
 
+    @discardableResult
     func tapDecreaseAge() -> Self {
         tapButton(Identifiers.ageDecrement)
         return self
     }
 
+    @discardableResult
     func tapDecreaseAgeWith(_ number: Int) -> Self {
         app.buttons[Identifiers.ageDecrement].tap(withNumberOfTaps: number, numberOfTouches: 1)
         return self
     }
 
+    @discardableResult
     func clearAge() -> Self {
         clearTextField(Identifiers.ageTextField)
         return self
     }
 
+    @discardableResult
     // Gender text field
     func tapGenderTextField() -> Self {
         tapTextField(Identifiers.genderTextField)
         return self
     }
 
+    @discardableResult
     func typeGender(_ gender: String) -> Self {
         typeText(Identifiers.genderTextField, gender)
         return self
     }
 
+    @discardableResult
     func clearGender() -> Self {
         clearTextField(Identifiers.genderTextField)
         return self
     }
 
     // Alert
+    @discardableResult
     func tapAlertOkButton() -> AddContactScreen {
         alertButtonTap(Identifiers.saveErrorAlert, Identifiers.alertOkButton)
         return AddContactScreen(app: app)
@@ -133,20 +144,21 @@ struct AddContactScreen: BaseScreen {
 
     // Add contact
     @discardableResult
-    func fillFormAndSave (_ name: String, _ age: String, _ gender: String) -> ContactListScreen {
+    func fillFormAndSave (_ name: String, _ age: String, _ gender: String) -> Self {
         typeText(Identifiers.nameTextField, name)
         tapTextField(Identifiers.ageTextField)
         clearTextField(Identifiers.ageTextField)
         typeText(Identifiers.ageTextField, age)
         typeText(Identifiers.genderTextField, gender)
         tapButton(Identifiers.saveButton)
-        return ContactListScreen(app: app)
+        return self
 
     }
 
     // MARK: Assertions
 
-    func addPersonScreenIsLoaded() {
+    @discardableResult
+    func addPersonScreenIsLoaded() -> Self {
         buttonExists(Identifiers.saveButton)
         buttonExists(Identifiers.cancelButton)
         labelExists(Identifiers.nameLabel)
@@ -158,83 +170,116 @@ struct AddContactScreen: BaseScreen {
         labelExists(Identifiers.genderLabel)
         labelExists(Identifiers.genderErrorLabel)
         textFieldExists(Identifiers.genderTextField)
+        return self
     }
 
     // Name text feield
 
-    func nameTextFieldPalaceholderEqualsTo (_ value: String) {
+    @discardableResult
+    func nameTextFieldPalaceholderEqualsTo (_ value: String) -> Self {
         textFieldPalaceholderEqualsTo(Identifiers.nameTextField, value)
+        return self
     }
 
-    func nameTextFiledValueEqualsTo (_ value: String) {
+    @discardableResult
+    func nameTextFiledValueEqualsTo (_ value: String) -> Self {
         textFieldValueEqualsTo(Identifiers.nameTextField, value)
+        return self
     }
 
-    func nameErrorLabelValueEqualsTo (_ value: String) {
+    @discardableResult
+    func nameErrorLabelValueEqualsTo (_ value: String) -> Self {
         labelHasValue(Identifiers.nameErrorLabel, value)
+        return self
     }
 
     // Age text field
 
-    func ageTextFieldValueEqualsTo (_ value: String) {
+    @discardableResult
+    func ageTextFieldValueEqualsTo (_ value: String) -> Self {
         textFieldValueEqualsTo(Identifiers.ageTextField, value)
+        return self
     }
 
-    func ageErrorLabelValueEqualsTo (_ value: String) {
+    @discardableResult
+    func ageErrorLabelValueEqualsTo (_ value: String) -> Self {
         labelHasValue(Identifiers.ageErrorLabel, value)
+        return self
     }
 
-    func ageIncreaseButtonIsEnabled() {
+    @discardableResult
+    func ageIncreaseButtonIsEnabled() -> Self {
         buttonIsEnabled(Identifiers.ageIncrement)
+        return self
     }
 
-    func ageIncreaseButtonIsNotEnabled() {
+    @discardableResult
+    func ageIncreaseButtonIsNotEnabled() -> Self {
         buttonIsDisabled(Identifiers.ageIncrement)
+        return self
     }
 
-    func ageDecreaseButtonIsEnabled() {
+    @discardableResult
+    func ageDecreaseButtonIsEnabled() -> Self {
         buttonIsEnabled(Identifiers.ageDecrement)
+        return self
     }
 
-    func ageDecreaseButtonIsNotEnabled() {
+    @discardableResult
+    func ageDecreaseButtonIsNotEnabled() -> Self {
         buttonIsDisabled(Identifiers.ageDecrement)
+        return self
     }
 
     // Gender text field
 
-    func genderTextFiledValueEqualsTo (_ value: String) {
+    @discardableResult
+    func genderTextFiledValueEqualsTo (_ value: String) -> Self {
         textFieldValueEqualsTo(Identifiers.genderTextField, value)
+        return self
     }
 
-    func genderTextFieldPalaceholderEqualsTo (_ value: String) {
+    @discardableResult
+    func genderTextFieldPalaceholderEqualsTo (_ value: String) -> Self {
         textFieldPalaceholderEqualsTo(Identifiers.genderTextField, value)
+        return self
     }
 
-    func genderErrorLabelValueEqualsTo (_ value: String) {
+    @discardableResult
+    func genderErrorLabelValueEqualsTo (_ value: String) -> Self {
         labelHasValue(Identifiers.genderErrorLabel, value)
+        return self
     }
 
     // Navigation bar
 
-    func navigationBarHasTitle (_ title: String) {
+    @discardableResult
+    func navigationBarHasTitle (_ title: String) -> Self {
         navigationBarHasTitle(Identifiers.navigationBar, title)
+        return self
     }
 
     // Alert
 
-    func alertHasProperTiltle () {
+    @discardableResult
+    func alertHasProperTiltle () -> Self {
         let alertTile = "Validation error"
 
         alertHasText(Identifiers.saveErrorAlert, alertTile)
+        return self
     }
 
-    func alertHasProperMessage () {
+    @discardableResult
+    func alertHasProperMessage () -> Self {
         let alertMessage = "The form has errors. Correct the data to save."
 
         alertHasText(Identifiers.saveErrorAlert, alertMessage)
+        return self
     }
 
-    func alertHasOkButton () {
+    @discardableResult
+    func alertHasOkButton () -> Self {
         buttonExists(Identifiers.alertOkButton)
+        return self
     }
 }

@@ -30,36 +30,42 @@ struct ContactListScreen: BaseScreen {
 
     // MARK: Handlers
 
-    func tapAddContact() -> AddContactScreen {
+    @discardableResult
+    func tapAddContact() -> Self {
         tapButton(Identifiers.addContact)
-        return AddContactScreen(app: app)
+        return self
     }
 
-    func selectContact(_ name: String) -> EditPersonScreen {
+    @discardableResult
+    func selectContact(_ name: String) -> Self {
         tapTableViewCell(Identifiers.contactList, name)
-        return EditPersonScreen(app: app)
+        return self
     }
 
-    func selectContact(_ index: Int) -> EditPersonScreen {
+    @discardableResult
+    func selectContact(_ index: Int) -> Self {
         tapTableViewCell(Identifiers.contactList, index)
-        return EditPersonScreen(app: app)
+        return self
     }
 
     func numberOfContacts() -> Int {
         return numberOfCells(Identifiers.contactList)
     }
 
+    @discardableResult
     func swipeToDeleteContact(_ index: Int) -> Self {
         swipeLeftCell(Identifiers.contactList, index)
         return self
     }
 
+    @discardableResult
     func deleteContact(_ index: Int) -> Self {
         swipeLeftCell(Identifiers.contactList, index)
         tapTableViewCellButton(Identifiers.contactList, index, Identifiers.deleteButton)
         return self
     }
 
+    @discardableResult
     func swipeToDeleteContact(_ name: String) -> Self {
         swipeLeftCell(Identifiers.contactList, name)
         return self
@@ -67,31 +73,45 @@ struct ContactListScreen: BaseScreen {
 
     // MARK: Assertions
 
-    func verifyContactsName(_ name: String) {
+    @discardableResult
+    func verifyContactsName(_ name: String) -> Self {
         tableViewCellLabelHasValue(Identifiers.contactList, name, Identifiers.personName, name)
+        return self
     }
 
-    func verifyDeleteButtonIsHittable() {
+    @discardableResult
+    func verifyDeleteButtonIsHittable() -> Self {
         XCTAssertTrue(app.buttons[Identifiers.deleteButton].isHittable)
+        return self
     }
 
-    func verifyNumberOfContactsAreGraterThan(_ number: Int) {
+    @discardableResult
+    func verifyNumberOfContactsAreGraterThan(_ number: Int) -> Self {
         XCTAssertTrue(app.tables[Identifiers.contactList].cells.count > number)
+        return self
     }
 
-    func verifyNumberOfContactsEquals(_ number: Int) {
+    @discardableResult
+    func verifyNumberOfContactsEquals(_ number: Int) -> Self {
         XCTAssertTrue(app.tables[Identifiers.contactList].cells.count == number)
+        return self
     }
 
-    func verifyContactWithNameExists (_ name: String) {
+    @discardableResult
+    func verifyContactWithNameExists (_ name: String) -> Self {
         tableViewCellExist(Identifiers.contactList, name)
+        return self
     }
 
-    func verifyContactWithNameDoesNotExists (_ name: String) {
+    @discardableResult
+    func verifyContactWithNameDoesNotExists (_ name: String) -> Self {
         tableViewCellDoesNotExist(Identifiers.contactList, name)
+        return self
     }
 
-    func verifyNameOfContactOnPosition (_ name: String, _ position: Int) {
+    @discardableResult
+    func verifyNameOfContactOnPosition (_ name: String, _ position: Int) -> Self {
         tableViewCellLabelHasValue(Identifiers.contactList, position, Identifiers.personName, name)
+        return self
     }
 }

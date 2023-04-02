@@ -71,9 +71,9 @@
 		F71A7D9129314AEA00618CB4 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		F71A7D932931504000618CB4 /* TextEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditView.swift; sourceTree = "<group>"; };
 		F71A7D952931506600618CB4 /* NumberEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberEditView.swift; sourceTree = "<group>"; };
-		F731B9772842491200373813 /* BaseScreen+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "BaseScreen+Extenstions.swift"; path = "CoreDataDemoUITests/Tests/EditContactTests/BaseScreen+Extenstions.swift"; sourceTree = SOURCE_ROOT; };
+		F731B9772842491200373813 /* BaseScreen+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "BaseScreen+Extenstions.swift"; path = "CoreDataDemoUITests/Extensions/BaseScreen+Extenstions.swift"; sourceTree = SOURCE_ROOT; };
 		F74A770028268D46004D81CB /* AddContactAgeTextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactAgeTextFieldTests.swift; sourceTree = "<group>"; };
-		F74A770228269F1C004D81CB /* XCUIElement+ClearText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "XCUIElement+ClearText.swift"; path = "CoreDataDemoUITests/Tests/XCUIElement+ClearText.swift"; sourceTree = SOURCE_ROOT; };
+		F74A770228269F1C004D81CB /* XCUIElement+ClearText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "XCUIElement+ClearText.swift"; path = "CoreDataDemoUITests/Extensions/XCUIElement+ClearText.swift"; sourceTree = SOURCE_ROOT; };
 		F74A77052826CC2E004D81CB /* AddContactGenderTextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactGenderTextFieldTests.swift; sourceTree = "<group>"; };
 		F7565AF928133D3200D1D64F /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
 		F763FF1C27E678F100E0A2CF /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };

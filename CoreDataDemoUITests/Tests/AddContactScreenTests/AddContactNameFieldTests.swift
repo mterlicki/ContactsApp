@@ -13,6 +13,7 @@ class AddContactNameFieldTests: BaseTest {
     func testErrorLabelIsEmptyAfterTypingName() throws {
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .typeName("John")
             .nameErrorLabelValueEqualsTo(" ")
     }
@@ -20,6 +21,7 @@ class AddContactNameFieldTests: BaseTest {
     func testErrorLabelShowsMessageWhenTypedNameIsEmpty() throws {
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .typeName("")
             .tapAgeTextField()
             .nameErrorLabelValueEqualsTo("Name is required")
@@ -28,6 +30,7 @@ class AddContactNameFieldTests: BaseTest {
     func testErrorLabelIsEmptyAfterRetypingName() throws {
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .tapNameTextField()
             .tapAgeTextField()
             .typeName("John")
@@ -37,6 +40,7 @@ class AddContactNameFieldTests: BaseTest {
     func testErrorLabelShowsMessageAfterDeletingName() throws {
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .typeName("John")
             .clearName()
             .nameErrorLabelValueEqualsTo("Name is required")
@@ -45,6 +49,7 @@ class AddContactNameFieldTests: BaseTest {
     func testErrorLabelIsEmptyAfterSavingWithErrorWithEmptyGender() throws {
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .typeName("John")
             .tapSave()
             .tapAlertOkButton()
@@ -54,6 +59,7 @@ class AddContactNameFieldTests: BaseTest {
     func testErrorLabelShowsErrorAfterSavingWithEmptyName() throws {
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .tapNameTextField()
             .tapSave()
             .tapAlertOkButton()
@@ -65,6 +71,7 @@ class AddContactNameFieldTests: BaseTest {
 
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .typeName(name)
             .nameTextFiledValueEqualsTo(name)
     }
@@ -74,6 +81,7 @@ class AddContactNameFieldTests: BaseTest {
 
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .typeName(name)
             .nameTextFiledValueEqualsTo(name)
     }
@@ -84,6 +92,7 @@ class AddContactNameFieldTests: BaseTest {
 
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .typeName(firstName)
             .tapAgeTextField()
             .typeName(secondName)

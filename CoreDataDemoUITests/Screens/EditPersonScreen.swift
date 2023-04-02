@@ -40,16 +40,19 @@ struct EditPersonScreen: BaseScreen {
 
     // Naviagation bar
 
-    func tapBackButton() -> ContactListScreen {
+    @discardableResult
+    func tapBackButton() -> Self {
         tapButton(Identifiers.backButton)
-        return ContactListScreen(app: app)
+        return self
     }
 
+    @discardableResult
     func tapEdit() -> Self {
         tapButton(Identifiers.editButton)
         return self
     }
 
+    @discardableResult
     func tapDone() -> Self {
         tapButton(Identifiers.doneButton)
         return self
@@ -57,16 +60,19 @@ struct EditPersonScreen: BaseScreen {
 
     // Edit buttons
 
+    @discardableResult
     func tapEditName() -> Self {
         tapButton(Identifiers.nameEditButton)
         return self
     }
 
+    @discardableResult
     func tapEditAge() -> Self {
         tapButton(Identifiers.ageEditButton)
         return self
     }
 
+    @discardableResult
     func tapEditGender() -> Self {
         tapButton(Identifiers.genderEditButton)
         return self
@@ -74,21 +80,25 @@ struct EditPersonScreen: BaseScreen {
 
     // Alert
 
+    @discardableResult
     func alertTapCancel() -> Self {
         alertButtonTap(Identifiers.editAlert, Identifiers.alertCancelButton)
         return self
     }
 
+    @discardableResult
     func alertTapSubmit() -> Self {
         alertButtonTap(Identifiers.editAlert, Identifiers.alertSubmitButton)
         return self
     }
 
+    @discardableResult
     func alertClearText() -> Self {
         clearAlertTextField(Identifiers.editAlert, Identifiers.alertTextField)
         return self
     }
 
+    @discardableResult
     func alertTypeText(_ text: String) -> Self {
         alertTextFieldTypeText(Identifiers.editAlert, Identifiers.alertTextField, text)
         return self
@@ -96,7 +106,8 @@ struct EditPersonScreen: BaseScreen {
 
     // MARK: Assertions
 
-    func editContactHasInitialState() {
+    @discardableResult
+    func editContactHasInitialState() -> Self {
         editButtonExists()
         editNameButtonExists()
         editNameButtonIsDisabled()
@@ -104,96 +115,135 @@ struct EditPersonScreen: BaseScreen {
         editAgeButtonIsDisabled()
         editGenderButtonExists()
         editGenderButtonIsDisabled()
+        return self
     }
 
-    func editContactHasContactData(_ name: String, _ age: String, _ gender: String) {
+    @discardableResult
+    func editContactHasContactData(_ name: String, _ age: String, _ gender: String) -> Self {
         verifyContactNameLabelHasValue(name)
         verifyContactAgeLabelHasValue(age)
         verifyContactGenderLabelHasValue(gender)
+        return self
     }
 
     // Navigation bar
 
-    func doneButtonExists() {
+    @discardableResult
+    func doneButtonExists() -> Self {
         buttonExists(Identifiers.doneButton)
+        return self
     }
 
-    func doneButtonIsEnabled() {
+    @discardableResult
+    func doneButtonIsEnabled() -> Self {
         buttonIsEnabled(Identifiers.doneButton)
+        return self
     }
 
-    func editButtonExists() {
-        buttonExists(Identifiers.editButton )
+    @discardableResult
+    func editButtonExists() -> Self {
+        buttonExists(Identifiers.editButton)
+        return self
     }
 
-    func editButtonIsEnabled() {
+    @discardableResult
+    func editButtonIsEnabled() -> Self {
         buttonIsEnabled(Identifiers.editButton)
+        return self
     }
 
     // Edit buttons
     // Name
 
-    func editNameButtonIsEnabled() {
+    @discardableResult
+    func editNameButtonIsEnabled() -> Self {
         buttonIsEnabled(Identifiers.nameEditButton)
+        return self
     }
 
-    func editNameButtonIsDisabled() {
+    @discardableResult
+    func editNameButtonIsDisabled() -> Self {
         buttonIsDisabled(Identifiers.nameEditButton)
+        return self
     }
 
-    func editNameButtonExists() {
+    @discardableResult
+    func editNameButtonExists() -> Self {
         buttonExists(Identifiers.nameEditButton)
+        return self
     }
 
     // Age
 
-    func editAgeButtonIsEnabled() {
+    @discardableResult
+    func editAgeButtonIsEnabled() -> Self {
         buttonIsEnabled(Identifiers.ageEditButton)
+        return self
     }
 
-    func editAgeButtonIsDisabled() {
+    @discardableResult
+    func editAgeButtonIsDisabled() -> Self {
         buttonIsDisabled(Identifiers.ageEditButton)
+        return self
     }
 
-    func editAgeButtonExists() {
+    @discardableResult
+    func editAgeButtonExists() -> Self {
         buttonExists(Identifiers.ageEditButton)
+        return self
     }
 
     // Gender
 
-    func editGenderButtonIsEnabled() {
+    @discardableResult
+    func editGenderButtonIsEnabled() -> Self {
         buttonIsEnabled(Identifiers.genderEditButton)
+        return self
     }
 
-    func editGenderButtonIsDisabled() {
+    @discardableResult
+    func editGenderButtonIsDisabled() -> Self {
         buttonIsDisabled(Identifiers.genderEditButton)
+        return self
     }
 
-    func editGenderButtonExists() {
+    @discardableResult
+    func editGenderButtonExists() -> Self {
         buttonExists(Identifiers.genderEditButton)
+        return self
     }
 
     // Labels
 
-    func verifyContactNameLabelHasValue(_ name: String) {
+    @discardableResult
+    func verifyContactNameLabelHasValue(_ name: String) -> Self {
         labelHasValue(Identifiers.contactNameLabel, name)
+        return self
     }
 
-    func verifyContactAgeLabelHasValue(_ age: String) {
+    @discardableResult
+    func verifyContactAgeLabelHasValue(_ age: String) -> Self {
         labelHasValue(Identifiers.contactAgeLabel, age)
+        return self
     }
 
-    func verifyContactGenderLabelHasValue(_ gender: String) {
+    @discardableResult
+    func verifyContactGenderLabelHasValue(_ gender: String) -> Self {
         labelHasValue(Identifiers.contactGenderLabel, gender)
+        return self
     }
 
     // Alerts
 
-    func verifyAlertHasText(_ text: String) {
+    @discardableResult
+    func verifyAlertHasText(_ text: String) -> Self {
         alertHasText(Identifiers.editAlert, text)
+        return self
     }
 
-    func verifyAlertTextFieldHasText(_ text: String) {
+    @discardableResult
+    func verifyAlertTextFieldHasText(_ text: String) -> Self {
         alertTextFieldHasValue(Identifiers.editAlert, text)
+        return self
     }
 }
