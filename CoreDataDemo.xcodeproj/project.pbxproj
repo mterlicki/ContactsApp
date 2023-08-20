@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F70DF9492A91F71B00A5ED3B /* AddContactTests.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = F70DF9482A91F71B00A5ED3B /* AddContactTests.xctestplan */; };
+		F70DF94B2A91F72F00A5ED3B /* EditContactTests.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = F70DF94A2A91F72F00A5ED3B /* EditContactTests.xctestplan */; };
+		F70DF94D2A91F7D400A5ED3B /* CoreDataDemo.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = F70DF94C2A91F7D400A5ED3B /* CoreDataDemo.xctestplan */; };
 		F731B9782842491200373813 /* BaseScreen+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F731B9772842491200373813 /* BaseScreen+Extenstions.swift */; };
 		F74A770128268D46004D81CB /* AddContactAgeTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74A770028268D46004D81CB /* AddContactAgeTextFieldTests.swift */; };
 		F74A770328269F1C004D81CB /* XCUIElement+ClearText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74A770228269F1C004D81CB /* XCUIElement+ClearText.swift */; };
@@ -56,6 +59,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F70DF9482A91F71B00A5ED3B /* AddContactTests.xctestplan */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AddContactTests.xctestplan; sourceTree = "<group>"; };
+		F70DF94A2A91F72F00A5ED3B /* EditContactTests.xctestplan */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EditContactTests.xctestplan; sourceTree = "<group>"; };
+		F70DF94C2A91F7D400A5ED3B /* CoreDataDemo.xctestplan */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CoreDataDemo.xctestplan; path = CoreDataDemo.xcodeproj/CoreDataDemo.xctestplan; sourceTree = "<group>"; };
 		F731B9772842491200373813 /* BaseScreen+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "BaseScreen+Extenstions.swift"; path = "CoreDataDemoUITests/Extensions/BaseScreen+Extenstions.swift"; sourceTree = SOURCE_ROOT; };
 		F74A770028268D46004D81CB /* AddContactAgeTextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactAgeTextFieldTests.swift; sourceTree = "<group>"; };
 		F74A770228269F1C004D81CB /* XCUIElement+ClearText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "XCUIElement+ClearText.swift"; path = "CoreDataDemoUITests/Extensions/XCUIElement+ClearText.swift"; sourceTree = SOURCE_ROOT; };
@@ -121,6 +127,7 @@
 		F74A77042826CAC6004D81CB /* AddContactScreenTests */ = {
 			isa = PBXGroup;
 			children = (
+				F70DF9482A91F71B00A5ED3B /* AddContactTests.xctestplan */,
 				F7A0158428032BEB00533FE2 /* AddContactInitialStateTests.swift */,
 				F77878AF28254716009EEAD2 /* AddContactNameFieldTests.swift */,
 				F74A770028268D46004D81CB /* AddContactAgeTextFieldTests.swift */,
@@ -133,6 +140,7 @@
 		F784172326EB2899001553D7 = {
 			isa = PBXGroup;
 			children = (
+				F70DF94C2A91F7D400A5ED3B /* CoreDataDemo.xctestplan */,
 				F784172E26EB2899001553D7 /* CoreDataDemo */,
 				F784174826EB289C001553D7 /* CoreDataDemoTests */,
 				F784175326EB289C001553D7 /* CoreDataDemoUITests */,
@@ -210,6 +218,7 @@
 		F7B07A56284012BF00927EB4 /* EditContactTests */ = {
 			isa = PBXGroup;
 			children = (
+				F70DF94A2A91F72F00A5ED3B /* EditContactTests.xctestplan */,
 				F7B07A572840132900927EB4 /* EditContactInitialStateTests.swift */,
 				F780F57F285E2D210076AC59 /* EditContactEditModeTests.swift */,
 			);
@@ -401,6 +410,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F70DF94B2A91F72F00A5ED3B /* EditContactTests.xctestplan in Resources */,
+				F70DF94D2A91F7D400A5ED3B /* CoreDataDemo.xctestplan in Resources */,
+				F70DF9492A91F71B00A5ED3B /* AddContactTests.xctestplan in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

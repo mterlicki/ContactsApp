@@ -1,0 +1,35 @@
+{
+  "configurations" : [
+    {
+      "id" : "F27A849A-64EA-4AFD-B612-D5A5E3E2A135",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "language" : "pl",
+    "region" : "PL"
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "skippedTests" : [
+        "AddContactAgeTextFieldTests",
+        "AddContactGenderTextFieldTests",
+        "AddContactInitialStateTests",
+        "AddContactNameFieldTests",
+        "AddContactValidationErrorTests",
+        "BaseTest",
+        "ContactListTests"
+      ],
+      "target" : {
+        "containerPath" : "container:CoreDataDemo.xcodeproj",
+        "identifier" : "F784174F26EB289C001553D7",
+        "name" : "CoreDataDemoUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

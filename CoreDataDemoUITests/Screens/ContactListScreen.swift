@@ -14,7 +14,7 @@ struct ContactListScreen: BaseScreen {
 
     // MARK: Identifiers
 
-    private enum Identifiers {
+    private struct Identifiers {
         static let navigationBar = "Contacts"
         static let addContact = "addContactButton"
 
@@ -32,42 +32,57 @@ struct ContactListScreen: BaseScreen {
 
     @discardableResult
     func tapAddContact() -> Self {
-        tapButton(Identifiers.addContact)
+        XCTContext.runActivity(named: "Tap Add contact button") { _ in
+            tapButton(Identifiers.addContact)
+        }
         return self
     }
 
     @discardableResult
     func selectContact(_ name: String) -> Self {
-        tapTableViewCell(Identifiers.contactList, name)
+        XCTContext.runActivity(named: "Select contact: \(name)") { _ in
+            tapTableViewCell(Identifiers.contactList, name)
+        }
         return self
     }
 
     @discardableResult
     func selectContact(_ index: Int) -> Self {
-        tapTableViewCell(Identifiers.contactList, index)
+        XCTContext.runActivity(named: "Select contact on position: \(index)") { _ in
+            tapTableViewCell(Identifiers.contactList, index)
+        }
         return self
     }
 
+    @discardableResult
     func numberOfContacts() -> Int {
-        return numberOfCells(Identifiers.contactList)
+        XCTContext.runActivity(named: "Get number of contacts") { _ in
+            return numberOfCells(Identifiers.contactList)
+        }
     }
 
     @discardableResult
     func swipeToDeleteContact(_ index: Int) -> Self {
-        swipeLeftCell(Identifiers.contactList, index)
+        XCTContext.runActivity(named: "Swipe left contact on index: \(index)") { _ in
+            swipeLeftCell(Identifiers.contactList, index)
+        }
         return self
     }
 
     @discardableResult
     func deleteContact(_ index: Int) -> Self {
-        swipeLeftCell(Identifiers.contactList, index)
-        tapTableViewCellButton(Identifiers.contactList, index, Identifiers.deleteButton)
+        XCTContext.runActivity(named: "Swipe left and delete contact on index: \(index)") { _ in
+            swipeLeftCell(Identifiers.contactList, index)
+            tapTableViewCellButton(Identifiers.contactList, index, Identifiers.deleteButton)
+        }
         return self
     }
 
     @discardableResult
     func swipeToDeleteContact(_ name: String) -> Self {
-        swipeLeftCell(Identifiers.contactList, name)
+        XCTContext.runActivity(named: "Swipe left contact: \(name)") { _ in
+            swipeLeftCell(Identifiers.contactList, name)
+        }
         return self
     }
 
@@ -75,43 +90,58 @@ struct ContactListScreen: BaseScreen {
 
     @discardableResult
     func verifyContactsName(_ name: String) -> Self {
-        tableViewCellLabelHasValue(Identifiers.contactList, name, Identifiers.personName, name)
+        XCTContext.runActivity(named: "Verify if Name label of cell has name: \(name)") { _ in
+            tableViewCellLabelHasValue(Identifiers.contactList, name, Identifiers.personName, name)
+        }
         return self
     }
 
     @discardableResult
     func verifyDeleteButtonIsHittable() -> Self {
-        XCTAssertTrue(app.buttons[Identifiers.deleteButton].isHittable)
+        XCTContext.runActivity(named: "Verify if Delete button is hittable") { _ in
+            XCTAssertTrue(app.buttons[Identifiers.deleteButton].isHittable)
+        }
         return self
     }
 
     @discardableResult
     func verifyNumberOfContactsAreGraterThan(_ number: Int) -> Self {
-        XCTAssertTrue(app.tables[Identifiers.contactList].cells.count > number)
+        XCTContext.runActivity(named: "Verify if number of contacts is grater than \(number)") { _ in
+            XCTAssertTrue(app.tables[Identifiers.contactList].cells.count > number)
+        }
         return self
     }
 
     @discardableResult
     func verifyNumberOfContactsEquals(_ number: Int) -> Self {
-        XCTAssertTrue(app.tables[Identifiers.contactList].cells.count == number)
+        XCTContext.runActivity(named: "Verify if number of contacts equals \(number)") { _ in
+            XCTAssertTrue(app.tables[Identifiers.contactList].cells.count == number)
+        }
         return self
     }
 
     @discardableResult
     func verifyContactWithNameExists (_ name: String) -> Self {
-        tableViewCellExist(Identifiers.contactList, name)
+        XCTContext.runActivity(named: "Verify if contact with name: \(name) exists on list") { _ in
+            tableViewCellExist(Identifiers.contactList, name)
+        }
         return self
     }
 
     @discardableResult
     func verifyContactWithNameDoesNotExists (_ name: String) -> Self {
-        tableViewCellDoesNotExist(Identifiers.contactList, name)
+        XCTContext.runActivity(named: "Verify if contact with name: \(name) does not exist on list") { _ in
+            tableViewCellDoesNotExist(Identifiers.contactList, name)
+        }
+        
         return self
     }
 
     @discardableResult
     func verifyNameOfContactOnPosition (_ name: String, _ position: Int) -> Self {
-        tableViewCellLabelHasValue(Identifiers.contactList, position, Identifiers.personName, name)
+        XCTContext.runActivity(named: "Verify if name of contact on position: \(position) is \(name)") { _ in
+            tableViewCellLabelHasValue(Identifiers.contactList, position, Identifiers.personName, name)
+        }
         return self
     }
 }

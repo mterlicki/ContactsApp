@@ -110,7 +110,7 @@ class AddContactGenderTextFieldTests: BaseTest {
             .tapAddContact()
         AddContactScreen(app: app)
             .typeGender(gender)
-            .genderTextFiledValueEqualsTo(gender)
+            .genderTextFieldValueEqualsTo(gender)
     }
 
     func testRetypingAppendsGender() throws {
@@ -120,6 +120,6 @@ class AddContactGenderTextFieldTests: BaseTest {
             .typeGender("wo")
             .tapNameTextField()
             .typeGender("man")
-            .genderTextFiledValueEqualsTo("woman")
+            .genderTextFieldValueEqualsTo("woman")
     }
 }
