@@ -9,8 +9,8 @@
     }
   ],
   "defaultOptions" : {
-    "language" : "en",
-    "region" : "GB",
+    "language" : "pl",
+    "region" : "PL",
     "testExecutionOrdering" : "random",
     "testTimeoutsEnabled" : true
   },

@@ -13,7 +13,7 @@ struct EditPersonScreen: BaseScreen {
 
     // MARK: Identifiers
 
-    private enum Identifiers {
+    private struct Identifiers {
         static let nameLabel = "nameLabel"
         static let contactNameLabel = "contactNameLabel"
         static let nameEditButton = "nameEditButton"
@@ -42,19 +42,25 @@ struct EditPersonScreen: BaseScreen {
 
     @discardableResult
     func tapBackButton() -> Self {
-        tapButton(Identifiers.backButton)
+        XCTContext.runActivity(named: "Tap Back button") { _ in
+            tapButton(Identifiers.backButton)
+        }
         return self
     }
 
     @discardableResult
     func tapEdit() -> Self {
-        tapButton(Identifiers.editButton)
+        XCTContext.runActivity(named: "Tap Edit Button") { _ in
+            tapButton(Identifiers.editButton)
+        }
         return self
     }
 
     @discardableResult
     func tapDone() -> Self {
-        tapButton(Identifiers.doneButton)
+        XCTContext.runActivity(named: "Tap Done button") { _ in
+            tapButton(Identifiers.doneButton)
+        }
         return self
     }
 
@@ -62,19 +68,25 @@ struct EditPersonScreen: BaseScreen {
 
     @discardableResult
     func tapEditName() -> Self {
-        tapButton(Identifiers.nameEditButton)
+        XCTContext.runActivity(named: "Tap Edit Name button") { _ in
+            tapButton(Identifiers.nameEditButton)
+        }
         return self
     }
 
     @discardableResult
     func tapEditAge() -> Self {
-        tapButton(Identifiers.ageEditButton)
+        XCTContext.runActivity(named: "Tap Edit Age button") { _ in
+            tapButton(Identifiers.ageEditButton)
+        }
         return self
     }
 
     @discardableResult
     func tapEditGender() -> Self {
-        tapButton(Identifiers.genderEditButton)
+        XCTContext.runActivity(named: "Tap Edit Gender button") { _ in
+            tapButton(Identifiers.genderEditButton)
+        }
         return self
     }
 
@@ -82,25 +94,33 @@ struct EditPersonScreen: BaseScreen {
 
     @discardableResult
     func alertTapCancel() -> Self {
-        alertButtonTap(Identifiers.editAlert, Identifiers.alertCancelButton)
+        XCTContext.runActivity(named: "Tap Cancel button in alert popover") { _ in
+            alertButtonTap(Identifiers.editAlert, Identifiers.alertCancelButton)
+        }
         return self
     }
 
     @discardableResult
     func alertTapSubmit() -> Self {
-        alertButtonTap(Identifiers.editAlert, Identifiers.alertSubmitButton)
+        XCTContext.runActivity(named: "Tap Submit button in alert popover") { _ in
+            alertButtonTap(Identifiers.editAlert, Identifiers.alertSubmitButton)
+        }
         return self
     }
 
     @discardableResult
     func alertClearText() -> Self {
-        clearAlertTextField(Identifiers.editAlert, Identifiers.alertTextField)
+        XCTContext.runActivity(named: "Clear text field value in alert popover") { _ in
+            clearAlertTextField(Identifiers.editAlert, Identifiers.alertTextField)
+        }
         return self
     }
 
     @discardableResult
     func alertTypeText(_ text: String) -> Self {
-        alertTextFieldTypeText(Identifiers.editAlert, Identifiers.alertTextField, text)
+        XCTContext.runActivity(named: "Type text: \(text) in alert text field") { _ in
+            alertTextFieldTypeText(Identifiers.editAlert, Identifiers.alertTextField, text)
+        }
         return self
     }
 
@@ -108,21 +128,25 @@ struct EditPersonScreen: BaseScreen {
 
     @discardableResult
     func editContactHasInitialState() -> Self {
-        editButtonExists()
-        editNameButtonExists()
-        editNameButtonIsDisabled()
-        editAgeButtonExists()
-        editAgeButtonIsDisabled()
-        editGenderButtonExists()
-        editGenderButtonIsDisabled()
+        XCTContext.runActivity(named: "Verify if Edit contact form is in initial state") { _ in
+            editButtonExists()
+            editNameButtonExists()
+            editNameButtonIsDisabled()
+            editAgeButtonExists()
+            editAgeButtonIsDisabled()
+            editGenderButtonExists()
+            editGenderButtonIsDisabled()
+        }
         return self
     }
 
     @discardableResult
     func editContactHasContactData(_ name: String, _ age: String, _ gender: String) -> Self {
-        verifyContactNameLabelHasValue(name)
-        verifyContactAgeLabelHasValue(age)
-        verifyContactGenderLabelHasValue(gender)
+        XCTContext.runActivity(named: "Verify if Edit contact form is filed with contact name: \(name), age: \(age) and \(gender)") { _ in
+            verifyContactNameLabelHasValue(name)
+            verifyContactAgeLabelHasValue(age)
+            verifyContactGenderLabelHasValue(gender)
+        }
         return self
     }
 
@@ -130,25 +154,33 @@ struct EditPersonScreen: BaseScreen {
 
     @discardableResult
     func doneButtonExists() -> Self {
-        buttonExists(Identifiers.doneButton)
+        XCTContext.runActivity(named: "Verify if Done button exist") { _ in
+            buttonExists(Identifiers.doneButton)
+        }
         return self
     }
 
     @discardableResult
     func doneButtonIsEnabled() -> Self {
-        buttonIsEnabled(Identifiers.doneButton)
+        XCTContext.runActivity(named: "Verify if Done button is hittable") { _ in
+            buttonIsEnabled(Identifiers.doneButton)
+        }
         return self
     }
 
     @discardableResult
     func editButtonExists() -> Self {
-        buttonExists(Identifiers.editButton)
+        XCTContext.runActivity(named: "Veirfy if Edit button exist") { _ in
+            buttonExists(Identifiers.editButton)
+        }
         return self
     }
 
     @discardableResult
     func editButtonIsEnabled() -> Self {
-        buttonIsEnabled(Identifiers.editButton)
+        XCTContext.runActivity(named: "Verify if Edit button is hittable") { _ in
+            buttonIsEnabled(Identifiers.editButton)
+        }
         return self
     }
 
@@ -157,19 +189,25 @@ struct EditPersonScreen: BaseScreen {
 
     @discardableResult
     func editNameButtonIsEnabled() -> Self {
-        buttonIsEnabled(Identifiers.nameEditButton)
+        XCTContext.runActivity(named: "Verify if Edit Name button is hittable") { _ in
+            buttonIsEnabled(Identifiers.nameEditButton)
+        }
         return self
     }
 
     @discardableResult
     func editNameButtonIsDisabled() -> Self {
-        buttonIsDisabled(Identifiers.nameEditButton)
+        XCTContext.runActivity(named: "Verify if Edit Name button is not hittable") { _ in
+            buttonIsDisabled(Identifiers.nameEditButton)
+        }
         return self
     }
 
     @discardableResult
     func editNameButtonExists() -> Self {
-        buttonExists(Identifiers.nameEditButton)
+        XCTContext.runActivity(named: "Verify if Edit Name button exists") { _ in
+            buttonExists(Identifiers.nameEditButton)
+        }
         return self
     }
 
@@ -177,19 +215,25 @@ struct EditPersonScreen: BaseScreen {
 
     @discardableResult
     func editAgeButtonIsEnabled() -> Self {
-        buttonIsEnabled(Identifiers.ageEditButton)
+        XCTContext.runActivity(named: "Verify if Edit Age button is hittable") { _ in
+            buttonIsEnabled(Identifiers.ageEditButton)
+        }
         return self
     }
 
     @discardableResult
     func editAgeButtonIsDisabled() -> Self {
-        buttonIsDisabled(Identifiers.ageEditButton)
+        XCTContext.runActivity(named: "Verify if Edit Age button is not hittable") { _ in
+            buttonIsDisabled(Identifiers.ageEditButton)
+        }
         return self
     }
 
     @discardableResult
     func editAgeButtonExists() -> Self {
-        buttonExists(Identifiers.ageEditButton)
+        XCTContext.runActivity(named: "Verify if Edit Age button exists") { _ in
+            buttonExists(Identifiers.ageEditButton)
+        }
         return self
     }
 
@@ -197,19 +241,25 @@ struct EditPersonScreen: BaseScreen {
 
     @discardableResult
     func editGenderButtonIsEnabled() -> Self {
-        buttonIsEnabled(Identifiers.genderEditButton)
+        XCTContext.runActivity(named: "Verify if Edit Gender button is hittable") { _ in
+            buttonIsEnabled(Identifiers.genderEditButton)
+        }
         return self
     }
 
     @discardableResult
     func editGenderButtonIsDisabled() -> Self {
-        buttonIsDisabled(Identifiers.genderEditButton)
+        XCTContext.runActivity(named: "Verify if Edit Gender button is not hittable") { _ in
+            buttonIsDisabled(Identifiers.genderEditButton)
+        }
         return self
     }
 
     @discardableResult
     func editGenderButtonExists() -> Self {
-        buttonExists(Identifiers.genderEditButton)
+        XCTContext.runActivity(named: "Verify if Edit Gender button exists") { _ in
+            buttonExists(Identifiers.genderEditButton)
+        }
         return self
     }
 
@@ -217,19 +267,25 @@ struct EditPersonScreen: BaseScreen {
 
     @discardableResult
     func verifyContactNameLabelHasValue(_ name: String) -> Self {
-        labelHasValue(Identifiers.contactNameLabel, name)
+        XCTContext.runActivity(named: "Verify if Contact Name label has value: \(name)") { _ in
+            labelHasValue(Identifiers.contactNameLabel, name)
+        }
         return self
     }
 
     @discardableResult
     func verifyContactAgeLabelHasValue(_ age: String) -> Self {
-        labelHasValue(Identifiers.contactAgeLabel, age)
+        XCTContext.runActivity(named: "Verify if Contact Age label has value: \(age)") { _ in
+            labelHasValue(Identifiers.contactAgeLabel, age)
+        }
         return self
     }
 
     @discardableResult
     func verifyContactGenderLabelHasValue(_ gender: String) -> Self {
-        labelHasValue(Identifiers.contactGenderLabel, gender)
+        XCTContext.runActivity(named: "Verify if Contact Gender label has value: \(gender)") { _ in
+            labelHasValue(Identifiers.contactGenderLabel, gender)
+        }
         return self
     }
 
@@ -237,13 +293,17 @@ struct EditPersonScreen: BaseScreen {
 
     @discardableResult
     func verifyAlertHasText(_ text: String) -> Self {
-        alertHasText(Identifiers.editAlert, text)
+        XCTContext.runActivity(named: "Verify if alert popover label has text: \(text)") { _ in
+            alertHasText(Identifiers.editAlert, text)
+        }
         return self
     }
 
     @discardableResult
     func verifyAlertTextFieldHasText(_ text: String) -> Self {
-        alertTextFieldHasValue(Identifiers.editAlert, text)
+        XCTContext.runActivity(named: "Verify if alert popover text field has text: \(text)") { _ in
+            alertTextFieldHasValue(Identifiers.editAlert, text)
+        }
         return self
     }
 }
