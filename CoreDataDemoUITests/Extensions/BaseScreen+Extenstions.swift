@@ -1,5 +1,5 @@
 //
-//  BaseScreen+Extenstions.swift
+//  BaseScreen+Extensions.swift
 //  CoreDataDemoUITests
 //
 //  Created by Michał Terlicki on 28/05/2022.
@@ -63,7 +63,7 @@ extension BaseScreen {
         let textFieldValue = app.alerts[identifier].textFields.firstMatch.value
 
         XCTAssertTrue(textFieldValue as? String == value,
-                      "Text field value is \(textFieldValue ?? "") not \(value) as expceted")
+                      "Text field value is \(textFieldValue ?? "") not \(value) as expected")
     }
 
     // MARK: Text field
@@ -72,9 +72,9 @@ extension BaseScreen {
         app.textFields[identifier].tap()
     }
 
-    func typeText(_ identfier: String, _ text: String) {
-        app.textFields[identfier].tap()
-        app.textFields[identfier].typeText(text)
+    func typeText(_ identifier: String, _ text: String) {
+        app.textFields[identifier].tap()
+        app.textFields[identifier].typeText(text)
     }
 
     func clearTextField(_ identifier: String) {
@@ -85,7 +85,7 @@ extension BaseScreen {
         XCTAssertTrue(app.textFields[identifier].exists, "Text Field \(identifier) does not exist")
     }
 
-    func textFieldPalaceholderEqualsTo (_ identifier: String, _ value: String) {
+    func textFieldPlaceholderEqualsTo (_ identifier: String, _ value: String) {
         XCTAssertTrue(app.textFields[identifier].placeholderValue == value)
     }
 

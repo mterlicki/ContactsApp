@@ -85,17 +85,17 @@ class NumberEditView: UIView {
 
     private func configureLabel (text: String, label: UILabel, isBold: Bool) {
         if isBold {
-            let atributes: [NSAttributedString.Key: Any] = [
+            let attributes: [NSAttributedString.Key: Any] = [
                 .font: UIFont.boldSystemFont(ofSize: 17)
             ]
-            let atributedText = NSAttributedString(string: text, attributes: atributes)
-            label.attributedText = atributedText
+            let attributedText = NSAttributedString(string: text, attributes: attributes)
+            label.attributedText = attributedText
         } else {
-            let atributes: [NSAttributedString.Key: Any] = [
+            let attributes: [NSAttributedString.Key: Any] = [
                 .font: UIFont.systemFont(ofSize: 10)
             ]
-            let atributedText = NSAttributedString(string: text, attributes: atributes)
-            label.attributedText = atributedText
+            let attributedText = NSAttributedString(string: text, attributes: attributes)
+            label.attributedText = attributedText
         }
 
         label.numberOfLines = 0

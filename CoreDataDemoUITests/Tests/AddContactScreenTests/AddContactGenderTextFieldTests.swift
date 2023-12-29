@@ -103,7 +103,7 @@ class AddContactGenderTextFieldTests: BaseTest {
             .genderErrorLabelValueEqualsTo("Invalid gender, type: men/woman/nn")
     }
 
-    func testTypingSpecialCharacktersShowsError() throws {
+    func testTypingSpecialCharactersShowsError() throws {
         let gender = "!@#$%&*()_+-=[]\\{}|;'<>?,./"
 
         ContactListScreen(app: app)

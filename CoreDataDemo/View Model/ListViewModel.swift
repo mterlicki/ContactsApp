@@ -96,7 +96,7 @@ extension ListView: EditDelegate {
     }
 }
 
-extension ListView: AddDelegete {
+extension ListView: AddDelegate {
     func addPerson(name: String, age: Int64, gender: String) {
 
         listViewModel.addNewPerson(name: name, age: age, gender: gender)

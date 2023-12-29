@@ -128,7 +128,7 @@ class EditContactEditModeTests: BaseTest {
             .verifyAlertTextFieldHasText(gender)
     }
 
-    func testSubmitingChangesInNameChangesLabelValue() throws {
+    func testSubmittingChangesInNameChangesLabelValue() throws {
         ContactListScreen(app: app)
             .selectContact(contactName)
         EditPersonScreen(app: app)
@@ -152,7 +152,7 @@ class EditContactEditModeTests: BaseTest {
             .verifyContactNameLabelHasValue(contactName)
     }
 
-    func testSubmitingChangesInAgeChangesLabelValue() throws {
+    func testSubmittingChangesInAgeChangesLabelValue() throws {
         ContactListScreen(app: app)
             .selectContact(contactName)
         EditPersonScreen(app: app)
@@ -176,7 +176,7 @@ class EditContactEditModeTests: BaseTest {
             .verifyContactAgeLabelHasValue(age)
     }
 
-    func testSubmitingChangesInGenderChangesLabelValue() throws {
+    func testSubmittingChangesInGenderChangesLabelValue() throws {
         ContactListScreen(app: app)
             .selectContact(contactName)
         EditPersonScreen(app: app)

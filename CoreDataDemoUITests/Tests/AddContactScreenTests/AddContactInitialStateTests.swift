@@ -26,10 +26,10 @@ class AddContactInitialStateTests: BaseTest {
         ContactListScreen(app: app)
             .tapAddContact()
         AddContactScreen(app: app)
-            .nameTextFieldPalaceholderEqualsTo(placeholderValue)
+            .nameTextFieldPlaceholderEqualsTo(placeholderValue)
     }
 
-    func testNameErrorLabelShowsReqiuredFieldMessage() throws {
+    func testNameErrorLabelShowsRequiredFieldMessage() throws {
         let errorLabelValue = "Required"
 
         ContactListScreen(app: app)
@@ -54,7 +54,7 @@ class AddContactInitialStateTests: BaseTest {
             .genderTextFieldPalaceholderEqualsTo(placeholderValue)
     }
 
-    func testGenderErrorLablelShowsReqiuredFieldMessage() throws {
+    func testGenderErrorLabelShowsRequiredFieldMessage() throws {
         let errorLabelValue = "Required"
 
         ContactListScreen(app: app)

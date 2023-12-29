@@ -31,7 +31,7 @@ class EditView: UIViewController {
         configureStackView()
         setStackViewConstraints()
         setKeyAndValue()
-        setAccessability()
+        setAccessibility()
         setEditButtons()
         setNavigationBar()
 
@@ -76,7 +76,7 @@ class EditView: UIViewController {
 
     }
 
-    private func setAccessability() {
+    private func setAccessibility() {
 
         nameView.keyLabel.accessibilityIdentifier = "nameLabel"
         nameView.editButton.accessibilityIdentifier = "nameEditButton"

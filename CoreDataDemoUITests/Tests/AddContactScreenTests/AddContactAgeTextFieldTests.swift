@@ -56,7 +56,7 @@ class AddContactAgeTextFieldTests: BaseTest {
             .ageErrorLabelValueEqualsTo("Age is required")
     }
 
-    func testIncementButtonIncreasesAgeValue() throws {
+    func testIncrementButtonIncreasesAgeValue() throws {
         let expectedAge = "19"
 
         ContactListScreen(app: app)
@@ -76,7 +76,7 @@ class AddContactAgeTextFieldTests: BaseTest {
             .ageTextFieldValueEqualsTo(expectedAge)
     }
 
-    func testMultipleIncrisingAgeChangesAgeValue() throws {
+    func testMultipleIncreasingAgeChangesAgeValue() throws {
         let expectedAge = "22"
 
         ContactListScreen(app: app)
@@ -90,7 +90,7 @@ class AddContactAgeTextFieldTests: BaseTest {
             .ageTextFieldValueEqualsTo(expectedAge)
     }
 
-    func testMultipleDecisingAgeChangesAgeValue() throws {
+    func testMultipleDecreasingAgeChangesAgeValue() throws {
         let expectedAge = "14"
 
         ContactListScreen(app: app)
@@ -126,7 +126,7 @@ class AddContactAgeTextFieldTests: BaseTest {
             .ageTextFieldValueEqualsTo(expectedAge)
     }
 
-    func testTypingAgeFormKeyboardAndIncresingByStepper() throws {
+    func testTypingAgeFormKeyboardAndIncreasingByStepper() throws {
         let age = "35"
         let expectedAge = "36"
 
@@ -140,7 +140,7 @@ class AddContactAgeTextFieldTests: BaseTest {
             .ageTextFieldValueEqualsTo(expectedAge)
     }
 
-    func testTypingAgeFormKeyboardAndDecresingByStepper() throws {
+    func testTypingAgeFormKeyboardAndDecreasingByStepper() throws {
         let age = "45"
         let expectedAge = "44"
 
@@ -154,7 +154,7 @@ class AddContactAgeTextFieldTests: BaseTest {
             .ageTextFieldValueEqualsTo(expectedAge)
     }
 
-    func testTypingAgeFromKeyboardAndIncresingAndThenDecreasingByStepper() throws {
+    func testTypingAgeFromKeyboardAndIncreasingAndThenDecreasingByStepper() throws {
         let age = "45"
         let expectedAge = "45"
 
@@ -169,7 +169,7 @@ class AddContactAgeTextFieldTests: BaseTest {
             .ageTextFieldValueEqualsTo(expectedAge)
     }
 
-    func testTypingAgeFromKeyboardAndDecresingAndThenIncreasingByStepper() throws {
+    func testTypingAgeFromKeyboardAndDecreasingAndThenIncreasingByStepper() throws {
         let age = "45"
         let expectedAge = "45"
 

@@ -40,7 +40,7 @@ struct AddContactScreen: BaseScreen {
 
     // MARK: Handlers
 
-    // Naviation bar
+    // Navigation bar
     @discardableResult
     func tapCancel() -> Self {
         XCTContext.runActivity(named: "Tap Cancel button") { _ in
@@ -208,12 +208,12 @@ struct AddContactScreen: BaseScreen {
         return self
     }
 
-    // Name text feield
+    // Name text field
 
     @discardableResult
-    func nameTextFieldPalaceholderEqualsTo (_ value: String) -> Self {
+    func nameTextFieldPlaceholderEqualsTo (_ value: String) -> Self {
         XCTContext.runActivity(named: "Verify if Name text field placeholder has value: \(value)") { _ in
-            textFieldPalaceholderEqualsTo(Identifiers.nameTextField, value)
+            textFieldPlaceholderEqualsTo(Identifiers.nameTextField, value)
         }
         return self
     }
@@ -297,7 +297,7 @@ struct AddContactScreen: BaseScreen {
     @discardableResult
     func genderTextFieldPalaceholderEqualsTo (_ value: String) -> Self {
         XCTContext.runActivity(named: "Verify if Gender text field placeholder has value: \(value)") { _ in
-            textFieldPalaceholderEqualsTo(Identifiers.genderTextField, value)
+            textFieldPlaceholderEqualsTo(Identifiers.genderTextField, value)
         }
         return self
     }
@@ -323,11 +323,11 @@ struct AddContactScreen: BaseScreen {
     // Alert
 
     @discardableResult
-    func alertHasProperTiltle () -> Self {
-        let alertTile = "Validation error"
+    func alertHasProperTitle () -> Self {
+        let alertTitle = "Validation error"
         
-        XCTContext.runActivity(named: "Verify if alert popover has title: \(alertTile)") { _ in
-            alertHasText(Identifiers.saveErrorAlert, alertTile)
+        XCTContext.runActivity(named: "Verify if alert popover has title: \(alertTitle)") { _ in
+            alertHasText(Identifiers.saveErrorAlert, alertTitle)
         }
         return self
     }

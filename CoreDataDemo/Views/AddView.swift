@@ -33,9 +33,9 @@ class AddView: UIViewController {
         configureStackView()
         setStackViewConstraints()
         configureNameTextField()
-        configureGenederTextField()
+        configureGenderTextField()
         configureAgeTextField()
-        setAccessability()
+        setAccessibility()
     }
 
     private func configureNavigationBar() {
@@ -70,7 +70,7 @@ class AddView: UIViewController {
         stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10).isActive = true
     }
 
-    private func setAccessability () {
+    private func setAccessibility () {
 
         nameTextField.keyLabel.accessibilityIdentifier = "nameLabel"
         nameTextField.textField.accessibilityIdentifier = "nameTextField"
@@ -125,7 +125,7 @@ class AddView: UIViewController {
 
     }
 
-    private func configureGenederTextField() {
+    private func configureGenderTextField() {
 
         genderTextField.set(key: "Gender:", placeholder: "Type men/woman/nn", errorMessage: "Required")
 

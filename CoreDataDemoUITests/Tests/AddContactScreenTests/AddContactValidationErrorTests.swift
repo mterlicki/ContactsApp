@@ -17,7 +17,7 @@ class AddContactValidationErrorTests: BaseTest {
             .tapAgeTextField()
             .clearAge()
             .tapSave()
-            .alertHasProperTiltle()
+            .alertHasProperTitle()
     }
 
     func testSavingEmptyContactGeneratesErrorMessageWithProperMessage() throws {
@@ -40,7 +40,7 @@ class AddContactValidationErrorTests: BaseTest {
             .alertHasOkButton()
     }
 
-    func testAfterTapingOkButttonScreenIsInInitialState() throws {
+    func testAfterTapingOkButtonScreenIsInInitialState() throws {
         ContactListScreen(app: app)
             .tapAddContact()
         AddContactScreen(app: app)

@@ -38,7 +38,7 @@ class ListView: UIViewController {
 
         setupTableView()
         setNavigationBar()
-        setAccesability()
+        setAccessibility()
     }
 
     private func setupTableView() {
@@ -72,7 +72,7 @@ class ListView: UIViewController {
 
     }
 
-    private func setAccesability() {
+    private func setAccessibility() {
 
         tableView.accessibilityIdentifier = "contactTableView"
         navigationItem.rightBarButtonItem?.accessibilityIdentifier = "addContactButton"

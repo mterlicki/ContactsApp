@@ -8,12 +8,12 @@
 
 import Foundation
 
-protocol AddDelegete: AnyObject {
+protocol AddDelegate: AnyObject {
     func addPerson(name: String, age: Int64, gender: String)
 }
 
 class AddViewModel {
 
-    weak var delegate: AddDelegete?
+    weak var delegate: AddDelegate?
 
 }

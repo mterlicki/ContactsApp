@@ -38,7 +38,7 @@ struct EditPersonScreen: BaseScreen {
 
     // MARK: Handlers
 
-    // Naviagation bar
+    // Navigation bar
 
     @discardableResult
     func tapBackButton() -> Self {
@@ -170,7 +170,7 @@ struct EditPersonScreen: BaseScreen {
 
     @discardableResult
     func editButtonExists() -> Self {
-        XCTContext.runActivity(named: "Veirfy if Edit button exist") { _ in
+        XCTContext.runActivity(named: "Verify if Edit button exist") { _ in
             buttonExists(Identifiers.editButton)
         }
         return self

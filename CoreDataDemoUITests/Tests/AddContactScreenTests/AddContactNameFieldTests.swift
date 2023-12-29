@@ -76,7 +76,7 @@ class AddContactNameFieldTests: BaseTest {
             .nameTextFiledValueEqualsTo(name)
     }
 
-    func testTypingSpecialCharackters() throws {
+    func testTypingSpecialCharacters() throws {
         let name = "!@#$%&*()_+-=[]\\{}|;'<>?,./"
 
         ContactListScreen(app: app)
