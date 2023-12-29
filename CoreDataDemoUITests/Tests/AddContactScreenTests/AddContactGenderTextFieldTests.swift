@@ -13,6 +13,7 @@ class AddContactGenderTextFieldTests: BaseTest {
     func testTypingEmptyGenderShowsError() throws {
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .tapGenderTextField()
             .typeGender("")
             .tapNameTextField()
@@ -24,6 +25,7 @@ class AddContactGenderTextFieldTests: BaseTest {
 
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .tapGenderTextField()
             .typeGender(gender)
             .genderErrorLabelValueEqualsTo(" ")
@@ -34,6 +36,7 @@ class AddContactGenderTextFieldTests: BaseTest {
 
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .tapGenderTextField()
             .typeGender(gender)
             .genderErrorLabelValueEqualsTo(" ")
@@ -44,6 +47,7 @@ class AddContactGenderTextFieldTests: BaseTest {
 
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .tapGenderTextField()
             .typeGender(gender)
             .genderErrorLabelValueEqualsTo(" ")
@@ -52,6 +56,7 @@ class AddContactGenderTextFieldTests: BaseTest {
     func testErrorLabelShowsMessageWhenTypedGenderIsEmpty() throws {
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .typeGender("")
             .tapNameTextField()
             .nameErrorLabelValueEqualsTo("Required")
@@ -60,6 +65,7 @@ class AddContactGenderTextFieldTests: BaseTest {
     func testErrorLabelIsEmptyAfterRetypingValidGender() throws {
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .typeGender("")
             .tapNameTextField()
             .typeGender("men")
@@ -69,6 +75,7 @@ class AddContactGenderTextFieldTests: BaseTest {
     func testErrorLabelShowsMessageAfterDeletingGender() throws {
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .typeGender("woman")
             .clearGender()
             .genderErrorLabelValueEqualsTo("Gender is required")
@@ -77,6 +84,7 @@ class AddContactGenderTextFieldTests: BaseTest {
     func testErrorLabelIsEmptyAfterSavingWithErrorWithEmptyName() throws {
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .typeName("")
             .typeGender("nn")
             .tapSave()
@@ -87,6 +95,7 @@ class AddContactGenderTextFieldTests: BaseTest {
     func testErrorLabelShowsErrorAfterSavingWithEmptyGender() throws {
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .typeName("John")
             .typeGender(" ")
             .tapSave()
@@ -94,21 +103,23 @@ class AddContactGenderTextFieldTests: BaseTest {
             .genderErrorLabelValueEqualsTo("Invalid gender, type: men/woman/nn")
     }
 
-    func testTypingSpecialCharacktersShowsError() throws {
+    func testTypingSpecialCharactersShowsError() throws {
         let gender = "!@#$%&*()_+-=[]\\{}|;'<>?,./"
 
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .typeGender(gender)
-            .genderTextFiledValueEqualsTo(gender)
+            .genderTextFieldValueEqualsTo(gender)
     }
 
     func testRetypingAppendsGender() throws {
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .typeGender("wo")
             .tapNameTextField()
             .typeGender("man")
-            .genderTextFiledValueEqualsTo("woman")
+            .genderTextFieldValueEqualsTo("woman")
     }
 }

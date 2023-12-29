@@ -1,0 +1,21 @@
+[
+  {
+     "id":"c3cb73c1-e5ff-49f0-9a60-fddfbaee7508",
+     "name":"Adam Slodowy",
+     "age":32,
+     "gender":"men"
+  },
+  {
+     "id":"2c18e4e0-fbb6-42c2-ad94-16555537db09",
+     "name":"Pipi Lamstrumf",
+     "age":32,
+     "gender":"woman"
+  },
+  {
+     "id":"ec2e97c9-ef23-4b1d-9602-cfcbb4cebd17",
+     "name":"Krzysztof Jarzyna",
+     "age":45,
+     "gender":"men"
+  }
+  
+]

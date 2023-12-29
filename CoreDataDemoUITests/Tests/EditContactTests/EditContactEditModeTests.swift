@@ -18,16 +18,15 @@ class EditContactEditModeTests: BaseTest {
         continueAfterFailure = false
         app = XCUIApplication()
         app.launchArguments = ["UITesting"]
+        app.launchEnvironment = ["TestData": "1contact.json"]
         app.launch()
 
-        ContactListScreen(app: app)
-            .tapAddContact()
-            .fillFormAndSave(contactName, age, gender)
     }
 
     func testAfterHittingEditButtonNameEditButtonsIsActive() throws {
         ContactListScreen(app: app)
             .selectContact(contactName)
+        EditPersonScreen(app: app)
             .tapEdit()
             .editNameButtonIsEnabled()
     }
@@ -35,6 +34,7 @@ class EditContactEditModeTests: BaseTest {
     func testAfterHittingEditButtonAgeEditButtonsIsActive() throws {
         ContactListScreen(app: app)
             .selectContact(contactName)
+        EditPersonScreen(app: app)
             .tapEdit()
             .editAgeButtonIsEnabled()
     }
@@ -42,6 +42,7 @@ class EditContactEditModeTests: BaseTest {
     func testAfterHittingEditButtonGenderEditButtonsIsActive() throws {
         ContactListScreen(app: app)
             .selectContact(contactName)
+        EditPersonScreen(app: app)
             .tapEdit()
             .editGenderButtonIsEnabled()
     }
@@ -49,6 +50,7 @@ class EditContactEditModeTests: BaseTest {
     func testAfterHittingNameEditButtonsShowsEditAlertWithTitle() throws {
         ContactListScreen(app: app)
             .selectContact(contactName)
+        EditPersonScreen(app: app)
             .tapEdit()
             .tapEditName()
             .verifyAlertHasText("Edit name")
@@ -57,6 +59,7 @@ class EditContactEditModeTests: BaseTest {
     func testAfterHittingAgeEditButtonsShowsEditAlertWithTitle() throws {
         ContactListScreen(app: app)
             .selectContact(contactName)
+        EditPersonScreen(app: app)
             .tapEdit()
             .tapEditAge()
             .verifyAlertHasText("Edit age")
@@ -65,6 +68,7 @@ class EditContactEditModeTests: BaseTest {
     func testAfterHittingGenderEditButtonsShowsEditAlertWithTitle() throws {
         ContactListScreen(app: app)
             .selectContact(contactName)
+        EditPersonScreen(app: app)
             .tapEdit()
             .tapEditGender()
             .verifyAlertHasText("Edit gender")
@@ -73,6 +77,7 @@ class EditContactEditModeTests: BaseTest {
     func testAfterHittingDoneNameEditButtonIsDisabled() throws {
         ContactListScreen(app: app)
             .selectContact(contactName)
+        EditPersonScreen(app: app)
             .tapEdit()
             .tapDone()
             .editNameButtonIsDisabled()
@@ -81,6 +86,7 @@ class EditContactEditModeTests: BaseTest {
     func testAfterHittingDoneAgeEditButtonIsDisabled() throws {
         ContactListScreen(app: app)
             .selectContact(contactName)
+        EditPersonScreen(app: app)
             .tapEdit()
             .tapDone()
             .editAgeButtonIsDisabled()
@@ -89,6 +95,7 @@ class EditContactEditModeTests: BaseTest {
     func testAfterHittingDoneGenderEditButtonIsDisabled() throws {
         ContactListScreen(app: app)
             .selectContact(contactName)
+        EditPersonScreen(app: app)
             .tapEdit()
             .tapDone()
             .editGenderButtonIsDisabled()
@@ -97,6 +104,7 @@ class EditContactEditModeTests: BaseTest {
     func testAlertHasFiledNameInTextField() throws {
         ContactListScreen(app: app)
             .selectContact(contactName)
+        EditPersonScreen(app: app)
             .tapEdit()
             .tapEditName()
             .verifyAlertTextFieldHasText(contactName)
@@ -105,6 +113,7 @@ class EditContactEditModeTests: BaseTest {
     func testAlertHasFiledAgeInTextField() throws {
         ContactListScreen(app: app)
             .selectContact(contactName)
+        EditPersonScreen(app: app)
             .tapEdit()
             .tapEditAge()
             .verifyAlertTextFieldHasText(age)
@@ -113,14 +122,16 @@ class EditContactEditModeTests: BaseTest {
     func testAlertHasFiledGenderInTextField() throws {
         ContactListScreen(app: app)
             .selectContact(contactName)
+        EditPersonScreen(app: app)
             .tapEdit()
             .tapEditGender()
             .verifyAlertTextFieldHasText(gender)
     }
 
-    func testSubmitingChangesInNameChangesLabelValue() throws {
+    func testSubmittingChangesInNameChangesLabelValue() throws {
         ContactListScreen(app: app)
             .selectContact(contactName)
+        EditPersonScreen(app: app)
             .tapEdit()
             .tapEditName()
             .alertClearText()
@@ -132,6 +143,7 @@ class EditContactEditModeTests: BaseTest {
     func testCancelingChangesInNameDoesNotChangeLabelValue() throws {
         ContactListScreen(app: app)
             .selectContact(contactName)
+        EditPersonScreen(app: app)
             .tapEdit()
             .tapEditName()
             .alertClearText()
@@ -140,9 +152,10 @@ class EditContactEditModeTests: BaseTest {
             .verifyContactNameLabelHasValue(contactName)
     }
 
-    func testSubmitingChangesInAgeChangesLabelValue() throws {
+    func testSubmittingChangesInAgeChangesLabelValue() throws {
         ContactListScreen(app: app)
             .selectContact(contactName)
+        EditPersonScreen(app: app)
             .tapEdit()
             .tapEditAge()
             .alertClearText()
@@ -154,6 +167,7 @@ class EditContactEditModeTests: BaseTest {
     func testCancelingChangesInAgeDoesNotChangeLabelValue() throws {
         ContactListScreen(app: app)
             .selectContact(contactName)
+        EditPersonScreen(app: app)
             .tapEdit()
             .tapEditName()
             .alertClearText()
@@ -162,9 +176,10 @@ class EditContactEditModeTests: BaseTest {
             .verifyContactAgeLabelHasValue(age)
     }
 
-    func testSubmitingChangesInGenderChangesLabelValue() throws {
+    func testSubmittingChangesInGenderChangesLabelValue() throws {
         ContactListScreen(app: app)
             .selectContact(contactName)
+        EditPersonScreen(app: app)
             .tapEdit()
             .tapEditGender()
             .alertClearText()
@@ -176,6 +191,7 @@ class EditContactEditModeTests: BaseTest {
     func testCancelingChangesInGenderDoesNotChangeLabelValue() throws {
         ContactListScreen(app: app)
             .selectContact(contactName)
+        EditPersonScreen(app: app)
             .tapEdit()
             .tapEditGender()
             .alertClearText()
@@ -187,6 +203,7 @@ class EditContactEditModeTests: BaseTest {
     func testAfterTapingDoneButtonNewNameIsVisibleOnList() throws {
         ContactListScreen(app: app)
             .selectContact(contactName)
+        EditPersonScreen(app: app)
             .tapEdit()
             .tapEditName()
             .alertClearText()
@@ -194,6 +211,7 @@ class EditContactEditModeTests: BaseTest {
             .alertTapSubmit()
             .tapDone()
             .tapBackButton()
+        ContactListScreen(app: app)
             .verifyContactWithNameExists("Paul")
     }
 }

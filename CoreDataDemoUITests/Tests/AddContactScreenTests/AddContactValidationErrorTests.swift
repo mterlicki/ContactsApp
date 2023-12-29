@@ -13,15 +13,17 @@ class AddContactValidationErrorTests: BaseTest {
     func testSavingEmptyContactGeneratesErrorMessageWithProperTitle() throws {
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .tapAgeTextField()
             .clearAge()
             .tapSave()
-            .alertHasProperTiltle()
+            .alertHasProperTitle()
     }
 
     func testSavingEmptyContactGeneratesErrorMessageWithProperMessage() throws {
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .tapAgeTextField()
             .clearAge()
             .tapSave()
@@ -31,15 +33,17 @@ class AddContactValidationErrorTests: BaseTest {
     func testSavingEmptyContactGeneratesErrorMessageWithOkButton() throws {
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .tapAgeTextField()
             .clearAge()
             .tapSave()
             .alertHasOkButton()
     }
 
-    func testAfterTapingOkButttonScreenIsInInitialState() throws {
+    func testAfterTapingOkButtonScreenIsInInitialState() throws {
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .tapSave()
             .tapAlertOkButton()
             .addPersonScreenIsLoaded()

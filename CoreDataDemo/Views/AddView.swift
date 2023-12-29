@@ -1,5 +1,5 @@
 //
-//  AddViewController.swift
+//  AddView.swift
 //  CoreDataDemo
 //
 //  Created by Michal Terlicki on 25/11/2022.
@@ -8,11 +8,7 @@
 
 import UIKit
 
-protocol AddDelegete: AnyObject {
-    func addPerson(name: String, age: Int64, gender: String)
-}
-
-class AddViewController: UIViewController {
+class AddView: UIViewController {
 
     let stackView = UIStackView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: 200, height: 100)))
 
@@ -20,7 +16,7 @@ class AddViewController: UIViewController {
     let ageTextField = NumberEditView(with: .age)
     let genderTextField = TextEditView(with: .gender)
 
-    weak var delegate: AddDelegete?
+    let addViewModel = AddViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,9 +33,9 @@ class AddViewController: UIViewController {
         configureStackView()
         setStackViewConstraints()
         configureNameTextField()
-        configureGenederTextField()
+        configureGenderTextField()
         configureAgeTextField()
-        setAccessability()
+        setAccessibility()
     }
 
     private func configureNavigationBar() {
@@ -74,7 +70,7 @@ class AddViewController: UIViewController {
         stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10).isActive = true
     }
 
-    private func setAccessability () {
+    private func setAccessibility () {
 
         nameTextField.keyLabel.accessibilityIdentifier = "nameLabel"
         nameTextField.textField.accessibilityIdentifier = "nameTextField"
@@ -118,7 +114,7 @@ class AddViewController: UIViewController {
             let gender = genderTextField.textField.text ?? ""
             let age = Int(ageTextField.textField.text ?? "")
 
-            delegate?.addPerson(name: name, age: Int64(age ?? 0), gender: gender)
+            addViewModel.delegate?.addPerson(name: name, age: Int64(age ?? 0), gender: gender)
             self.dismiss(animated: true, completion: nil)
         }
     }
@@ -129,7 +125,7 @@ class AddViewController: UIViewController {
 
     }
 
-    private func configureGenederTextField() {
+    private func configureGenderTextField() {
 
         genderTextField.set(key: "Gender:", placeholder: "Type men/woman/nn", errorMessage: "Required")
 

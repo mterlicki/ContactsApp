@@ -14,7 +14,7 @@ struct AddContactScreen: BaseScreen {
 
     // MARK: Identifiers
 
-    private enum Identifiers {
+    private struct Identifiers {
         static let navigationBar = "Add contact"
 
         static let nameLabel = "nameLabel"
@@ -40,201 +40,313 @@ struct AddContactScreen: BaseScreen {
 
     // MARK: Handlers
 
-    // Naviation bar
-    func tapCancel() -> ContactListScreen {
-        tapNavigationBarButton(Identifiers.navigationBar, Identifiers.cancelButton)
-        return ContactListScreen(app: app)
+    // Navigation bar
+    @discardableResult
+    func tapCancel() -> Self {
+        XCTContext.runActivity(named: "Tap Cancel button") { _ in
+            tapNavigationBarButton(Identifiers.navigationBar, Identifiers.cancelButton)
+        }
+        return self
     }
 
-    func tapSave() -> ContactListScreen {
-        tapNavigationBarButton(Identifiers.navigationBar, Identifiers.saveButton)
-        return ContactListScreen(app: app)
-    }
-
+    @discardableResult
     func tapSave() -> Self {
-        tapNavigationBarButton(Identifiers.navigationBar, Identifiers.saveButton)
+        XCTContext.runActivity(named: "Tap Save button") { _ in
+            tapNavigationBarButton(Identifiers.navigationBar, Identifiers.saveButton)
+        }
         return self
     }
 
     // Name text field
+    @discardableResult
     func tapNameTextField() -> Self {
-        tapTextField(Identifiers.nameTextField)
+        XCTContext.runActivity(named: "Tap Name text field") { _ in
+            tapTextField(Identifiers.nameTextField)
+        }
         return self
     }
 
+    @discardableResult
     func typeName(_ name: String) -> Self {
-        typeText(Identifiers.nameTextField, name)
+        XCTContext.runActivity(named: "Tap Name text field and type: \(name)") { _ in
+            typeText(Identifiers.nameTextField, name)
+        }
         return self
     }
 
+    @discardableResult
     func clearName() -> Self {
-        clearTextField(Identifiers.nameTextField)
+        XCTContext.runActivity(named: "Clear Name text field") { _ in
+            clearTextField(Identifiers.nameTextField)
+        }
         return self
     }
 
     // Age text field
+    @discardableResult
     func tapAgeTextField() -> Self {
-        tapTextField(Identifiers.ageTextField)
+        XCTContext.runActivity(named: "Tap Age text field") { _ in
+            tapTextField(Identifiers.ageTextField)
+        }
         return self
     }
 
+    @discardableResult
     func typeAge(_ age: String) -> Self {
-        typeText(Identifiers.ageTextField, age)
+        XCTContext.runActivity(named: "Tap Age text field and type age: \(age)") { _ in
+            typeText(Identifiers.ageTextField, age)
+        }
         return self
     }
 
+    @discardableResult
     func tapIncreaseAge() -> Self {
-        tapButton(Identifiers.ageIncrement)
+        XCTContext.runActivity(named: "Tap increase age button") { _ in
+            tapButton(Identifiers.ageIncrement)
+        }
         return self
     }
 
+    @discardableResult
     func tapIncreaseAgeWith(_ number: Int) -> Self {
-        app.buttons[Identifiers.ageIncrement].tap(withNumberOfTaps: number, numberOfTouches: 1)
-
+        XCTContext.runActivity(named: "Tap increase age age button \(number) times") { _ in
+            app.buttons[Identifiers.ageIncrement].tap(withNumberOfTaps: number, numberOfTouches: 1)
+        }
         return self
     }
 
+    @discardableResult
     func tapDecreaseAge() -> Self {
-        tapButton(Identifiers.ageDecrement)
+        XCTContext.runActivity(named: "Tap decrease age button") { _ in
+            tapButton(Identifiers.ageDecrement)
+        }
         return self
     }
 
+    @discardableResult
     func tapDecreaseAgeWith(_ number: Int) -> Self {
-        app.buttons[Identifiers.ageDecrement].tap(withNumberOfTaps: number, numberOfTouches: 1)
+        XCTContext.runActivity(named: "Tap decrease age button \(number) times") { _ in
+            app.buttons[Identifiers.ageDecrement].tap(withNumberOfTaps: number, numberOfTouches: 1)
+        }
         return self
     }
 
+    @discardableResult
     func clearAge() -> Self {
-        clearTextField(Identifiers.ageTextField)
+        XCTContext.runActivity(named: "Clear age text field") { _ in
+            clearTextField(Identifiers.ageTextField)
+        }
         return self
     }
 
+    @discardableResult
     // Gender text field
     func tapGenderTextField() -> Self {
-        tapTextField(Identifiers.genderTextField)
+        XCTContext.runActivity(named: "Tap Gender text field") { _ in
+            tapTextField(Identifiers.genderTextField)
+        }
         return self
     }
 
+    @discardableResult
     func typeGender(_ gender: String) -> Self {
-        typeText(Identifiers.genderTextField, gender)
+        XCTContext.runActivity(named: "Tap Gender text field and type: \(gender)") { _ in
+            typeText(Identifiers.genderTextField, gender)
+        }
         return self
     }
 
+    @discardableResult
     func clearGender() -> Self {
-        clearTextField(Identifiers.genderTextField)
+        XCTContext.runActivity(named: "Clear gender text field") { _ in
+            clearTextField(Identifiers.genderTextField)
+        }
         return self
     }
 
     // Alert
-    func tapAlertOkButton() -> AddContactScreen {
-        alertButtonTap(Identifiers.saveErrorAlert, Identifiers.alertOkButton)
-        return AddContactScreen(app: app)
+    @discardableResult
+    func tapAlertOkButton() -> Self {
+        XCTContext.runActivity(named: "Tap Ok button in save alert popover") { _ in
+            alertButtonTap(Identifiers.saveErrorAlert, Identifiers.alertOkButton)
+        }
+        return self
     }
 
     // Add contact
     @discardableResult
-    func fillFormAndSave (_ name: String, _ age: String, _ gender: String) -> ContactListScreen {
-        typeText(Identifiers.nameTextField, name)
-        tapTextField(Identifiers.ageTextField)
-        clearTextField(Identifiers.ageTextField)
-        typeText(Identifiers.ageTextField, age)
-        typeText(Identifiers.genderTextField, gender)
-        tapButton(Identifiers.saveButton)
-        return ContactListScreen(app: app)
+    func fillFormAndSave (_ name: String, _ age: String, _ gender: String) -> Self {
+        XCTContext.runActivity(named: "Fill form with name: \(name), age: \(age), gender: \(gender) and tap Save button") { _ in
+            typeText(Identifiers.nameTextField, name)
+            tapTextField(Identifiers.ageTextField)
+            clearTextField(Identifiers.ageTextField)
+            typeText(Identifiers.ageTextField, age)
+            typeText(Identifiers.genderTextField, gender)
+            tapButton(Identifiers.saveButton)
+        }
+        return self
 
     }
 
     // MARK: Assertions
 
-    func addPersonScreenIsLoaded() {
-        buttonExists(Identifiers.saveButton)
-        buttonExists(Identifiers.cancelButton)
-        labelExists(Identifiers.nameLabel)
-        labelExists(Identifiers.nameErrorLabel)
-        textFieldExists(Identifiers.nameTextField)
-        labelExists(Identifiers.ageLabel)
-        labelExists(Identifiers.ageErrorLabel)
-        textFieldExists(Identifiers.ageTextField)
-        labelExists(Identifiers.genderLabel)
-        labelExists(Identifiers.genderErrorLabel)
-        textFieldExists(Identifiers.genderTextField)
+    @discardableResult
+    func addPersonScreenIsLoaded() -> Self {
+        XCTContext.runActivity(named: "Verify if add contact form is in initial state") { _ in
+            buttonExists(Identifiers.saveButton)
+            buttonExists(Identifiers.cancelButton)
+            labelExists(Identifiers.nameLabel)
+            labelExists(Identifiers.nameErrorLabel)
+            textFieldExists(Identifiers.nameTextField)
+            labelExists(Identifiers.ageLabel)
+            labelExists(Identifiers.ageErrorLabel)
+            textFieldExists(Identifiers.ageTextField)
+            labelExists(Identifiers.genderLabel)
+            labelExists(Identifiers.genderErrorLabel)
+            textFieldExists(Identifiers.genderTextField)
+        }
+        return self
     }
 
-    // Name text feield
+    // Name text field
 
-    func nameTextFieldPalaceholderEqualsTo (_ value: String) {
-        textFieldPalaceholderEqualsTo(Identifiers.nameTextField, value)
+    @discardableResult
+    func nameTextFieldPlaceholderEqualsTo (_ value: String) -> Self {
+        XCTContext.runActivity(named: "Verify if Name text field placeholder has value: \(value)") { _ in
+            textFieldPlaceholderEqualsTo(Identifiers.nameTextField, value)
+        }
+        return self
     }
 
-    func nameTextFiledValueEqualsTo (_ value: String) {
-        textFieldValueEqualsTo(Identifiers.nameTextField, value)
+    @discardableResult
+    func nameTextFiledValueEqualsTo (_ value: String) -> Self {
+        XCTContext.runActivity(named: "Verify if Name text field value is: \(value)") { _ in
+            textFieldValueEqualsTo(Identifiers.nameTextField, value)
+        }
+        return self
     }
 
-    func nameErrorLabelValueEqualsTo (_ value: String) {
-        labelHasValue(Identifiers.nameErrorLabel, value)
+    @discardableResult
+    func nameErrorLabelValueEqualsTo (_ value: String) -> Self {
+        XCTContext.runActivity(named: "Verify if Name error label has value: \(value)") { _ in
+            labelHasValue(Identifiers.nameErrorLabel, value)
+        }
+        return self
     }
 
     // Age text field
 
-    func ageTextFieldValueEqualsTo (_ value: String) {
-        textFieldValueEqualsTo(Identifiers.ageTextField, value)
+    @discardableResult
+    func ageTextFieldValueEqualsTo (_ value: String) -> Self {
+        XCTContext.runActivity(named: "Verify if Age text field has value: \(value)") { _ in
+            textFieldValueEqualsTo(Identifiers.ageTextField, value)
+        }
+        return self
     }
 
-    func ageErrorLabelValueEqualsTo (_ value: String) {
-        labelHasValue(Identifiers.ageErrorLabel, value)
+    @discardableResult
+    func ageErrorLabelValueEqualsTo (_ value: String) -> Self {
+        XCTContext.runActivity(named: "Verify if Age error label has value: \(value)") { _ in
+            labelHasValue(Identifiers.ageErrorLabel, value)
+        }
+        return self
     }
 
-    func ageIncreaseButtonIsEnabled() {
-        buttonIsEnabled(Identifiers.ageIncrement)
+    @discardableResult
+    func ageIncreaseButtonIsEnabled() -> Self {
+        XCTContext.runActivity(named: "Verify if Age increase button is hittable") { _ in
+            buttonIsEnabled(Identifiers.ageIncrement)
+        }
+        return self
     }
 
-    func ageIncreaseButtonIsNotEnabled() {
-        buttonIsDisabled(Identifiers.ageIncrement)
+    @discardableResult
+    func ageIncreaseButtonIsNotEnabled() -> Self {
+        XCTContext.runActivity(named: "Verify if Age increase button is not hittable") { _ in
+            buttonIsDisabled(Identifiers.ageIncrement)
+        }
+        return self
     }
 
-    func ageDecreaseButtonIsEnabled() {
-        buttonIsEnabled(Identifiers.ageDecrement)
+    @discardableResult
+    func ageDecreaseButtonIsEnabled() -> Self {
+        XCTContext.runActivity(named: "Verify if Age decrease button is hittable") { _ in
+            buttonIsEnabled(Identifiers.ageDecrement)
+        }
+        return self
     }
 
-    func ageDecreaseButtonIsNotEnabled() {
-        buttonIsDisabled(Identifiers.ageDecrement)
+    @discardableResult
+    func ageDecreaseButtonIsNotEnabled() -> Self {
+        XCTContext.runActivity(named: "Verify if Age decrease button is not hittable") { _ in
+            buttonIsDisabled(Identifiers.ageDecrement)
+        }
+        return self
     }
 
     // Gender text field
 
-    func genderTextFiledValueEqualsTo (_ value: String) {
-        textFieldValueEqualsTo(Identifiers.genderTextField, value)
+    @discardableResult
+    func genderTextFieldValueEqualsTo (_ value: String) -> Self {
+        XCTContext.runActivity(named: "Verify if Gender text field has value: \(value)") { _ in
+            textFieldValueEqualsTo(Identifiers.genderTextField, value)
+        }
+        return self
     }
 
-    func genderTextFieldPalaceholderEqualsTo (_ value: String) {
-        textFieldPalaceholderEqualsTo(Identifiers.genderTextField, value)
+    @discardableResult
+    func genderTextFieldPalaceholderEqualsTo (_ value: String) -> Self {
+        XCTContext.runActivity(named: "Verify if Gender text field placeholder has value: \(value)") { _ in
+            textFieldPlaceholderEqualsTo(Identifiers.genderTextField, value)
+        }
+        return self
     }
 
-    func genderErrorLabelValueEqualsTo (_ value: String) {
-        labelHasValue(Identifiers.genderErrorLabel, value)
+    @discardableResult
+    func genderErrorLabelValueEqualsTo (_ value: String) -> Self {
+        XCTContext.runActivity(named: "Verify if Gender error label has value: \(value)") { _ in
+            labelHasValue(Identifiers.genderErrorLabel, value)
+        }
+        return self
     }
 
     // Navigation bar
 
-    func navigationBarHasTitle (_ title: String) {
-        navigationBarHasTitle(Identifiers.navigationBar, title)
+    @discardableResult
+    func navigationBarHasTitle (_ title: String) -> Self {
+        XCTContext.runActivity(named: "Verify if navigation bar has title: \(title)") { _ in
+            navigationBarHasTitle(Identifiers.navigationBar, title)
+        }
+        return self
     }
 
     // Alert
 
-    func alertHasProperTiltle () {
-        let alertTile = "Validation error"
-
-        alertHasText(Identifiers.saveErrorAlert, alertTile)
+    @discardableResult
+    func alertHasProperTitle () -> Self {
+        let alertTitle = "Validation error"
+        
+        XCTContext.runActivity(named: "Verify if alert popover has title: \(alertTitle)") { _ in
+            alertHasText(Identifiers.saveErrorAlert, alertTitle)
+        }
+        return self
     }
 
-    func alertHasProperMessage () {
+    @discardableResult
+    func alertHasProperMessage () -> Self {
         let alertMessage = "The form has errors. Correct the data to save."
 
-        alertHasText(Identifiers.saveErrorAlert, alertMessage)
+        XCTContext.runActivity(named: "Verify if alert popover has message: \(alertMessage)") { _ in
+            alertHasText(Identifiers.saveErrorAlert, alertMessage)
+        }
+        return self
     }
 
-    func alertHasOkButton () {
-        buttonExists(Identifiers.alertOkButton)
+    @discardableResult
+    func alertHasOkButton () -> Self {
+        XCTContext.runActivity(named: "Verify if alert popover has Ok button") { _ in
+            buttonExists(Identifiers.alertOkButton)
+        }
+        return self
     }
 }

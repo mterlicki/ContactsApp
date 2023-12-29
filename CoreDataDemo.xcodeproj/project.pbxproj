@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F703AF7429718494002AB83A /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F703AF7329718494002AB83A /* ListViewController.swift */; };
+		F703AF7429718494002AB83A /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F703AF7329718494002AB83A /* ListView.swift */; };
 		F703AF76297192D9002AB83A /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F703AF75297192D9002AB83A /* ContactCell.swift */; };
-		F71A7D9229314AEA00618CB4 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71A7D9129314AEA00618CB4 /* AddViewController.swift */; };
+		F71A7D9229314AEA00618CB4 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71A7D9129314AEA00618CB4 /* AddView.swift */; };
 		F71A7D942931504000618CB4 /* TextEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71A7D932931504000618CB4 /* TextEditView.swift */; };
 		F71A7D962931506600618CB4 /* NumberEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71A7D952931506600618CB4 /* NumberEditView.swift */; };
 		F731B9782842491200373813 /* BaseScreen+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F731B9772842491200373813 /* BaseScreen+Extenstions.swift */; };
@@ -19,7 +19,15 @@
 		F7565AFA28133D3200D1D64F /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7565AF928133D3200D1D64F /* CoreDataController.swift */; };
 		F763FF1E27E678F100E0A2CF /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F763FF1C27E678F100E0A2CF /* Person+CoreDataClass.swift */; };
 		F763FF1F27E678F100E0A2CF /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F763FF1D27E678F100E0A2CF /* Person+CoreDataProperties.swift */; };
-		F76732A72917D9B400533AA8 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76732A62917D9B400533AA8 /* EditViewController.swift */; };
+		F76732A72917D9B400533AA8 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76732A62917D9B400533AA8 /* EditView.swift */; };
+		F76EAA1F298D8A4F005FD295 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76EAA1E298D8A4F005FD295 /* Contact.swift */; };
+		F76EAA22298EAC67005FD295 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76EAA21298EAC67005FD295 /* Bundle-Decodable.swift */; };
+		F76EAA25298EACDB005FD295 /* 1contact.json in Resources */ = {isa = PBXBuildFile; fileRef = F76EAA24298EACDB005FD295 /* 1contact.json */; };
+		F76EAA27298EAF10005FD295 /* 2contacts.json in Resources */ = {isa = PBXBuildFile; fileRef = F76EAA26298EAF10005FD295 /* 2contacts.json */; };
+		F76EAA2B298EAF5C005FD295 /* 3contacts.json in Resources */ = {isa = PBXBuildFile; fileRef = F76EAA2A298EAF5C005FD295 /* 3contacts.json */; };
+		F76EAA2E298ED7F2005FD295 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76EAA2D298ED7F2005FD295 /* ListViewModel.swift */; };
+		F76EAA30298F00AB005FD295 /* EditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76EAA2F298F00AB005FD295 /* EditViewModel.swift */; };
+		F76EAA32298F00C2005FD295 /* AddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76EAA31298F00C2005FD295 /* AddViewModel.swift */; };
 		F76EFDA828379AB300BF3EE7 /* AddContactValidationErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76EFDA728379AB300BF3EE7 /* AddContactValidationErrorTests.swift */; };
 		F77878B028254716009EEAD2 /* AddContactNameFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77878AF28254716009EEAD2 /* AddContactNameFieldTests.swift */; };
 		F780F580285E2D220076AC59 /* EditContactEditModeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F780F57F285E2D210076AC59 /* EditContactEditModeTests.swift */; };
@@ -58,19 +66,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F703AF7329718494002AB83A /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		F703AF7329718494002AB83A /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		F703AF75297192D9002AB83A /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
-		F71A7D9129314AEA00618CB4 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		F71A7D9129314AEA00618CB4 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		F71A7D932931504000618CB4 /* TextEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditView.swift; sourceTree = "<group>"; };
 		F71A7D952931506600618CB4 /* NumberEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberEditView.swift; sourceTree = "<group>"; };
-		F731B9772842491200373813 /* BaseScreen+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "BaseScreen+Extenstions.swift"; path = "CoreDataDemoUITests/Tests/EditContactTests/BaseScreen+Extenstions.swift"; sourceTree = SOURCE_ROOT; };
+		F731B9772842491200373813 /* BaseScreen+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "BaseScreen+Extenstions.swift"; path = "CoreDataDemoUITests/Extensions/BaseScreen+Extenstions.swift"; sourceTree = SOURCE_ROOT; };
 		F74A770028268D46004D81CB /* AddContactAgeTextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactAgeTextFieldTests.swift; sourceTree = "<group>"; };
-		F74A770228269F1C004D81CB /* XCUIElement+ClearText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "XCUIElement+ClearText.swift"; path = "CoreDataDemoUITests/Tests/XCUIElement+ClearText.swift"; sourceTree = SOURCE_ROOT; };
+		F74A770228269F1C004D81CB /* XCUIElement+ClearText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "XCUIElement+ClearText.swift"; path = "CoreDataDemoUITests/Extensions/XCUIElement+ClearText.swift"; sourceTree = SOURCE_ROOT; };
 		F74A77052826CC2E004D81CB /* AddContactGenderTextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactGenderTextFieldTests.swift; sourceTree = "<group>"; };
 		F7565AF928133D3200D1D64F /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
 		F763FF1C27E678F100E0A2CF /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F763FF1D27E678F100E0A2CF /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		F76732A62917D9B400533AA8 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		F76732A62917D9B400533AA8 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		F76EAA1E298D8A4F005FD295 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		F76EAA21298EAC67005FD295 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
+		F76EAA24298EACDB005FD295 /* 1contact.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = 1contact.json; sourceTree = "<group>"; };
+		F76EAA26298EAF10005FD295 /* 2contacts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = 2contacts.json; sourceTree = "<group>"; };
+		F76EAA2A298EAF5C005FD295 /* 3contacts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = 3contacts.json; sourceTree = "<group>"; };
+		F76EAA2D298ED7F2005FD295 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		F76EAA2F298F00AB005FD295 /* EditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewModel.swift; sourceTree = "<group>"; };
+		F76EAA31298F00C2005FD295 /* AddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewModel.swift; sourceTree = "<group>"; };
 		F76EFDA728379AB300BF3EE7 /* AddContactValidationErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactValidationErrorTests.swift; sourceTree = "<group>"; };
 		F77878AF28254716009EEAD2 /* AddContactNameFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactNameFieldTests.swift; sourceTree = "<group>"; };
 		F780F57F285E2D210076AC59 /* EditContactEditModeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactEditModeTests.swift; sourceTree = "<group>"; };
@@ -138,6 +154,34 @@
 			path = AddContactScreenTests;
 			sourceTree = "<group>";
 		};
+		F76EAA20298EAC37005FD295 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F76EAA21298EAC67005FD295 /* Bundle-Decodable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F76EAA23298EACA4005FD295 /* Test Data */ = {
+			isa = PBXGroup;
+			children = (
+				F76EAA24298EACDB005FD295 /* 1contact.json */,
+				F76EAA26298EAF10005FD295 /* 2contacts.json */,
+				F76EAA2A298EAF5C005FD295 /* 3contacts.json */,
+			);
+			path = "Test Data";
+			sourceTree = "<group>";
+		};
+		F76EAA2C298ED777005FD295 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				F76EAA2D298ED7F2005FD295 /* ListViewModel.swift */,
+				F76EAA2F298F00AB005FD295 /* EditViewModel.swift */,
+				F76EAA31298F00C2005FD295 /* AddViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
 		F784172326EB2899001553D7 = {
 			isa = PBXGroup;
 			children = (
@@ -162,12 +206,14 @@
 		F784172E26EB2899001553D7 /* CoreDataDemo */ = {
 			isa = PBXGroup;
 			children = (
-				F7B31BD0291FC29200C42452 /* Views */,
 				F784176C26EB2A79001553D7 /* Model */,
+				F7B31BD0291FC29200C42452 /* Views */,
+				F76EAA2C298ED777005FD295 /* View Model */,
+				F76EAA23298EACA4005FD295 /* Test Data */,
+				F76EAA20298EAC37005FD295 /* Extensions */,
 				F784172F26EB2899001553D7 /* AppDelegate.swift */,
 				F784173126EB2899001553D7 /* SceneDelegate.swift */,
 				F7DF287827EB797900F0B9B7 /* Cells */,
-				F7DF287727EB78F400F0B9B7 /* View Controllers */,
 				F784173B26EB289C001553D7 /* Assets.xcassets */,
 				F784173D26EB289C001553D7 /* LaunchScreen.storyboard */,
 				F784174026EB289C001553D7 /* Info.plist */,
@@ -204,6 +250,7 @@
 				F763FF1C27E678F100E0A2CF /* Person+CoreDataClass.swift */,
 				F763FF1D27E678F100E0A2CF /* Person+CoreDataProperties.swift */,
 				F7565AF928133D3200D1D64F /* CoreDataController.swift */,
+				F76EAA1E298D8A4F005FD295 /* Contact.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -221,21 +268,14 @@
 		F7B31BD0291FC29200C42452 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F703AF7329718494002AB83A /* ListView.swift */,
+				F76732A62917D9B400533AA8 /* EditView.swift */,
+				F71A7D9129314AEA00618CB4 /* AddView.swift */,
 				F7B31BD1291FC2DE00C42452 /* DetailView.swift */,
 				F71A7D932931504000618CB4 /* TextEditView.swift */,
 				F71A7D952931506600618CB4 /* NumberEditView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		F7DF287727EB78F400F0B9B7 /* View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				F76732A62917D9B400533AA8 /* EditViewController.swift */,
-				F703AF7329718494002AB83A /* ListViewController.swift */,
-				F71A7D9129314AEA00618CB4 /* AddViewController.swift */,
-			);
-			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		F7DF287827EB797900F0B9B7 /* Cells */ = {
@@ -396,8 +436,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F76EAA2B298EAF5C005FD295 /* 3contacts.json in Resources */,
 				F784173F26EB289C001553D7 /* LaunchScreen.storyboard in Resources */,
+				F76EAA25298EACDB005FD295 /* 1contact.json in Resources */,
 				F784173C26EB289C001553D7 /* Assets.xcassets in Resources */,
+				F76EAA27298EAF10005FD295 /* 2contacts.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,17 +487,22 @@
 			files = (
 				F71A7D942931504000618CB4 /* TextEditView.swift in Sources */,
 				F763FF1E27E678F100E0A2CF /* Person+CoreDataClass.swift in Sources */,
-				F71A7D9229314AEA00618CB4 /* AddViewController.swift in Sources */,
+				F76EAA22298EAC67005FD295 /* Bundle-Decodable.swift in Sources */,
+				F71A7D9229314AEA00618CB4 /* AddView.swift in Sources */,
+				F76EAA30298F00AB005FD295 /* EditViewModel.swift in Sources */,
 				F7B31BD2291FC2DE00C42452 /* DetailView.swift in Sources */,
+				F76EAA32298F00C2005FD295 /* AddViewModel.swift in Sources */,
+				F76EAA1F298D8A4F005FD295 /* Contact.swift in Sources */,
+				F76EAA2E298ED7F2005FD295 /* ListViewModel.swift in Sources */,
 				F763FF1F27E678F100E0A2CF /* Person+CoreDataProperties.swift in Sources */,
 				F703AF76297192D9002AB83A /* ContactCell.swift in Sources */,
-				F703AF7429718494002AB83A /* ListViewController.swift in Sources */,
+				F703AF7429718494002AB83A /* ListView.swift in Sources */,
 				F7565AFA28133D3200D1D64F /* CoreDataController.swift in Sources */,
 				F784173A26EB2899001553D7 /* CoreDataDemo.xcdatamodeld in Sources */,
 				F71A7D962931506600618CB4 /* NumberEditView.swift in Sources */,
 				F784173026EB2899001553D7 /* AppDelegate.swift in Sources */,
 				F784173226EB2899001553D7 /* SceneDelegate.swift in Sources */,
-				F76732A72917D9B400533AA8 /* EditViewController.swift in Sources */,
+				F76732A72917D9B400533AA8 /* EditView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

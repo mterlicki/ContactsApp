@@ -9,10 +9,17 @@
     }
   ],
   "defaultOptions" : {
-
+    "language" : "pl",
+    "region" : "PL",
+    "testExecutionOrdering" : "random",
+    "testRepetitionMode" : "retryOnFailure"
   },
   "testTargets" : [
     {
+      "parallelizable" : true,
+      "skippedTests" : [
+        "BaseTest"
+      ],
       "target" : {
         "containerPath" : "container:CoreDataDemo.xcodeproj",
         "identifier" : "F784174F26EB289C001553D7",

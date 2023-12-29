@@ -16,6 +16,7 @@ class AddContactInitialStateTests: BaseTest {
 
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .navigationBarHasTitle(navigationBarTitle)
     }
 
@@ -24,20 +25,23 @@ class AddContactInitialStateTests: BaseTest {
 
         ContactListScreen(app: app)
             .tapAddContact()
-            .nameTextFieldPalaceholderEqualsTo(placeholderValue)
+        AddContactScreen(app: app)
+            .nameTextFieldPlaceholderEqualsTo(placeholderValue)
     }
 
-    func testNameErrorLabelShowsReqiuredFieldMessage() throws {
+    func testNameErrorLabelShowsRequiredFieldMessage() throws {
         let errorLabelValue = "Required"
 
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .nameErrorLabelValueEqualsTo(errorLabelValue)
     }
 
     func testAgeTextFieldHasInitialValue() throws {
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .ageTextFieldValueEqualsTo("18")
     }
 
@@ -46,14 +50,16 @@ class AddContactInitialStateTests: BaseTest {
 
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .genderTextFieldPalaceholderEqualsTo(placeholderValue)
     }
 
-    func testGenderErrorLablelShowsReqiuredFieldMessage() throws {
+    func testGenderErrorLabelShowsRequiredFieldMessage() throws {
         let errorLabelValue = "Required"
 
         ContactListScreen(app: app)
             .tapAddContact()
+        AddContactScreen(app: app)
             .genderErrorLabelValueEqualsTo(errorLabelValue)
     }
 
